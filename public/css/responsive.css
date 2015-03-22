@@ -1,0 +1,173 @@
+/* General
+================================================== */
+img{ max-width: 100%; }
+
+/*hide responsive menus*/
+#top-bar .selector,
+#navigation .selector { display: none; }
+
+
+/* Apply To All Responsive Layouts
+================================================== */
+@media only screen and (max-width: 959px) {
+	
+	/*special hide class*/
+	.hide-all-devices{ display: none; }
+	
+	/*hide stuff*/
+	#navigation ul,
+	#navigation #searchbar{ display: none !important; }
+	
+	/*navigation top menu*/
+	#navigation{ height: 40px; position: inherit; right: auto; bottom: auto; margin: 0 0 20px; text-transform: uppercase; border: 1px solid #ddd; -moz-border-radius: 2px; -khtml-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; background: #f7f7f7; background: -moz-linear-gradient(top,  #fefefe 0%, #f7f7f7 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#f7f7f7));background: -webkit-linear-gradient(top,  #fefefe 0%,#f7f7f7 100%);background: -o-linear-gradient(top,  #fefefe 0%,#f7f7f7 100%);background: -ms-linear-gradient(top,  #fefefe 0%,#f7f7f7 100%);background: linear-gradient(to bottom,  #fefefe 0%,#f7f7f7 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#f7f7f7',GradientType=0 ); }
+	#navigation .selector option{ background:#000; color: #fff; padding: 10px; border-bottom: 1px solid #333; -webkit-appearance:none; }
+	#navigation .selector, 
+	#navigation .selector span{ cursor: pointer !important; -webkit-font-smoothing:antialiased }
+	#navigation .selector, 
+	#navigation .selector *{ margin:0; padding:0 }
+	#navigation .selector select{ top:0px; left:0px; height: 40px }
+	#navigation:hover{ cursor: pointer; border-color: #ccc; }
+	#navigation .selector{ background: #ddd; line-height: 40px; text-indent: 20px }
+	#navigation .selector{ height: 40px; width: 60px; width: 100%; display:-moz-inline-box; display:inline-block; vertical-align:middle; zoom:1; *display:inline; cursor: pointer !important; position:relative; overflow:hidden; background: url("../images/responsive-drop-arrow.png") right center no-repeat; }
+	#navigation .selector select:focus{outline:0; }
+	#navigation .selector span{ display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+	#navigation .selector select{ position:absolute; height:40px;  background:none; width:100%; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-size:12px; font-weight:500; border:0 !important; text-transform: uppercase; }
+	
+	/*display dropdown nav*/
+	#navigation .selector { display: inline-block; }
+	
+	/*main*/
+	#wrap { padding: 0; }
+	
+}
+
+
+/* #Tablet (Landscape) = Design for a width of 720px
+================================================== */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	
+	/*special hide class*/
+	.hide-tablet-landscape{ display: none; }
+
+}
+/* #Tablet (Landscape) = Design for a width of 720px
+================================================== */
+@media only screen and (max-width : 768px) {
+	
+	/*special hide class*/
+	#carousel{ display: none; }
+
+}
+
+/* #Tablet (Portrait) = Design for a width of 720px
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	
+	/*special hide class*/
+	.hide-tablet-portrait{ display: none; }
+	
+	/*grid*/
+	.outerbox{ width: 720px; }
+	.loop-entry{ width: 350px; }
+	
+	/*main*/
+	#post{ width: 430px }
+	#sidebar{ width: 260px }
+	.wpex-widget-recent-posts .recent-right{ width: 130px; }
+	#footer .wpex-widget-recent-posts .recent-right{ width: 130px; }
+	
+	/*homepage with sidebar*/
+	.home-sidebar .loop-entry{ width: 205px;  }
+	.home-sidebar .loop-entry-meta li{ display: block; float: none; margin-bottom: 5px; }
+	.home-sidebar .loop-entry-meta li:last-child{ margin:0; }
+	
+	/*footer*/
+	.footer-box{ width: 226px; margin-right: 21px; }
+	
+	/*blog*/
+	#author-bio{ width: 310px }
+	body.no-sidebar #author-bio{ width: 600px; }
+
+}
+
+
+
+/* Mobile (Portrait) = Design for a width of 280px
+================================================== */
+
+@media only screen and (max-width: 767px) {
+	
+	/*hide*/
+	.hide-mobile-portrait{ display: none; }
+	#single-nav{ display: none; }
+	
+	/*grid*/
+	.outerbox{ width: 280px; }
+	#sidebar{ width: 280px; }
+	.loop-entry{ width: 280px; margin-right: 0; margin-bottom: 20px }
+	
+	/*main*/
+	#post{ width: 100%; }
+	#sidebar{ width: 100%; }
+	#sidebar{ margin-top: 30px; padding-top: 30px; border-top: 4px solid #ddd; }
+	
+	/*header*/
+	#header-social{ position: inherit; top: auto; right: auto; text-align: center; margin-top: -10px; margin-bottom: 20px; }
+	#header-social li, #header-social a{ display: inline-block; }
+	#logo{ text-align: center; }
+	#logo a{ display: inline-block; float: none; }
+	
+	/*blog*/
+	#related-posts .alignleft{ max-width: 30% }
+	.related-entry-excerpt{ display: none; }
+	#author-bio{ width: 155px; }
+	body.no-sidebar #author-bio{ width: 155px; }
+	.meta li, .loop-entry-meta li{ display: block; float: none; margin-bottom: 5px; }
+	.meta li:last-child, .loop-entry-meta li:last-child{ margin:0; }
+		
+	/*search*/
+	.search-entry-text{ width: 100%; margin-top: 25px; }
+	
+	/*footer*/
+	.footer-box{ width: 100%; margin-right: 0; }
+	#footer-bottom, #footer-menu{ text-align: center; }
+	#footer-menu{ margin-top: 5px; }
+	#copyright,
+	.footer-menu{ width: 100%; float: none; }
+	.footer-menu{ margin-top: 10px; text-align: center; }
+	
+	/*comments*/
+	.children { margin: 30px 0 0; }
+	.children li.depth-2,
+	.children li.depth-3,
+	.children li.depth-4,
+	.children li.depth-5,
+	.children li.depth-6,
+	.children li.depth-7,
+	.children li.depth-8,
+	.children li.depth-9,
+	.children li.depth-10 { margin: 0 }
+       
+}
+
+
+/* Mobile (Landscape) = Design for a width of 440px
+================================================== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	/*special hide class*/
+	.hide-mobile-portrait{ display: block; }
+	.hide-mobile-landscape{ display: none; }
+	
+	/*main*/
+	.outerbox{ width: 440px; }
+	#sidebar{ width: 440px; }
+	.loop-entry{ width: 440px; margin-right: 0; margin-bottom: 20px }
+	.wpex-widget-recent-posts .recent-right{ float: right; width: 330px; }
+	#footer .wpex-widget-recent-posts .recent-right{ width: 330px; }
+	
+	/*blog*/
+	#author-bio{ width: 310px }
+	body.no-sidebar #author-bio{ width: 315px; }
+		
+}
