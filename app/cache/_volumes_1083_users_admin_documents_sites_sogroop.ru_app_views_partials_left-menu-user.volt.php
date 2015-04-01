@@ -10,6 +10,22 @@
             </li>
             <li class="list-group-item clearfix">
                 <a href="javascript:void(0);" >
+                    Мои сообщения
+                </a>
+                <ul class="dropdown-menu" style="display:block;">
+                    <li class="list-group-item  clearfix ">
+                        <a href="/room/write"><i class="fa fa-circle"></i> Написать сообщение</a>
+                    </li>
+                    <li class="list-group-item  clearfix ">
+                        <a href="/room/inbox"><i class="fa fa-circle"></i> Входящие (2)</a>
+                    </li>
+                    <li class="list-group-item  clearfix ">
+                        <a href="/room/send"><i class="fa fa-circle"></i> Отправленые (5)</a>
+                        </li>
+                </ul>
+            </li>
+            <li class="list-group-item clearfix">
+                <a href="javascript:void(0);" >
                     Мой профиль
                 </a>
             </li>

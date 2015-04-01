@@ -92,5 +92,16 @@ class RoomController extends ControllerBase
         $this->view->errors = $errors;
     }
 
+    public function inboxAction () {
+        $this->view->setRenderLevel(View::LEVEL_LAYOUT);
+    }
+
+    public function sendAction () {
+        $this->view->setRenderLevel(View::LEVEL_LAYOUT);
+    }
+
+    public function writeAction () {
+        $this->view->setRenderLevel(View::LEVEL_LAYOUT);
+    }
 }
 

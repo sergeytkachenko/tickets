@@ -287,3 +287,8 @@ div.langs-block-others {
 .green {
     color: green;
 }
+
+
+.inbox .table th{
+    background-color: transparent !important;
+}
