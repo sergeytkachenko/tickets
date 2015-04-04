@@ -13,14 +13,14 @@
                     Мои сообщения
                 </a>
                 <ul class="dropdown-menu" style="display:block;">
-                    <li class="list-group-item  clearfix ">
-                        <a href="/room/write"><i class="fa fa-circle"></i> Написать сообщение</a>
+                    <li class="list-group-item  clearfix {% if router.getRewriteUri() == '/message/write' %}active{% endif %}">
+                        <a href="/message/write"><i class="fa fa-circle"></i> Написать сообщение</a>
                     </li>
-                    <li class="list-group-item  clearfix ">
-                        <a href="/room/inbox"><i class="fa fa-circle"></i> Входящие (2)</a>
+                    <li class="list-group-item  clearfix {% if router.getRewriteUri() == '/message/inbox' %}active{% endif %}">
+                        <a href="/message/inbox"><i class="fa fa-circle"></i> Входящие ({{ user.MessagesRecipient|length}})</a>
                     </li>
-                    <li class="list-group-item  clearfix ">
-                        <a href="/room/send"><i class="fa fa-circle"></i> Отправленые (5)</a>
+                    <li class="list-group-item  clearfix {% if router.getRewriteUri() == '/message/send' %}active{% endif %}">
+                        <a href="/message/send"><i class="fa fa-circle"></i> Отправленые ({{ user.MessagesSender|length  }})</a>
                         </li>
                 </ul>
             </li>

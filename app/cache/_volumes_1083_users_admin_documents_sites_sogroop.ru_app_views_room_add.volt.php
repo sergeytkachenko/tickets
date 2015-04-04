@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Описание</label>
+                    <label>Текст объявления</label>
                     <textarea class="form-control" rows="5" name="description" required></textarea>
                 </div>
                 <input type="hidden" name="photos" value="">

@@ -289,6 +289,15 @@ div.langs-block-others {
 }
 
 
-.inbox .table th{
+.inbox .table th {
     background-color: transparent !important;
+    border: 0;
+}
+
+.inbox .table th, .inbox .table td {
+    border-bottom: 1px solid #DDD !important;
+}
+
+.inbox .table-hover tbody tr.unread > td{
+    background: #EEF4F7 !important;
 }

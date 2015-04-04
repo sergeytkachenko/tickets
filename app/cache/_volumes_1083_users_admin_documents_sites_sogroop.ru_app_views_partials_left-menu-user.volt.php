@@ -13,14 +13,14 @@
                     Мои сообщения
                 </a>
                 <ul class="dropdown-menu" style="display:block;">
-                    <li class="list-group-item  clearfix ">
-                        <a href="/room/write"><i class="fa fa-circle"></i> Написать сообщение</a>
+                    <li class="list-group-item  clearfix <?php if ($this->router->getRewriteUri() == '/message/write') { ?>active<?php } ?>">
+                        <a href="/message/write"><i class="fa fa-circle"></i> Написать сообщение</a>
                     </li>
-                    <li class="list-group-item  clearfix ">
-                        <a href="/room/inbox"><i class="fa fa-circle"></i> Входящие (2)</a>
+                    <li class="list-group-item  clearfix <?php if ($this->router->getRewriteUri() == '/message/inbox') { ?>active<?php } ?>">
+                        <a href="/message/inbox"><i class="fa fa-circle"></i> Входящие (<?php echo $this->length($user->MessagesRecipient); ?>)</a>
                     </li>
-                    <li class="list-group-item  clearfix ">
-                        <a href="/room/send"><i class="fa fa-circle"></i> Отправленые (5)</a>
+                    <li class="list-group-item  clearfix <?php if ($this->router->getRewriteUri() == '/message/send') { ?>active<?php } ?>">
+                        <a href="/message/send"><i class="fa fa-circle"></i> Отправленые (<?php echo $this->length($user->MessagesSender); ?>)</a>
                         </li>
                 </ul>
             </li>

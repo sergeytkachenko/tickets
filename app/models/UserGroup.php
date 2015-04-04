@@ -21,7 +21,6 @@ class UserGroup extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->hasMany('id', 'Users', 'user_group_id', array('alias' => 'Users'));
-        $this->hasMany('id', 'Users', 'user_group_id', NULL);
     }
 
 }

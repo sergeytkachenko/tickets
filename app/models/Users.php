@@ -101,10 +101,31 @@ class Users extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->hasMany('id', 'Service_item', 'user_id', array('alias' => 'Service_item'));
-        $this->belongsTo('user_group_id', 'User_group', 'id', array('alias' => 'User_group'));
-        $this->hasMany('id', 'ServiceItem', 'user_id', NULL);
-        $this->belongsTo('user_group_id', 'UserGroup', 'id', NULL);
+        $this->hasMany('id', 'Messages', 'user_sender_id', array('alias' => 'MessagesSender'));
+        $this->hasMany('id', 'Messages', 'user_recipient_id', array('alias' => 'MessagesRecipient'));
+        $this->hasMany('id', 'ServiceItem', 'user_id', array('alias' => 'ServiceItem'));
+        $this->belongsTo('user_group_id', 'UserGroup', 'id', array('alias' => 'UserGroup'));
+    }
+
+    /**
+     * Independent Column Mapping.
+     */
+    public function columnMap()
+    {
+        return array(
+            'id' => 'id', 
+            'email' => 'email', 
+            'password' => 'password', 
+            'phone' => 'phone', 
+            'status_id' => 'status_id', 
+            'code_validate' => 'code_validate', 
+            'user_group_id' => 'user_group_id', 
+            'balance' => 'balance', 
+            'binding_ip' => 'binding_ip', 
+            'date_register' => 'date_register', 
+            'is_new' => 'is_new', 
+            'newsletter' => 'newsletter'
+        );
     }
 
 }

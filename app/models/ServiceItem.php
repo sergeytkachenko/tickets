@@ -74,16 +74,31 @@ class ServiceItem extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->hasMany('id', 'Service_item_comments', 'service_item_id', array('alias' => 'Service_item_comments'));
-        $this->hasMany('id', 'Service_item_images', 'service_item_id', array('alias' => 'Service_item_images'));
-        $this->hasMany('id', 'Service_item_videos', 'service_item_id', array('alias' => 'Service_item_videos'));
+        $this->hasMany('id', 'ServiceItemComments', 'service_item_id', array('alias' => 'ServiceItemComments'));
+        $this->hasMany('id', 'ServiceItemImages', 'service_item_id', array('alias' => 'ServiceItemImages'));
+        $this->hasMany('id', 'ServiceItemVideos', 'service_item_id', array('alias' => 'ServiceItemVideos'));
         $this->belongsTo('service_id', 'Services', 'id', array('alias' => 'Services'));
         $this->belongsTo('user_id', 'Users', 'id', array('alias' => 'Users'));
-        $this->hasMany('id', 'ServiceItemComments', 'service_item_id', NULL);
-        $this->hasMany('id', 'ServiceItemImages', 'service_item_id', NULL);
-        $this->hasMany('id', 'ServiceItemVideos', 'service_item_id', NULL);
-        $this->belongsTo('service_id', 'Services', 'id', NULL);
-        $this->belongsTo('user_id', 'Users', 'id', NULL);
+    }
+
+    /**
+     * Independent Column Mapping.
+     */
+    public function columnMap()
+    {
+        return array(
+            'id' => 'id', 
+            'title' => 'title', 
+            'logo_src' => 'logo_src', 
+            'short_description' => 'short_description', 
+            'description' => 'description', 
+            'date_post' => 'date_post', 
+            'price' => 'price', 
+            'service_id' => 'service_id', 
+            'user_id' => 'user_id', 
+            'is_vip' => 'is_vip', 
+            'is_published' => 'is_published'
+        );
     }
 
 }

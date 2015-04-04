@@ -32,8 +32,7 @@ class Services extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->hasMany('id', 'Service_item', 'service_id', array('alias' => 'Service_item'));
-        $this->hasMany('id', 'ServiceItem', 'service_id', NULL);
+        $this->hasMany('id', 'ServiceItem', 'service_id', array('alias' => 'ServiceItem'));
     }
 
 }

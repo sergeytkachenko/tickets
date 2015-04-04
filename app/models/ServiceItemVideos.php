@@ -33,7 +33,6 @@ class ServiceItemVideos extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->belongsTo('service_item_id', 'Service_item', 'id', array('alias' => 'Service_item'));
-        $this->belongsTo('service_item_id', 'ServiceItem', 'id', NULL);
     }
 
 }
