@@ -49,7 +49,7 @@ class MessageController extends ControllerBase
             $subject = $this->request->get("subject");
             $text = $this->request->get("text");
 
-            if(empty(trim($subject)) or empty(trim($text))) {
+            if(empty($subject) or empty($text)) {
                 $errors[] = "Вы не заполнили тему или текст письма";
             }
 
