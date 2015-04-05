@@ -31,7 +31,7 @@
             </div>
             <div class="product-page-cart">
                 <br>
-                <button class="btn btn-primary" type="submit">Показать контакты</button>
+                <button class="btn btn-primary" type="submit" onclick="displayContact(<?php echo $item->id; ?>);" id="show-contact">Показать контакты</button>
             </div>
             <div class="review">
                 <input type="range" value="4" step="0.25" id="backing4">
@@ -106,5 +106,22 @@
         var img = $(that).find("img").clone();
         $("div.product-main-image").html(img);
         $('.product-main-image').zoom({url: $(img).attr('data-BigImgSrc')});
+    }
+
+    function displayContact (serviceItemId) {
+        $.post("/service-item/getServiceItem/"+serviceItemId, {}, function (data) {
+            $("#show-contact").fadeOut();
+            var phone = data.serviceItem.phone,
+                email = data.serviceItem.email;
+            if(phone) {
+                $( "<h5><i class='fa fa-phone'></i> "+phone+"</h5>" ).insertAfter("#show-contact");
+            }
+            if(email) {
+                $( "<h5><i class='fa fa-envelope-o'></i> "+email+"</h5>" ).insertAfter("#show-contact");
+            }
+            if (!email && !phone) {
+                $( "<p>Пользователь не указал свои контакты</p>" ).insertAfter("#show-contact");
+            }
+        })
     }
 </script>

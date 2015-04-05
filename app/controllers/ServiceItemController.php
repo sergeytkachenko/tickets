@@ -57,5 +57,15 @@ class ServiceItemController extends ControllerBase
             "success" => true
         ));
     }
+
+    public function getServiceItemAction ($serviceItemId) {
+        $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
+        $serviceItem = ServiceItem::findFirst($serviceItemId);
+        $this->response->setContentType('application/json', 'UTF-8');
+        echo json_encode(array(
+            "success" => true,
+            "serviceItem" => $serviceItem
+        ));
+    }
 }
 
