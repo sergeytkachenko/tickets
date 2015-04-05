@@ -20,6 +20,10 @@ class ControllerBase extends Controller {
         }
 
         $this->view->user = $this->session->get("user");
+
+        $this->view->maxCountVideo = Config::findFirst("name = 'max-count-video'")->value;
+        $this->view->maxLengthDescription = Config::findFirst("name = 'max-length-description'")->value;
+        $this->view->adminUserId = Config::findFirst("name = 'admin-user-id'")->value;
     }
 
 }

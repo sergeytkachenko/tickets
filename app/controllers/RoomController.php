@@ -19,6 +19,16 @@ class RoomController extends ControllerBase
     public function addAction () {
         $this->view->setRenderLevel(View::LEVEL_LAYOUT);
         $this->view->services = Services::find();
+        $this->view->title = "Добавление обьявления";
+        $this->view->serviceItem = new ServiceItem();
+    }
+
+    public function editAction ($id) {
+        $this->view->setRenderLevel(View::LEVEL_LAYOUT);
+        $this->view->services = Services::find();
+        $this->view->title = "Редактирование обьявления";
+        $this->view->serviceItem = ServiceItem::findFirst(intval($id));
+
     }
 
     public function saveAction () {
@@ -29,7 +39,9 @@ class RoomController extends ControllerBase
             $errors[] = "Время сессии истекло. Войти в личный кабинет снова";
         }
 
-        if($this->request->isGet() and $userId) {
+        if($this->request->isPost() and $userId) {
+            $serviceItemId = intval($this->request->get("serviceItemId"));
+
             $images = $this->request->get("photos");
             $logo = trim($this->request->get("logo"));
             $logo = ($logo and !empty($logo)) ? $logo : "/img/empty.jpg";
@@ -37,23 +49,33 @@ class RoomController extends ControllerBase
             $price = $this->request->get("price");
             if(!is_numeric($price)) {
                 $errors[] = "Поле цена, должно содержать только цифры";
+
             }
+
             $service_id = $this->request->get("service_id");
             $description = $this->request->get("description");
+
             $email = $this->request->get("email");
             $phone = $this->request->get("phone");
             $youtube_src = $this->request->get("youtube_src");
 
-            $serviceItem = new ServiceItem();
+            $serviceItem = $serviceItemId? ServiceItem::findFirst($serviceItemId) : new ServiceItem();
             $serviceItem->title = $title;
 
             $serviceItem->price = $price;
+            $serviceItem->email = $email;
+            $serviceItem->phone = $phone;
             $serviceItem->description = $description;
             $serviceItem->short_description = $description;
             $serviceItem->service_id = $service_id;
             $serviceItem->logo_src = $logo;
-            $serviceItem->date_post = date("Y-m-d H:i:s");
+            $serviceItem->date_post = $serviceItemId?  $serviceItem->date_post : date("Y-m-d H:i:s");
             $serviceItem->user_id = $userId;
+            $serviceItem->is_published = $serviceItemId? $serviceItem->is_published : 0;
+
+            $serviceItem->ServiceItemImages->delete();
+            $serviceItem->ServiceItemVideos->delete();
+
             $serviceItem->save();
 
             $id = $serviceItem->id;

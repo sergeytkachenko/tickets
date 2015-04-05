@@ -1,5 +1,7 @@
 <?php
 
+use Phalcon\Mvc\Model\Validator\Email as Email;
+
 class ServiceItem extends \Phalcon\Mvc\Model
 {
 
@@ -47,6 +49,18 @@ class ServiceItem extends \Phalcon\Mvc\Model
 
     /**
      *
+     * @var string
+     */
+    public $email;
+
+    /**
+     *
+     * @var string
+     */
+    public $phone;
+
+    /**
+     *
      * @var integer
      */
     public $service_id;
@@ -69,9 +83,7 @@ class ServiceItem extends \Phalcon\Mvc\Model
      */
     public $is_published;
 
-    /**
-     * Initialize method for model.
-     */
+
     public function initialize()
     {
         $this->hasMany('id', 'ServiceItemComments', 'service_item_id', array('alias' => 'ServiceItemComments'));
@@ -94,6 +106,8 @@ class ServiceItem extends \Phalcon\Mvc\Model
             'description' => 'description', 
             'date_post' => 'date_post', 
             'price' => 'price', 
+            'email' => 'email', 
+            'phone' => 'phone', 
             'service_id' => 'service_id', 
             'user_id' => 'user_id', 
             'is_vip' => 'is_vip', 

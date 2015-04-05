@@ -57,6 +57,12 @@ class Users extends \Phalcon\Mvc\Model
      *
      * @var integer
      */
+    public $tariff_plan_id;
+
+    /**
+     *
+     * @var integer
+     */
     public $binding_ip;
 
     /**
@@ -76,13 +82,8 @@ class Users extends \Phalcon\Mvc\Model
      * @var integer
      */
     public $newsletter;
-
-    /**
-     * Validations and business logic
-     */
     public function validation()
     {
-
         $this->validate(
             new Email(
                 array(
@@ -95,10 +96,6 @@ class Users extends \Phalcon\Mvc\Model
             return false;
         }
     }
-
-    /**
-     * Initialize method for model.
-     */
     public function initialize()
     {
         $this->hasMany('id', 'Messages', 'user_sender_id', array('alias' => 'MessagesSender'));
@@ -106,7 +103,7 @@ class Users extends \Phalcon\Mvc\Model
         $this->hasMany('id', 'ServiceItem', 'user_id', array('alias' => 'ServiceItem'));
         $this->belongsTo('user_group_id', 'UserGroup', 'id', array('alias' => 'UserGroup'));
     }
-
+ 
     /**
      * Independent Column Mapping.
      */
@@ -121,6 +118,7 @@ class Users extends \Phalcon\Mvc\Model
             'code_validate' => 'code_validate', 
             'user_group_id' => 'user_group_id', 
             'balance' => 'balance', 
+            'tariff_plan_id' => 'tariff_plan_id', 
             'binding_ip' => 'binding_ip', 
             'date_register' => 'date_register', 
             'is_new' => 'is_new', 
