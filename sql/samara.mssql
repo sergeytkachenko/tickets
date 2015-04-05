@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Мар 22 2015 г., 13:50
+-- Время создания: Апр 05 2015 г., 14:57
 -- Версия сервера: 5.6.21
 -- Версия PHP: 5.5.14
 
@@ -55,6 +55,31 @@ CREATE TABLE IF NOT EXISTS `config` (
 `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `value` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `config`
+--
+
+INSERT INTO `config` (`id`, `name`, `value`) VALUES
+(1, 'admin-user-id', '1'),
+(2, 'max-count-video', '4'),
+(3, 'max-length-description', '500');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `messages`
+--
+
+CREATE TABLE IF NOT EXISTS `messages` (
+`id` int(11) NOT NULL,
+  `user_sender_id` int(11) NOT NULL COMMENT 'отправитель',
+  `user_recipient_id` int(11) NOT NULL COMMENT 'получатель',
+  `subject` varchar(255) DEFAULT NULL,
+  `text` mediumtext NOT NULL,
+  `date` datetime NOT NULL,
+  `is_unread` tinyint(1) DEFAULT '0' COMMENT 'просмотренное или нет '
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -85,24 +110,90 @@ INSERT INTO `pages` (`id`, `title`, `description`) VALUES
 CREATE TABLE IF NOT EXISTS `services` (
 `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `img_src` varchar(255) NOT NULL,
-  `parent_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+  `img_src` varchar(255) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `is_index_page` tinyint(1) DEFAULT '0' COMMENT 'отображается ли на главной в виде картинки ',
+  `is_category` tinyint(1) DEFAULT '0' COMMENT 'если 1 то это категория '
+) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `services`
 --
 
-INSERT INTO `services` (`id`, `title`, `img_src`, `parent_id`) VALUES
-(1, 'Авто на прокат', '/img/uslugi/ZhsUEAO-wJk.png', 0),
-(2, 'Ведущие и артисты', '/img/uslugi/2.png', 0),
-(3, 'Свадебные салоны', '/img/uslugi/3.png', NULL),
-(4, 'Залы и рестораны', '/img/uslugi/4.png', NULL),
-(5, 'Выезная регистрация', '/img/uslugi/5.png', NULL),
-(7, 'Признания', '/img/uslugi/7.png', NULL),
-(8, 'Платья и др наряды', '/img/uslugi/8.png', NULL),
-(9, 'Праздники', '/img/uslugi/9.png', NULL),
-(10, 'Украшения', '/img/uslugi/10.png', NULL);
+INSERT INTO `services` (`id`, `title`, `img_src`, `parent_id`, `is_index_page`, `is_category`) VALUES
+(1, 'авто на прокат', '/img/uslugi/ZhsUEAO-wJk.png', NULL, 1, 1),
+(2, 'ведущие и артисты', '/img/uslugi/2.png', NULL, 1, 1),
+(3, 'свадебные салоны', '/img/uslugi/3.png', NULL, 1, 1),
+(4, 'залы и рестораны', '/img/uslugi/4.png', NULL, 1, 1),
+(5, 'выезная регистрация', '/img/uslugi/5.png', NULL, 1, 1),
+(7, 'признания', '/img/uslugi/7.png', NULL, 1, 1),
+(8, 'платья и др наряды', '/img/uslugi/8.png', NULL, 1, 1),
+(9, 'праздники', '/img/uslugi/9.png', NULL, 1, 1),
+(10, 'украшения', '/img/uslugi/10.png', NULL, 1, 1),
+(26, 'детские праздники ', NULL, NULL, 0, 1),
+(27, 'выпускной бал', NULL, NULL, 0, 1),
+(28, 'календарные праздники', NULL, NULL, 0, 1),
+(29, 'юбилеи', NULL, NULL, 0, 1),
+(30, 'рождение малыша', NULL, NULL, 0, 1),
+(31, 'выписка из роддома', NULL, NULL, 0, 1),
+(32, 'детские праздники', NULL, NULL, 0, 1),
+(33, 'выпускной бал', NULL, NULL, 0, 1),
+(34, 'юбилеии', NULL, NULL, 0, 1),
+(35, 'новый год и рождество', NULL, NULL, 0, 1),
+(36, '23 февраля', NULL, NULL, 0, 1),
+(37, '8 марта', NULL, NULL, 0, 1),
+(38, '9 мая', NULL, NULL, 0, 1),
+(39, 'корпоративные мероприятия', NULL, NULL, 0, 1),
+(40, 'презентации и открытия', NULL, NULL, 0, 1),
+(41, 'проведение торжеств', NULL, NULL, 0, 0),
+(42, 'праздник «под ключ»', NULL, NULL, 0, 0),
+(43, 'фото', NULL, NULL, 0, 0),
+(44, 'видео', NULL, NULL, 0, 0),
+(45, 'ведущие, ди-джеи', NULL, NULL, 0, 0),
+(46, 'артисты', NULL, NULL, 0, 0),
+(72, 'танцоры', NULL, 46, 0, 0),
+(73, 'фокурсники', NULL, 46, 0, 0),
+(74, 'клоуны', NULL, 46, 0, 0),
+(75, 'юмористы', NULL, 46, 0, 0),
+(76, 'аниматоры', NULL, NULL, 0, 0),
+(77, 'эксклюзивные услуги', NULL, NULL, 0, 0),
+(78, 'мимы', NULL, 77, 0, 0),
+(79, 'шаржисты', NULL, 77, 0, 0),
+(80, 'живые статуи', NULL, 77, 0, 0),
+(81, 'костюмированное шоу', NULL, 77, 0, 0),
+(82, 'цветы', NULL, NULL, 0, 0),
+(83, 'прокат автомобилей', NULL, NULL, 0, 0),
+(84, 'проведение мастер-классов', NULL, NULL, 0, 0),
+(85, 'выездная регистрация', NULL, NULL, 0, 0),
+(86, 'приглашения', NULL, NULL, 0, 0),
+(87, 'аксессуары ручной работы', NULL, NULL, 0, 0),
+(88, 'свадебные аксессуары', NULL, NULL, 0, 0),
+(89, 'салюты, фейерверки', NULL, NULL, 0, 0),
+(90, 'огненное/лазерное шоу', NULL, NULL, 0, 0),
+(91, 'подарки', NULL, NULL, 0, 0),
+(92, 'гостиницы', NULL, NULL, 0, 0),
+(93, 'кафе, бары', NULL, NULL, 0, 0),
+(94, 'рестораны', NULL, NULL, 0, 0),
+(95, 'банкетные залы', NULL, NULL, 0, 0),
+(96, 'столовые', NULL, NULL, 0, 0),
+(97, 'оформление залов', NULL, NULL, 0, 0),
+(98, 'салоны красоты', NULL, NULL, 0, 0),
+(99, 'парикмахеры', NULL, NULL, 0, 0),
+(100, 'стилисты', NULL, NULL, 0, 0),
+(101, 'визажисты', NULL, NULL, 0, 0),
+(102, 'маникюр', NULL, NULL, 0, 0),
+(103, 'сюрпризы детям', NULL, NULL, 0, 0),
+(104, 'дед мороз и снегурочка', NULL, NULL, 0, 0),
+(105, 'романтические признания', NULL, NULL, 0, 0),
+(106, 'меха', NULL, NULL, 0, 0),
+(107, 'ювелирные салоны', NULL, NULL, 0, 0),
+(108, 'мужская одежда', NULL, NULL, 0, 0),
+(109, 'свадебные салоны', NULL, NULL, 0, 0),
+(110, 'вечерние наряды', NULL, NULL, 0, 0),
+(111, 'праздничная одежда для детей', NULL, NULL, 0, 0),
+(112, 'детские товары от 0 до 14', NULL, NULL, 0, 0),
+(113, 'услуги такси', NULL, NULL, 0, 0),
+(114, 'оборудование в аренду', NULL, NULL, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -118,21 +209,13 @@ CREATE TABLE IF NOT EXISTS `service_item` (
   `description` text NOT NULL,
   `date_post` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `price` int(11) NOT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
   `service_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `is_vip` tinyint(1) DEFAULT '0',
   `is_published` tinyint(1) DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `service_item`
---
-
-INSERT INTO `service_item` (`id`, `title`, `logo_src`, `short_description`, `description`, `date_post`, `price`, `service_id`, `user_id`, `is_vip`, `is_published`) VALUES
-(1, 'ФОТОГРАФ РУСЛАН ДАВИДЕНКО', '/img/man.jpg', 'Снимающий для семьи, друзей, для не связанной с получением материальной выгоды публикации на различных интернет - ресурсах. При этом по уровню технического оснащения, теоретических знаний и прикладных умений отдельный фотограф - любитель может не уступать профессиональному фотографу.', 'Снимающий для семьи, друзей, для не связанной с получением материальной выгоды публикации на различных интернет - ресурсах. При этом по уровню технического оснащения, теоретических знаний и прикладных умений отдельный фотограф - любитель может не уступать профессиональному фотографу.', '2015-03-21 17:27:49', 15000, 1, 1, 1, 1),
-(2, 'СТУДИЯ СВАДЕБНОГО ДЕКОРА «АНТУРАЖ»\r\n', '/img/st.jpg', '                Если у вас намечается праздник, и вы хотите провести его красиво, красочно, неповторимо –\r\n                у вас есть мы, <b>Студия Свадебного Декора «Антураж»!</b>\r\n                Мы отнесемся к оформлению вашего торжества как своему или своих друзей. Выполним заказ в\r\n                любой цветовой гамме. Предложим свои варианты и рассмотрим предложения заказчика.', '                Если у вас намечается праздник, и вы хотите провести его красиво, красочно, неповторимо –\r\n                у вас есть мы, <b>Студия Свадебного Декора «Антураж»!</b>\r\n                Мы отнесемся к оформлению вашего торжества как своему или своих друзей. Выполним заказ в\r\n                любой цветовой гамме. Предложим свои варианты и рассмотрим предложения заказчика.', '2015-03-21 17:28:34', 2500, 1, 1, 0, 1),
-(3, 'КАРТИНЫ ИЗ ЯНТАРЯ\r\n', '/img/empty.jpg', 'Предлагаем Вам приобрести картины, которые выполнены из янтарной крошки и солнечного камня – янтаря. \r\nЭто самый лучший подарок, сувенир для Вашей любимой или любимого, кроме того это лучший подарок для семьи, друзей, сотрудников на Вашей работе. Этот подарок станет приятным сюрпризом и останется Вам на долгую память!', 'Предлагаем Вам приобрести картины, которые выполнены из янтарной крошки и солнечного камня – янтаря. \r\nЭто самый лучший подарок, сувенир для Вашей любимой или любимого, кроме того это лучший подарок для семьи, друзей, сотрудников на Вашей работе. Этот подарок станет приятным сюрпризом и останется Вам на долгую память!', '2015-03-21 17:28:59', 800, 1, 1, 0, 1),
-(18, 'Новое обьявление', '/files/e1cOruvaXO0.jpg', 'Если у вас намечается праздник, и вы хотите провести его красиво, красочно, неповторимо – у вас есть мы, Студия Свадебного Декора «Антураж»! Мы отнесемся к оформлению вашего торжества как своему или своих друзей. Выполним заказ в любой цветовой гамме. Предложим свои варианты и рассмотрим предложения заказчика.', 'Если у вас намечается праздник, и вы хотите провести его красиво, красочно, неповторимо – у вас есть мы, Студия Свадебного Декора «Антураж»! Мы отнесемся к оформлению вашего торжества как своему или своих друзей. Выполним заказ в любой цветовой гамме. Предложим свои варианты и рассмотрим предложения заказчика.', '2015-03-22 12:55:23', 100, 1, 1, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -149,14 +232,6 @@ CREATE TABLE IF NOT EXISTS `service_item_comments` (
   `date_comment` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `service_item_comments`
---
-
-INSERT INTO `service_item_comments` (`id`, `service_item_id`, `user_name`, `email`, `comment`, `date_comment`) VALUES
-(1, 1, 'Игорь', 'aa', 'комментарий 1', '2015-03-21 18:41:55'),
-(2, 1, 'Мария', 'as', 'комментарий 2', '2015-03-21 18:42:12');
-
 -- --------------------------------------------------------
 
 --
@@ -167,14 +242,7 @@ CREATE TABLE IF NOT EXISTS `service_item_images` (
 `id` int(11) NOT NULL,
   `img_src` varchar(255) NOT NULL,
   `service_item_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `service_item_images`
---
-
-INSERT INTO `service_item_images` (`id`, `img_src`, `service_item_id`) VALUES
-(1, '/files/model1.jpg', 18);
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -187,16 +255,7 @@ CREATE TABLE IF NOT EXISTS `service_item_videos` (
   `service_item_id` int(11) NOT NULL,
   `youtube_src` varchar(255) NOT NULL,
   `height` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `service_item_videos`
---
-
-INSERT INTO `service_item_videos` (`id`, `service_item_id`, `youtube_src`, `height`) VALUES
-(1, 1, 'https://www.youtube.com/embed/Sxb7f4NN_0o', 315),
-(2, 2, 'https://www.youtube.com/embed/Sxb7f4NN_0o', 315),
-(5, 18, 'https://www.youtube.com/embed/61JiBNYSeps', 315);
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -213,18 +272,20 @@ CREATE TABLE IF NOT EXISTS `users` (
   `code_validate` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_group_id` int(11) DEFAULT '1',
   `balance` int(11) DEFAULT '0',
+  `tariff_plan_id` int(11) NOT NULL DEFAULT '1' COMMENT 'тарифный план, по-умолчанию бесплатный, если 2 - оплаченный',
   `binding_ip` int(11) DEFAULT '0' COMMENT 'привязка к ip адрессу',
   `date_register` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `is_new` int(11) DEFAULT '1',
   `newsletter` int(11) DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `phone`, `status_id`, `code_validate`, `user_group_id`, `balance`, `binding_ip`, `date_register`, `is_new`, `newsletter`) VALUES
-(1, 'serg.tkachenko@hotmail.com', '$2a$04$FJ3fvxsf3QOSNGOZrmxnbubqDo5Y.RdtiNLB8lB6/eF5wobnhbNFa', '', 2, '30667f534bc2302873554b266b0adb2b', 1, 1550, 0, '2013-08-24 17:01:02', 1, 0);
+INSERT INTO `users` (`id`, `email`, `password`, `phone`, `status_id`, `code_validate`, `user_group_id`, `balance`, `tariff_plan_id`, `binding_ip`, `date_register`, `is_new`, `newsletter`) VALUES
+(1, 'serg.tkachenko@hotmail.com', '$2a$04$FJ3fvxsf3QOSNGOZrmxnbubqDo5Y.RdtiNLB8lB6/eF5wobnhbNFa', '', 2, '30667f534bc2302873554b266b0adb2b', 1, 1550, 1, 0, '2013-08-24 17:01:02', 1, 0),
+(2, 'bombascter@gmail.com\r\n', '$2a$04$FJ3fvxsf3QOSNGOZrmxnbubqDo5Y.RdtiNLB8lB6/eF5wobnhbNFa', '', 2, '30667f534bc2302873554b266b0adb2b', 1, 1550, 1, 0, '2013-08-24 17:01:02', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -309,6 +370,12 @@ ALTER TABLE `config`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `messages`
+--
+ALTER TABLE `messages`
+ ADD PRIMARY KEY (`id`), ADD KEY `index2` (`user_sender_id`), ADD KEY `index3` (`user_recipient_id`);
+
+--
 -- Индексы таблицы `pages`
 --
 ALTER TABLE `pages`
@@ -318,7 +385,7 @@ ALTER TABLE `pages`
 -- Индексы таблицы `services`
 --
 ALTER TABLE `services`
- ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `index2` (`parent_id`);
 
 --
 -- Индексы таблицы `service_item`
@@ -375,6 +442,11 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 -- AUTO_INCREMENT для таблицы `config`
 --
 ALTER TABLE `config`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT для таблицы `messages`
+--
+ALTER TABLE `messages`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT для таблицы `pages`
@@ -385,7 +457,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT для таблицы `services`
 --
 ALTER TABLE `services`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=115;
 --
 -- AUTO_INCREMENT для таблицы `service_item`
 --
@@ -400,17 +472,17 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT для таблицы `service_item_images`
 --
 ALTER TABLE `service_item_images`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT для таблицы `service_item_videos`
 --
 ALTER TABLE `service_item_videos`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT для таблицы `users_autorisation`
 --
@@ -424,6 +496,19 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
+
+--
+-- Ограничения внешнего ключа таблицы `messages`
+--
+ALTER TABLE `messages`
+ADD CONSTRAINT `messages_fk1` FOREIGN KEY (`user_sender_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `messages_fk2` FOREIGN KEY (`user_recipient_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Ограничения внешнего ключа таблицы `services`
+--
+ALTER TABLE `services`
+ADD CONSTRAINT `fk1_ services` FOREIGN KEY (`parent_id`) REFERENCES `services` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `service_item`

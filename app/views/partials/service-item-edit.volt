@@ -13,9 +13,16 @@
                 <div class="form-group">
                     <label>Рубрика</label>
                     <select class="form-control" name="service_id" name="service_id">
-                        {% for service in services %}
+                        <optgroup label="Категории">
+                        {% for service in categoriesAllMenu %}
                             <option value="{{ service.id }}" {% if serviceItem.Services and serviceItem.Services.id == service.id %} selected {% endif %}>{{ service.title }}</option>
                         {% endfor %}
+                        </optgroup>
+                        <optgroup label="Услуги">
+                            {% for service in servicesMenu %}
+                                <option value="{{ service.id }}" {% if serviceItem.Services and serviceItem.Services.id == service.id %} selected {% endif %}>{{ service.title }}</option>
+                            {% endfor %}
+                        </optgroup>
                     </select>
                 </div>
                 <div class="form-group">
