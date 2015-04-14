@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68d6220d-514f-4a92-8db8-fc51fb36306d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/default-bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/app/dropzone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/services-table.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/FileController.php" afterPath="$PROJECT_DIR$/app/controllers/FileController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/RoomController.php" afterPath="$PROJECT_DIR$/app/controllers/RoomController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ServiceItemController.php" afterPath="$PROJECT_DIR$/app/controllers/ServiceItemController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/_opt_www_sogroop.ru_app_views_layouts_room.volt.php" afterPath="$PROJECT_DIR$/app/cache/_opt_www_sogroop.ru_app_views_layouts_room.volt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/_opt_www_sogroop.ru_app_views_partials_service-item-edit.volt.php" afterPath="$PROJECT_DIR$/app/cache/_opt_www_sogroop.ru_app_views_partials_service-item-edit.volt.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/_opt_www_sogroop.ru_app_views_room_index.volt.php" afterPath="$PROJECT_DIR$/app/cache/_opt_www_sogroop.ru_app_views_room_index.volt.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/room/index.volt" afterPath="$PROJECT_DIR$/app/views/room/index.volt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/room.volt" afterPath="$PROJECT_DIR$/app/views/layouts/room.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/service-item-edit.volt" afterPath="$PROJECT_DIR$/app/views/partials/service-item-edit.volt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="651c3a30-c589-45c5-bc7d-209aa434fe1f" name="New changelist" comment="" />
@@ -36,12 +42,35 @@
       <file leaf-file-name="index.volt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/room/index.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2970297" vertical-offset="0" max-vertical-offset="1998">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.3469388" vertical-offset="36" max-vertical-offset="1800">
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceItemController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ServiceItemController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="18.851852" vertical-offset="887" max-vertical-offset="1782">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/RoomController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.481482" vertical-offset="698" max-vertical-offset="2466">
+              <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,7 +78,7 @@
       <file leaf-file-name="default-bootstrap.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/default-bootstrap.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
+            <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="144">
               <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
               <folding />
             </state>
@@ -59,18 +88,8 @@
       <file leaf-file-name="service-item-edit.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/service-item-edit.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-47.333332" vertical-offset="0" max-vertical-offset="3258">
-              <caret line="71" column="120" selection-start-line="71" selection-start-column="120" selection-end-line="71" selection-end-column="120" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="define.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/define.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="126">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="17" />
+            <state vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="3384">
+              <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -79,8 +98,8 @@
       <file leaf-file-name="FileController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/FileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.0" vertical-offset="0" max-vertical-offset="756">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="792">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -99,46 +118,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="room.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/room.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2970">
-              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form-dropzone.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets-admin/scripts/custom/form-dropzone.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
-              <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="left-menu-user.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/partials/left-menu-user.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="918">
-              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/index/index.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -147,9 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/page/view.volt" />
-        <option value="$PROJECT_DIR$/app/views/layouts/page.phtml" />
-        <option value="$PROJECT_DIR$/app/views/layouts/page.volt" />
         <option value="$PROJECT_DIR$/app/views/layouts/product.volt" />
         <option value="$PROJECT_DIR$/app/controllers/PageController.php" />
         <option value="$PROJECT_DIR$/app/views/partials/service-list.phtml" />
@@ -172,7 +148,6 @@
         <option value="$PROJECT_DIR$/public/assets/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/views/service-item/view.volt" />
         <option value="$PROJECT_DIR$/app/views/partials/service-items.volt" />
-        <option value="$PROJECT_DIR$/app/controllers/ServiceItemController.php" />
         <option value="$PROJECT_DIR$/app/views/partials/service-list.volt" />
         <option value="$PROJECT_DIR$/app/views/partials/menu.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/menu.volt" />
@@ -181,7 +156,6 @@
         <option value="$PROJECT_DIR$/app/views/room/add.volt" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/views/partials/left-menu-user.volt" />
-        <option value="$PROJECT_DIR$/app/controllers/RoomController.php" />
         <option value="$PROJECT_DIR$/app/views/room/write.volt" />
         <option value="$PROJECT_DIR$/app/views/room/send.volt" />
         <option value="$PROJECT_DIR$/app/views/room/inbox.volt" />
@@ -191,12 +165,17 @@
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/app/config/define.php" />
         <option value="$PROJECT_DIR$/app/controllers/ControllerBase.php" />
-        <option value="$PROJECT_DIR$/public/assets-admin/scripts/custom/form-dropzone.js" />
         <option value="$PROJECT_DIR$/public/html/metronic/admin/template_rtl/assets/scripts/custom/form-dropzone.js" />
-        <option value="$PROJECT_DIR$/app/views/partials/service-item-edit.volt" />
-        <option value="$PROJECT_DIR$/app/controllers/FileController.php" />
         <option value="$PROJECT_DIR$/public/css/default-bootstrap.css" />
+        <option value="$PROJECT_DIR$/app/views/partials/services-table.volt" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/public/assets-admin/scripts/custom/form-dropzone.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/room.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/FileController.php" />
+        <option value="$PROJECT_DIR$/public/js/app/dropzone.js" />
+        <option value="$PROJECT_DIR$/app/controllers/ServiceItemController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/RoomController.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/service-item-edit.volt" />
         <option value="$PROJECT_DIR$/app/views/room/index.volt" />
       </list>
     </option>
@@ -238,7 +217,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,86 +246,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sogroop.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sogroop.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sogroop.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sogroop.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sogroop.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sogroop.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="room" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sogroop.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sogroop.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,12 +295,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sogroop.ru" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sogroop.ru" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -542,27 +459,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="255">
-          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/debug.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3885">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/breadcrumb.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="947">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/html/metronic/ecommerce/template/login-page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5604396" vertical-offset="510" max-vertical-offset="10875">
@@ -666,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ServiceItemController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="375">
-          <caret line="8" column="91" selection-start-line="8" selection-start-column="91" selection-end-line="8" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/room/save.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="495">
@@ -754,7 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29664">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,14 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3439" max-vertical-offset="4485">
           <caret line="292" column="44" selection-start-line="292" selection-start-column="44" selection-end-line="292" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/RoomController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="2430">
-          <caret line="102" column="25" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -794,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20111732" vertical-offset="0" max-vertical-offset="895">
           <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32178771" vertical-offset="0" max-vertical-offset="895">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,15 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3821229" vertical-offset="0" max-vertical-offset="895">
           <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets-admin/scripts/custom/form-dropzone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
-          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.59297055" vertical-offset="739" max-vertical-offset="2394">
           <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,7 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="895">
           <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,22 +727,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/default-bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019522777" vertical-offset="0" max-vertical-offset="922">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets-admin/scripts/custom/form-dropzone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.097613886" vertical-offset="0" max-vertical-offset="922">
+          <caret line="5" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/define.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="126">
+        <state vertical-scroll-proportion="0.020111732" vertical-offset="0" max-vertical-offset="895">
           <caret line="1" column="17" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/FileController.php">
+    <entry file="file://$PROJECT_DIR$/app/views/partials/services-table.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.0" vertical-offset="0" max-vertical-offset="756">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.66368717" vertical-offset="0" max-vertical-offset="895">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/dropzone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2733189" vertical-offset="0" max-vertical-offset="922">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/room.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1632653" vertical-offset="2034" max-vertical-offset="2970">
+          <caret line="121" column="13" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -891,37 +797,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ServiceItemController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="18.851852" vertical-offset="887" max-vertical-offset="1782">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/RoomController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.481482" vertical-offset="698" max-vertical-offset="2466">
+          <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/FileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="792">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/service-item-edit.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-47.333332" vertical-offset="0" max-vertical-offset="3258">
-          <caret line="71" column="120" selection-start-line="71" selection-start-column="120" selection-end-line="71" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/default-bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/room.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2970">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        <state vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="3384">
+          <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/room/index.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2970297" vertical-offset="0" max-vertical-offset="1998">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.3469388" vertical-offset="36" max-vertical-offset="1800">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

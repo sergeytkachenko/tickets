@@ -5,14 +5,20 @@
             <input type="hidden" name="serviceItemId"  value="{{ serviceItem.id }}" />
             <div class="form-body">
                 <div class="form-group">
+                    <label>Тип обьявления</label>
+                    <select name="place_type" class="form-control" >
+                        <option value="0">Стандарт</option>
+                        <option value="1" {% if serviceItem.is_vip %} selected {% endif %}>Вип</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="exampleInputEmail1">Название</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="title" required value="{{ serviceItem.title }}">
                     <span class="help-block">Коротко о вашем обьявлении.</span>
                 </div>
-
                 <div class="form-group">
                     <label>Рубрика</label>
-                    <select class="form-control" name="service_id" name="service_id">
+                    <select class="form-control" name="service_id">
                         <optgroup label="Категории">
                         {% for service in categoriesAllMenu %}
                             <option value="{{ service.id }}" {% if serviceItem.Services and serviceItem.Services.id == service.id %} selected {% endif %}>{{ service.title }}</option>
@@ -25,6 +31,7 @@
                         </optgroup>
                     </select>
                 </div>
+
                 <div class="form-group">
                     <label>Цена в руб.</label>
                     <div class="input-group">

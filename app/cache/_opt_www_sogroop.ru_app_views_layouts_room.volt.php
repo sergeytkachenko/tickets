@@ -119,7 +119,7 @@
 <script src="/assets-admin/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
 
 <script src="/assets-admin/plugins/dropzone/dropzone.js"></script>
-<script src="/assets-admin/scripts/custom/form-dropzone.js"></script>
+<script src="/js/app/dropzone.js"></script>
 
 <script type="text/javascript" src="/assets/scripts/app.js"></script>
 <script type="text/javascript" src="/assets/scripts/index.js"></script>

@@ -1,39 +1,7 @@
 <div style="margin-bottom: 20px; text-align: right;">
     <a styrole="button" class="btn blue btn-primary" href="/room/add">Добавить обьявление <i class="fa fa-plus-circle"></i></a>
 </div>
-<div class="table-responsive">
-    <h4>Описание доступных услуг</h4>
-    <table class="table ">
-        <tr>
-            <th>Услуга</th>
-            <th class="alignc">Max. к-во фото</th>
-            <th class="alignc">Max. к-во видео</th>
-            <th class="alignc">Дополнительно</th>
-            <th class="alignc">Стоимость</th>
-        </tr>
-        <tr>
-            <td>Бессплатное размещение</td>
-            <td class="alignc">4</td>
-            <td class="alignc">1</td>
-            <td class="alignc">-</td>
-            <td class="alignc">100</td>
-        </tr>
-        <tr>
-            <td>Реместить обьявление как ВИП</td>
-            <td class="alignc"><b>Не ограничено</b></td>
-            <td class="alignc"><b>Не ограничено</b></td>
-            <td class="alignc"><b>Выделение анкеты</b></td>
-            <td class="alignc">100</td>
-        </tr>
-        <tr>
-            <td>Поднятие анкеты на первое место</td>
-            <td class="alignc">-</td>
-            <td class="alignc">-</td>
-            <td class="alignc">-</td>
-            <td class="alignc">100</td>
-        </tr>
-    </table>
-</div>
+<?php echo $this->partial('partials/services-table'); ?>
 
 <div class="row list-view-sorting clearfix">
 
@@ -43,15 +11,25 @@
             <!-- PRODUCT ITEM START -->
             <div class="col-md-12" id="item-<?php echo $item->id; ?>">
                 <div class="product-item <?php if ($item->is_vip) { ?> vip <?php } ?>">
-                    <div class="control" style="margin-bottom: 5px; padding-left: 6px; text-align: right; overflow: hidden;">
-                        <button type="button" class="btn default" style=" margin-right: 15px;"><i class="fa "></i> <?php echo $item->Services->title; ?></button>
+                    <div class="control" style="padding-bottom: 10px; margin-bottom: 5px;padding-left: 6px; text-align: right; overflow: hidden; border-bottom: 1px dashed #bbb">
+                        <?php if ($item->is_vip) { ?>
+                            <button type="button" class="btn default" style="margin-right: 15px;">
+                                <i class="fa fa-dot-circle-o"></i>
+                                ВИП
+                            </button>
+                        <?php } ?>
+                        <button type="button" class="btn btn-danger" style="margin-right: 15px;" onclick="deleteServiceItem(<?php echo $item->id; ?>);"><i class="fa fa-times"></i> Удалить</button>
+
+                        <button type="button" class="btn btn-success" style="margin-right: 15px;" onclick="up(<?php echo $item->id; ?>);">
+                            <i class="fa fa-arrow-up"></i> Поднять</button>
 
                         <?php if ($item->is_published == 1) { ?>
-                            <button type="button" class="btn default" onclick="removeFromPlacement(<?php echo $item->id; ?>);">Снять с размещения</button>
+                            <button type="button" class="btn default" onclick="removeFromPlacement(<?php echo $item->id; ?>);">
+                                <i class="fa fa-times"></i> Снять с размещения</button>
                         <?php } else { ?>
-                            <button type="button" class="btn btn-success" onclick="placement(<?php echo $item->id; ?>);"><i class="fa  fa-tags" ></i> Разместить</button>
+                            <button type="button" class="btn btn-success" onclick="placement(<?php echo $item->id; ?>);"><i class="fa fa-gavel"></i> Разместить</button>
                         <?php } ?>
-                        <button type="button" class="btn btn-danger" style="float: left" onclick="deleteServiceItem(<?php echo $item->id; ?>);"><i class="fa fa-times"></i> Удалить</button>
+                        <button type="button" class="btn default" style="float: left"><i class="fa "></i> <?php echo $item->Services->title; ?></button>
                     </div>
                     <div class="photo">
                         <a href="/service-item/view/<?php echo $item->id; ?>">
@@ -100,6 +78,17 @@
             $.post("/service-item/placement/"+id, {}, function (data) {
                 alert("Операция успешно завершена!");
                 location.reload();
+            });
+        }
+    }
+
+    function up (id) {
+        if (confirm("Вы действительно хотите поднять это обьявление?")) {
+            $.post("/service-item/up/"+id, {}, function (data) {
+                if(data.success) {
+                    alert(data.msg);
+                    location.reload();
+                }
             });
         }
     }

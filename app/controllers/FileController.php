@@ -19,7 +19,9 @@ class FileController extends ControllerBase {
                     $newName = $uploader->file_dst_name;
                     return array(
                         'success' => true,
-                        'msg' => "Файл $newName успешно загружен!"
+                        'msg' => "Файл $newName успешно загружен!",
+                        'filename' => $newName,
+                        'fullPath' => "/files/".$newName
                     );
                 } else {
                     return array(

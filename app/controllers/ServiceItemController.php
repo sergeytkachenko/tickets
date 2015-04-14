@@ -16,13 +16,16 @@ class ServiceItemController extends ControllerBase
     }
 
     public function getPhotosAction ($serviceItemId) {
-        $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
+        $this->setJsonResponse();
+
         $data = ServiceItem::findFirst($serviceItemId)->ServiceItemImages->toArray();
-        $this->response->setContentType('application/json', 'UTF-8');
-        echo json_encode($data);
+
+        return $data;
     }
 
     public function deleteAction($serviceItemId) {
+        $this->setJsonResponse();
+
         $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
         $serviceItem = ServiceItem::findFirst($serviceItemId);
         $serviceItem->ServiceItemImages->delete();
@@ -30,42 +33,61 @@ class ServiceItemController extends ControllerBase
         $serviceItem->ServiceItemComments->delete();
         $serviceItem->delete();
 
-        $this->response->setContentType('application/json', 'UTF-8');
-        echo json_encode(array(
+
+        return array(
             "success" => true
-        ));
+        );
     }
 
     public function removeFromPlacementAction ($serviceItemId) {
+        $this->setJsonResponse();
+
         $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
         $serviceItem = ServiceItem::findFirst($serviceItemId);
         $serviceItem->is_published = 0;
         $serviceItem->save();
-        $this->response->setContentType('application/json', 'UTF-8');
-        echo json_encode(array(
+
+        return array(
             "success" => true
-        ));
+        );
     }
 
     public function placementAction ($serviceItemId) {
+        $this->setJsonResponse();
+
         $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
         $serviceItem = ServiceItem::findFirst($serviceItemId);
         $serviceItem->is_published = 1;
         $serviceItem->save();
-        $this->response->setContentType('application/json', 'UTF-8');
-        echo json_encode(array(
+
+        return array(
             "success" => true
-        ));
+        );
     }
 
     public function getServiceItemAction ($serviceItemId) {
+        $this->setJsonResponse();
+
         $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
         $serviceItem = ServiceItem::findFirst($serviceItemId);
-        $this->response->setContentType('application/json', 'UTF-8');
-        echo json_encode(array(
+
+        return array(
             "success" => true,
             "serviceItem" => $serviceItem
-        ));
+        );
+    }
+
+    public function upAction ($serviceItemId) { // поднятие анкеты
+        $this->setJsonResponse();
+
+        $serviceItem = ServiceItem::findFirst($serviceItemId);
+        $serviceItem->datePost = date('now');
+        $serviceItem->save();
+
+        return array(
+            "success" => true,
+            "msg" => "Обьявление успешно обновлено!"
+        );
     }
 }
 

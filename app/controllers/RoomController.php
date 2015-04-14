@@ -47,6 +47,7 @@ class RoomController extends ControllerBase
             $logo = ($logo and !empty($logo)) ? $logo : "/img/empty.jpg";
             $title = $this->request->get("title");
             $price = $this->request->get("price");
+            $placeType = $this->request->get("place_type");
             if(!is_numeric($price)) {
                 $errors[] = "Поле цена, должно содержать только цифры";
 
@@ -71,6 +72,7 @@ class RoomController extends ControllerBase
             $serviceItem->logo_src = $logo;
             $serviceItem->date_post = $serviceItemId?  $serviceItem->date_post : date("Y-m-d H:i:s");
             $serviceItem->user_id = $userId;
+            $serviceItem->is_vip = $placeType;
             $serviceItem->is_published = $serviceItemId? $serviceItem->is_published : 0;
 
             $serviceItem->ServiceItemImages->delete();
