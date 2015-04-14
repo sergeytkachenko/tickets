@@ -7,6 +7,7 @@ var FormDropzone = function () {
 
             Dropzone.options.myDropzone = {
                 init: function() {
+                    var self = this;
                     this.on("addedfile", function(file) {
                         // Create the remove button
                         var removeButton = Dropzone.createElement("<button class='btn btn-sm btn-block'>Удалить файл</button>");
@@ -29,7 +30,14 @@ var FormDropzone = function () {
                         // Add the button to the file preview element.
                         file.previewElement.appendChild(removeButton);
                     });
-                }            
+
+                    this.on("success", function(file, response) {
+                        if(response.success === false) {
+                            file.previewElement.parentNode.removeChild(file.previewElement);
+                            alert("При загрузке произошла ошибка: "+response.msg)
+                        }
+                    });
+                }
             }
         }
     };

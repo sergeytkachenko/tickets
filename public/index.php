@@ -1,6 +1,7 @@
 <?php
 
 error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 try {
     define('PUBLIC_PATH', realpath(dirname(__FILE__)));
@@ -8,6 +9,7 @@ try {
     /**
      * Read the configuration
      */
+
     $config = include __DIR__ . "/../app/config/config.php";
 
     /**
@@ -15,6 +17,7 @@ try {
      */
     include __DIR__ . "/../app/config/loader.php";
 
+    require_once __DIR__ . "/../app/config/define.php";
     /**
      * Read services
      */

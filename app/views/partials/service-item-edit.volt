@@ -68,7 +68,9 @@
             </div>
 
         </form>
-        <h4 style="text-align: left; font-size: 1.4em;">Фотографии</h4>
+        <h4 style="text-align: left; font-size: 1.4em;">Фотографии
+            <small>Максимальный размер одного фото <b><?= PHOTO_MAX; ?> MB</b>, допускаеться: <b>jpg, jpeg, png, gif</b> </small>
+        </h4>
         <form  role="form" enctype="multipart/form-data" class="dropzone" id="my-dropzone" action="/file/save">
 
         </form>

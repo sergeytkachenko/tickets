@@ -45,6 +45,7 @@
     function deleteServiceItem(id) {
         if (confirm("Вы действительно хотите удалить это сообщение без возможности восстановления?")) {
             $.post("/service-item/delete/"+id, {}, function (data) {
+                alert("Операция успешно завершена!");
                 $("#item-"+id).fadeOut();
             });
         }
@@ -53,6 +54,7 @@
     function removeFromPlacement(id) {
         if (confirm("Вы действительно хотите снять с раземещения это обьявление?")) {
             $.post("/service-item/removeFromPlacement/"+id, {}, function (data) {
+                alert("Операция успешно завершена!");
                 location.reload();
             });
         }
@@ -60,8 +62,9 @@
 
 
     function placement(id) {
-        if (confirm("Вы действительно хотите разестить это обьявление?")) {
+        if (confirm("Вы действительно хотите разместить это обьявление?")) {
             $.post("/service-item/placement/"+id, {}, function (data) {
+                alert("Операция успешно завершена!");
                 location.reload();
             });
         }
