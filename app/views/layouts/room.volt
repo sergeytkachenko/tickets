@@ -31,6 +31,7 @@
 
     <!-- Global styles START -->
     <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/default-bootstrap.css" rel="stylesheet" type="text/css">
     <link href="/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
     <!-- Global styles END -->
 
