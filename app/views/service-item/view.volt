@@ -37,7 +37,8 @@
                 <input type="range" value="4" step="0.25" id="backing4">
                 <div class="rateit" data-rateit-backingfld="#backing4" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5">
                 </div>
-                <a href="#">{{ item.ServiceItemComments|length }} комментариев</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Написать комментарий</a>
+                <a href="javascript:$('#review-click').trigger('click');">{{ item.ServiceItemComments|length }} комментариев</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="javascript:$('#review-click').trigger('click');">Написать комментарий</a>
             </div>
             <ul class="social-icons">
                 <li><a class="facebook" data-original-title="facebook" href="#"></a></li>
@@ -50,16 +51,21 @@
 
         <div class="product-page-content">
             <ul id="myTab" class="nav nav-tabs">
-                <li class="active"><a href="#Video" data-toggle="tab">Видео({{ item.ServiceItemVideos|length }})</a></li>
-                <li ><a href="#Reviews" data-toggle="tab">Комментарии ({{ item.ServiceItemComments|length }})</a></li>
+
+                <li {% if item.ServiceItemVideos|length > 0 %} class="active" {% endif %}>
+                    <a href="#Video" data-toggle="tab">Видео({{ item.ServiceItemVideos|length }})</a>
+                </li>
+                <li  {% if item.ServiceItemVideos|length == 0 %} class="active" {% endif %}>
+                    <a href="#Reviews" data-toggle="tab" id="review-click">Комментарии ({{ item.ServiceItemComments|length }})</a>
+                </li>
             </ul>
             <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade in active" id="Video" style="padding: 15px 0;">
+                <div class="tab-pane fade in {% if item.ServiceItemVideos|length > 0 %} active {% endif %}" id="Video" style="padding: 15px 0;">
                     {%  for video in item.ServiceItemVideos %}
                         <iframe width="100%" height="{{ video.height }}" src="{{ video.youtube_src }}" frameborder="0" allowfullscreen></iframe>
                     {% endfor %}
                 </div>
-                <div class="tab-pane fade in " id="Reviews">
+                <div class="tab-pane fade in {% if item.ServiceItemVideos|length == 0 %}active {% endif %}" id="Reviews">
                     <!--<p>There are no reviews for this product.</p>-->
                     {%  for comment in item.ServiceItemComments %}
                     <div class="review-item clearfix">
@@ -123,5 +129,9 @@
                 $( "<p>Пользователь не указал свои контакты</p>" ).insertAfter("#show-contact");
             }
         })
+    }
+
+    function writeComment() {
+        $("#Reviews").trigger("click");
     }
 </script>

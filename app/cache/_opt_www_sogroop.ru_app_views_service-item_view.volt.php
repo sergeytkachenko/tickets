@@ -37,7 +37,8 @@
                 <input type="range" value="4" step="0.25" id="backing4">
                 <div class="rateit" data-rateit-backingfld="#backing4" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5">
                 </div>
-                <a href="#"><?php echo $this->length($item->ServiceItemComments); ?> комментариев</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Написать комментарий</a>
+                <a href="javascript:$('#review-click').trigger('click');"><?php echo $this->length($item->ServiceItemComments); ?> комментариев</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="javascript:$('#review-click').trigger('click');">Написать комментарий</a>
             </div>
             <ul class="social-icons">
                 <li><a class="facebook" data-original-title="facebook" href="#"></a></li>
@@ -50,16 +51,21 @@
 
         <div class="product-page-content">
             <ul id="myTab" class="nav nav-tabs">
-                <li class="active"><a href="#Video" data-toggle="tab">Видео(<?php echo $this->length($item->ServiceItemVideos); ?>)</a></li>
-                <li ><a href="#Reviews" data-toggle="tab">Комментарии (<?php echo $this->length($item->ServiceItemComments); ?>)</a></li>
+
+                <li <?php if ($this->length($item->ServiceItemVideos) > 0) { ?> class="active" <?php } ?>>
+                    <a href="#Video" data-toggle="tab">Видео(<?php echo $this->length($item->ServiceItemVideos); ?>)</a>
+                </li>
+                <li  <?php if ($this->length($item->ServiceItemVideos) == 0) { ?> class="active" <?php } ?>>
+                    <a href="#Reviews" data-toggle="tab" id="review-click">Комментарии (<?php echo $this->length($item->ServiceItemComments); ?>)</a>
+                </li>
             </ul>
             <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade in active" id="Video" style="padding: 15px 0;">
+                <div class="tab-pane fade in <?php if ($this->length($item->ServiceItemVideos) > 0) { ?> active <?php } ?>" id="Video" style="padding: 15px 0;">
                     <?php foreach ($item->ServiceItemVideos as $video) { ?>
                         <iframe width="100%" height="<?php echo $video->height; ?>" src="<?php echo $video->youtube_src; ?>" frameborder="0" allowfullscreen></iframe>
                     <?php } ?>
                 </div>
-                <div class="tab-pane fade in " id="Reviews">
+                <div class="tab-pane fade in <?php if ($this->length($item->ServiceItemVideos) == 0) { ?>active <?php } ?>" id="Reviews">
                     <!--<p>There are no reviews for this product.</p>-->
                     <?php foreach ($item->ServiceItemComments as $comment) { ?>
                     <div class="review-item clearfix">
@@ -123,5 +129,9 @@
                 $( "<p>Пользователь не указал свои контакты</p>" ).insertAfter("#show-contact");
             }
         })
+    }
+
+    function writeComment() {
+        $("#Reviews").trigger("click");
     }
 </script>
