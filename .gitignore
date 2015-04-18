@@ -2,3 +2,5 @@ app/cache
 .idea
 .phalcon
 app/config/config.php
+public/cache
+public/files

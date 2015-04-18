@@ -49,7 +49,7 @@ class ControllerBase extends Controller {
         if($countInPage) {
             $this->session->set("sortType", $countInPage);
         } else if(!$this->session->get("sortType")) {
-            $this->session->set("sortType", ControllerBase::COUNT_ITEMS_VIEW);
+            $this->session->set("sortType", Order::TYPE_DEFAULT);
         }
         $this->view->setVar("sortType", $this->session->get("sortType"));
     }

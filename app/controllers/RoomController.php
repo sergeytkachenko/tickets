@@ -8,7 +8,8 @@ class RoomController extends ControllerBase
         $this->view->setRenderLevel(View::LEVEL_LAYOUT);
         $this->view->items = ServiceItem::find(array(
             "conditions" => "user_id = ?1",
-            "bind"       => array(1 => $this->session->get("user")->id)
+            "bind"       => array(1 => $this->session->get("user")->id),
+            "order" => "date_post DESC"
         ));
 
     }

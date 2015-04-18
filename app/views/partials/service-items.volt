@@ -23,8 +23,8 @@
                     <option value="2" {% if sortType == 2 %} selected {% endif %}>Имени (Я - А)</option>
                     <option value="3" {% if sortType == 3 %} selected {% endif %}>Цене (Меньше &gt; Больше)</option>
                     <option value="4" {% if sortType == 4 %} selected {% endif %}>Цене (Больше &gt; Меньше)</option>
-                    <option value="5" {% if sortType == 5 %} selected {% endif %}>Дате (Новые сверху)</option>
-                    <option value="6" {% if sortType == 6 %} selected {% endif %}>Дате (Старые сверху)</option>
+                    <option value="5" {% if sortType == 5 %} selected {% endif %}>Дате (Старые сверху)</option>
+                    <option value="6" {% if sortType == 6 %} selected {% endif %}>Дате (Новые сверху)</option>
                 </select>
             </div>
         </form>
