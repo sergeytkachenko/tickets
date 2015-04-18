@@ -32,7 +32,7 @@ class FileController extends ControllerBase {
             }
         }
 
-        return array('success' => true);
+        return array('success' => false);
     }
 }
 

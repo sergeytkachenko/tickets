@@ -3,7 +3,12 @@
 use Phalcon\Mvc\Controller;
 
 class ControllerBase extends Controller {
+    public $br = null;
+
     public function initialize() {
+        $this->br = new Breadcrumbs();
+
+
         $request = new Phalcon\Http\Request();
         $cityId = $request->get("city_id");
         if($cityId) {
@@ -58,5 +63,7 @@ class ControllerBase extends Controller {
             $this->response->setContent($data);
             $this->response->send();
         }
+
+        $this->view->setVar("br", $this->br->generate()); // added breadcrumb in view
     }
 }

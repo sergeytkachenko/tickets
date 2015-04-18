@@ -6,8 +6,11 @@ class ServiceItemController extends ControllerBase
 {
 
     public function listAction($serviceId=null) {
+        $this->br->add(Services::findFirst($serviceId)->title, "service-item/list/".$serviceId);
+
         $this->view->items  = ServiceItem::find("service_id = $serviceId and is_published=1");
         $this->view->setRenderLevel(View::LEVEL_LAYOUT);
+        $this->view->setVar("br", $this->br->generate());
     }
 
     public function viewAction($id=null) {
