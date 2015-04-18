@@ -6,11 +6,24 @@ class ServiceItemController extends ControllerBase
 {
 
     public function listAction($serviceId=null) {
-        $this->br->add(Services::findFirst($serviceId)->title, "service-item/list/".$serviceId);
+        $serviceItems = ServiceItem::find(array (
+            "service_id = $serviceId and is_published=1",
+            "order" => Order::getOrderServiceItem($this->session->get("sortType"))
+        ));
+        $paginator = new \Phalcon\Paginator\Adapter\Model(
+            array(
+                "data" => $serviceItems,
+                "limit"=> $this->session->get("countInPage"),
+                "page" => (int) $this->request->get("page"),
+            )
+        );
+        $this->view->page  = $paginator->getPaginate();
 
-        $this->view->items  = ServiceItem::find("service_id = $serviceId and is_published=1");
-        $this->view->setRenderLevel(View::LEVEL_LAYOUT);
+        $this->view->setVar("service", Services::findFirst($serviceId));
+
+        $this->br->add(Services::findFirst($serviceId)->title, "service-item/list/".$serviceId);
         $this->view->setVar("br", $this->br->generate());
+        $this->view->setRenderLevel(View::LEVEL_LAYOUT);
     }
 
     public function viewAction($id=null) {

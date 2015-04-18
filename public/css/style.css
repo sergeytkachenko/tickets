@@ -1,3 +1,7 @@
+.alignl {
+    text-align: left;
+}
+
 .center {
     position: relative;
     left: 50%;

@@ -4,7 +4,6 @@
 {{ partial("partials/services-table") }}
 
 <div class="row list-view-sorting clearfix">
-
     <!-- BEGIN PRODUCT LIST -->
     <div class="row product-list">
         {% for item in items %}

@@ -3,19 +3,14 @@
 use Phalcon\Mvc\Controller;
 
 class ControllerBase extends Controller {
+
+    const COUNT_ITEMS_VIEW = 3;
     public $br = null;
 
     public function initialize() {
         $this->br = new Breadcrumbs();
 
-
-        $request = new Phalcon\Http\Request();
-        $cityId = $request->get("city_id");
-        if($cityId) {
-            $this->session->set("city_id", $cityId);
-        } else if(!$this->session->get("city_id")) {
-            $this->session->set("city_id", 1);
-        }
+        $this->setSessionVars();
 
         $this->view->cities = Cities::find();
         foreach($this->view->cities as $city) {
@@ -24,13 +19,39 @@ class ControllerBase extends Controller {
             }
         }
 
-        $this->view->user = $this->session->get("user");
+        $this->view->setVar("user", $this->session->get("user"));
 
         $this->view->maxCountVideo = Config::findFirst("name = 'max-count-video'")->value;
         $this->view->maxLengthDescription = Config::findFirst("name = 'max-length-description'")->value;
         $this->view->adminUserId = Config::findFirst("name = 'admin-user-id'")->value;
 
         $this->initLeftCatlog();
+    }
+
+    private function setSessionVars  () {
+        $request = new Phalcon\Http\Request();
+        $cityId = $request->get("city_id");
+        if($cityId) {
+            $this->session->set("city_id", $cityId);
+        } else if(!$this->session->get("city_id")) {
+            $this->session->set("city_id", 1);
+        }
+
+        $countInPage  = $request->get("countInPage");
+        if($countInPage) {
+            $this->session->set("countInPage", $countInPage);
+        } else if(!$this->session->get("countInPage")) {
+            $this->session->set("countInPage", ControllerBase::COUNT_ITEMS_VIEW);
+        }
+        $this->view->setVar("countInPage", $this->session->get("countInPage"));
+
+        $countInPage  = $request->get("sortType");
+        if($countInPage) {
+            $this->session->set("sortType", $countInPage);
+        } else if(!$this->session->get("sortType")) {
+            $this->session->set("sortType", ControllerBase::COUNT_ITEMS_VIEW);
+        }
+        $this->view->setVar("sortType", $this->session->get("sortType"));
     }
 
     private function initLeftCatlog() {
