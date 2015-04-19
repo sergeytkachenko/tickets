@@ -3,7 +3,7 @@
     <div class="sidebar col-md-3 col-sm-5">
         <ul class="list-group margin-bottom-25 sidebar-menu">
 
-            <li class="list-group-item clearfix">
+            <li class="list-group-item clearfix  {% if router.getRewriteUri() == '/room' %}active{% endif %}">
                 <a href="/room" >
                     Мои обьявления ({{ user.ServiceItem|length }})
                 </a>

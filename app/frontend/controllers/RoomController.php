@@ -16,7 +16,7 @@ class RoomController extends ControllerBase
             "bind"       => array(1 => $this->session->get("user")->id),
             "order" => "date_post DESC"
         ));
-
+        $this->br->add("Мои обьявления", "room");
     }
 
     /**
@@ -37,6 +37,8 @@ class RoomController extends ControllerBase
         $this->view->title = "Редактирование обьявления";
         $this->view->serviceItem = ServiceItem::findFirst(intval($id));
 
+        $this->br->add("Мои обьявления", "room");
+        $this->br->add($this->view->serviceItem->title, "room/edit/".$id);
     }
 
     public function saveAction () {
@@ -188,6 +190,8 @@ class RoomController extends ControllerBase
             "&Culture=$culture&Encoding=$encoding&DefaultSum=$def_sum'></script>";
 
         $this->view->setVar("paymentBtn", $paymentBtn);
+
+        $this->br->add("Баланс", "balance");
     }
 }
 
