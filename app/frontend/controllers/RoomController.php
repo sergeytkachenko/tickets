@@ -151,7 +151,7 @@ class RoomController extends ControllerBase
 
         // номер заказа
         // number of order
-        $inv_id = 0;
+        $inv_id = 12;
 
         // описание заказа
         // order description
@@ -159,8 +159,8 @@ class RoomController extends ControllerBase
 
         // сумма заказа
         // sum of order
-        $out_summ = "1000";
-
+        $out_summ = 250.00;
+        $def_sum = $out_summ;
         // тип товара
         // code of goods
         $shp_item = 1;
@@ -185,7 +185,7 @@ class RoomController extends ControllerBase
             "src='https://auth.robokassa.ru/Merchant/PaymentForm/FormFLS.js?".
             "MrchLogin=$mrh_login&OutSum=$out_summ&InvId=$inv_id&IncCurrLabel=$in_curr".
             "&Desc=$inv_desc&SignatureValue=$crc&Shp_item=$shp_item".
-            "&Culture=$culture&Encoding=$encoding'></script>";
+            "&Culture=$culture&Encoding=$encoding&DefaultSum=$def_sum'></script>";
 
         $this->view->setVar("paymentBtn", $paymentBtn);
     }
