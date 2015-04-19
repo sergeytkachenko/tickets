@@ -52,7 +52,7 @@
     <link href="/assets-admin/plugins/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"/>
 
     <link href="/css/style.css" rel="stylesheet" type="text/css">
-    <link href="/css/calendar.css" rel="stylesheet" type="text/css">
+    {#<link href="/css/calendar.css" rel="stylesheet" type="text/css">#}
 
     <link href="/css/color.css" rel="stylesheet" type="text/css">
 

@@ -8,8 +8,8 @@
                     Мои обьявления ({{ user.ServiceItem|length }})
                 </a>
             </li>
-            <li class="list-group-item clearfix">
-                <a href="javascript:void(0);" >
+            <li class="list-group-item clearfix  {% if router.getRewriteUri() == '/room/balance' %}active{% endif %}">
+                <a href="/room/balance" >
                     Баланс ({{ user.balance }} <span style="text-transform: none">руб.</span>)
                 </a>
             </li>
