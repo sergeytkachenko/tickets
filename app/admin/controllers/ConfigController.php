@@ -1,0 +1,58 @@
+<?php
+namespace Multiple\Admin\Controllers;
+
+use Config;
+
+class ConfigController extends ControllerBase {
+
+    public function getListAction() {
+        $this->setJson();
+        $data = Config::find()->toArray();
+
+        return array(
+            'data' => $data,
+            'totalCount' => count($data),
+        );
+    }
+
+    public function getOneAction() {
+        $this->setJson();
+        $id = $this->request->get('id');
+
+        if (!$id) {
+            require_once 'Lib/Exception/Controller.php';
+            throw new Exception('Id or lenguage_id is required');
+        }
+
+
+        $data = Config::findFirst($id)->dump();
+
+        return $data;
+    }
+
+    public function saveAction() {
+        $this->setJson();
+        $id = $this->request->get('id');
+
+        if (!isset($id)) {
+            require_once 'Lib/Exception/Controller.php';
+            throw new Exception('Id is required');
+        }
+
+        $data = $this->request->getPost();
+        if($id == "new") {
+            unset($data['id']);
+            $item = new Config();
+            $item->assign($data);
+            $item->save();
+        } else {
+            $item = Config::findFirst($id);
+            $item->save($data);
+        }
+
+        return array(
+            "success" => true
+        );
+    }
+}
+

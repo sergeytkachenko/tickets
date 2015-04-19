@@ -1,0 +1,174 @@
+.ux-desktop-shortcut {
+    width: 84px;
+    float: left;
+}
+
+.ux-desktop-shortcut-icon {
+    width: 68px;
+    background-position: center;
+}
+.ux-desktop-shortcut {
+    width: 84px;
+    float: left;
+    height: 84px;
+    position: relative;
+}
+
+.ux-desktop-shortcut b.count{
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    color: /*#cf0000*/white;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    background: url(img/tr.png) !important;
+    font-family: tahoma;
+}
+
+.ux-desktop-shortcut-icon {
+    width: 68px;
+    background-position: center;
+}
+/*
+.thumb{
+    width: 96px;
+    height: 86px;
+    float: left;
+    margin: 4px;
+    text-align: center;
+    border: 1px solid #DFE9F6;
+}
+.thumb > img{
+    width: 83px;
+    height: 63px;
+    border: 3px solid #ddd;
+    margin: 3px;
+}
+.x-item-over > .thumb {
+    background: #EFEFEF;
+    border: 1px solid #ddd;
+}
+.x-item-selected> .thumb{
+    background: #EFEFEF;
+    border: 1px solid #ddd;   
+}
+*/
+.inserImageclass{
+    width: 20px !important;
+    height: 20px !important;
+    background: url(img/add.png) !important;
+    border: none !important;
+}
+.deleteImageclass{
+    width: 20px !important;
+    height: 20px !important;
+    background: url(img/delete.png) !important;
+    border: none !important;
+}
+/*DATA-View CSS*/
+
+ .x-panel-body{
+    background: white;
+    font: 11px Arial, Helvetica, sans-serif;
+}
+ .thumb{
+    background: #F1F1F1;
+    padding: 3px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.x-quirks  .thumb {
+    padding-bottom: 3px;
+}
+
+ .thumb img{
+   /*
+   min-height: 60px;
+   min-width: 80px;
+   */
+   max-width: 80px;
+   max-height: 60px;
+    
+}
+ .thumb-wrap{
+    display:  inline-block;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+}
+ .thumb-wrap span {
+    
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width: 86px; 
+}
+
+ .x-item-over{
+    border:1px solid #dddddd;
+    background: #efefef url(over.gif) repeat-x left top;
+    padding: 4px;
+}
+
+ .x-item-selected{
+    background: #eff5fb url(selected.gif) no-repeat right bottom;
+    border:1px solid #99bbe8;
+    padding: 4px;
+}
+.x-item-selected span{
+    color: #333;
+}
+
+ .x-item-selected .thumb{
+    background:transparent;
+}
+
+ .loading-indicator {
+    font-size:11px;
+    background-image:url('../../resources/themes/images/default/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left:20px;
+    margin:10px;
+}
+
+.x-view-selector {
+    position:absolute;
+    left:0;
+    top:0;
+    width:0;
+    border:1px dotted;
+    opacity: .5;
+    -moz-opacity: .5;
+    filter:alpha(opacity=50);
+    zoom:1;
+    background-color:#c3daf9;
+    border-color:#3399bb;
+}.ext-strict .ext-ie .x-tree .x-panel-bwrap{
+    position:relative;
+    overflow:hidden;
+}
+
+.deleteImageclass{
+    width: 20px;
+    display: block;
+    background: url('img/delete.png') no-repeat;
+    margin-left: 10px;
+}
+
+/* DATA VIEW */
+span.x-editable {
+    min-height: 5px;
+}
+/* END DATA VIEW */
+.x-btn.active span{
+    color: #D83A61 !important;
+}
+
+.leng-title {
+    color: #D83A61;
+}

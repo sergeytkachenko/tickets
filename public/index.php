@@ -1,11 +1,12 @@
-<?php
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+<?
 
 try {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
     define('PUBLIC_PATH', realpath(dirname(__FILE__)));
     date_default_timezone_set('Europe/Kiev');//or change to whatever timezone you want
+
     /**
      * Read the configuration
      */
@@ -29,6 +30,19 @@ try {
      * Handle the request
      */
     $application = new \Phalcon\Mvc\Application($di);
+
+    $application->registerModules(
+        array(
+            'frontend' => array(
+                'className' => 'Multiple\Frontend\Module',
+                'path'      => '../app/frontend/Module.php',
+            ),
+            'admin'  => array(
+                'className' => 'Multiple\Admin\Module',
+                'path'      => '../app/admin/Module.php',
+            )
+        )
+    );
 
     echo $application->handle()->getContent();
 

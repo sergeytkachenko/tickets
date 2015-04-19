@@ -30,7 +30,7 @@ $di->set('view', function () use ($config) {
 
     $view = new View();
 
-    $view->setViewsDir($config->application->viewsDir);
+    //$view->setViewsDir($config->application->viewsDir);
 
     $view->registerEngines(array(
         '.volt' => function ($view, $di) use ($config) {
@@ -78,4 +78,26 @@ $di->set('session', function () {
     $session->start();
 
     return $session;
+});
+
+// Специфичные роуты для модуля
+$di->set('router', function () {
+
+    $router = new \Phalcon\Mvc\Router();
+
+    $router->setDefaultModule("frontend");
+
+    $router->add("/adm", array(
+        'module'     => 'admin',
+        'controller' => "index",
+        'action'     => "index",
+    ));
+
+    $router->add("/admin/:controller/:action(\.json)?", array(
+        'module'     => 'admin',
+        'controller' => 1,
+        'action'     => 2,
+    ));
+
+    return $router;
 });

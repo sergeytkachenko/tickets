@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <title>sogroop.ru CMS</title>
+
+    <link rel="stylesheet" type="text/css" href="/extjs/resources/css/ext-all.css" />
+    <link rel="stylesheet" type="text/css" href="/extjs/desktop/css/desktop.css" />
+
+    <script type="text/javascript" src="/extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="/extjs/desktop/widgets/jquery-1.8.1.min.js"></script>
+
+    <script type="text/javascript">
+        Ext.Loader.setPath({
+            'Ext.ux.desktop' : '/extjs/examples/desktop/js',
+            MyDesktop: '/extjs/desktop'
+        });
+        Ext.require('MyDesktop.App');
+
+        var myDesktopApp;
+        Ext.onReady(function () {
+            myDesktopApp = new MyDesktop.App();
+        });
+    </script>
+    <script type="text/javascript" src="/extjs/desktop/functions.js"></script>
+    <script type="text/javascript" src="/extjs/desktop/TaskRunner.js"></script>
+
+    <? 
+        $classLoader = new \Loader();
+
+        $classLoader->addPath('/extjs/desktop/modules', 1);
+        $classLoader->start();
+        $classLoader->printFiles();
+    ?>
+
+    <script type="text/javascript" src="/extjs/desktop/plagins/photo.js"></script>
+    <script type="text/javascript" src="/admin/tinymce/tiny_mce.js"></script>
+    <script type="text/javascript" src="/extjs/desktop/widgets/TinyMCE.js"></script>
+    <script type="text/javascript" src="/extjs/desktop/widgets/ceFileInput.js"></script>
+    <script type="text/javascript" src="/extjs/desktop/widgets/ceFilePdfInput.js"></script>
+
+    <script type="text/javascript" src="/extjs/desktop/widgets/dataViewLabelEditor.js"></script>
+    <script type="text/javascript" src="/extjs/desktop/widgets/dataViewDragSelector.js"></script>
+    <script type="text/javascript" src="/extjs/desktop/widgets/deleteImages.js"></script>
+    <script type="text/javascript" src="/extjs/desktop/widgets/insertImages.js"></script>
+
+    <script type="text/javascript" src="/admin/tinymce/plugins/filemanager/js/mcfilemanager.js"></script>
+    <script type="text/javascript" src="/admin/tinymce/plugins/imagemanager/js/mcimagemanager.js"></script>
+</head>
+
+<body>
+
+</body>
+</html>
