@@ -63,6 +63,12 @@ class ServiceItem extends \Phalcon\Mvc\Model
      *
      * @var integer
      */
+    public $city_id;
+
+    /**
+     *
+     * @var integer
+     */
     public $service_id;
 
     /**
@@ -83,13 +89,13 @@ class ServiceItem extends \Phalcon\Mvc\Model
      */
     public $is_published;
 
-
     public function initialize()
     {
         $this->hasMany('id', 'ServiceItemComments', 'service_item_id', array('alias' => 'ServiceItemComments'));
         $this->hasMany('id', 'ServiceItemImages', 'service_item_id', array('alias' => 'ServiceItemImages'));
         $this->hasMany('id', 'ServiceItemVideos', 'service_item_id', array('alias' => 'ServiceItemVideos'));
         $this->belongsTo('service_id', 'Services', 'id', array('alias' => 'Services'));
+        $this->belongsTo('city_id', 'Cities', 'id', array('alias' => 'Cities'));
         $this->belongsTo('user_id', 'Users', 'id', array('alias' => 'Users'));
     }
 
@@ -108,6 +114,7 @@ class ServiceItem extends \Phalcon\Mvc\Model
             'price' => 'price', 
             'email' => 'email', 
             'phone' => 'phone', 
+            'city_id' => 'city_id', 
             'service_id' => 'service_id', 
             'user_id' => 'user_id', 
             'is_vip' => 'is_vip', 

@@ -12,6 +12,14 @@
                     </select>
                 </div>
                 <div class="form-group">
+                    <label>Город</label>
+                    <select class="form-control" name="city_id">
+                        {% for city in cities %}
+                            <option value="{{ city.id }}" {% if serviceItem.city_id == city.id %} selected {% endif %}>{{ city.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
                     <label for="exampleInputEmail1">Название</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="title" required value="{{ serviceItem.title }}">
                     <span class="help-block">Коротко о вашем обьявлении.</span>

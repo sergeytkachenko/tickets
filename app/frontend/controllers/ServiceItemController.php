@@ -8,8 +8,9 @@ class ServiceItemController extends ControllerBase
 {
 
     public function listAction($serviceId=null) {
+        $cityId = $this->session->get("city_id");
         $serviceItems = ServiceItem::find(array (
-            "service_id = $serviceId and is_published=1",
+            "service_id = $serviceId and is_published=1 AND city_id = $cityId",
             "order" => \Order::getOrderServiceItem($this->session->get("sortType"))
         ));
         $paginator = new \Phalcon\Paginator\Adapter\Model(

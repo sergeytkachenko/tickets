@@ -9,6 +9,7 @@ use Services;
 class RoomController extends ControllerBase
 {
     public function indexAction () {
+        $this->checkUser();
         $this->view->setRenderLevel(View::LEVEL_LAYOUT);
         $this->view->items = ServiceItem::find(array(
             "conditions" => "user_id = ?1",
@@ -22,6 +23,7 @@ class RoomController extends ControllerBase
      * Добавление обьявления
      */
     public function addAction () {
+        $this->checkUser();
         $this->view->setRenderLevel(View::LEVEL_LAYOUT);
         $this->view->services = Services::find();
         $this->view->title = "Добавление обьявления";
@@ -29,6 +31,7 @@ class RoomController extends ControllerBase
     }
 
     public function editAction ($id) {
+        $this->checkUser();
         $this->view->setRenderLevel(View::LEVEL_LAYOUT);
         $this->view->services = Services::find();
         $this->view->title = "Редактирование обьявления";
@@ -59,6 +62,7 @@ class RoomController extends ControllerBase
             }
 
             $service_id = $this->request->get("service_id");
+            $cityId = $this->request->get("city_id");
             $description = $this->request->get("description");
 
             $email = $this->request->get("email");
@@ -77,6 +81,7 @@ class RoomController extends ControllerBase
             $serviceItem->logo_src = $logo;
             $serviceItem->date_post = $serviceItemId?  $serviceItem->date_post : date("Y-m-d H:i:s");
             $serviceItem->user_id = $userId;
+            $serviceItem->city_id = $cityId;
             $serviceItem->is_vip = $placeType;
             $serviceItem->is_published = $serviceItemId? $serviceItem->is_published : 0;
 
@@ -86,7 +91,7 @@ class RoomController extends ControllerBase
             $serviceItem->save();
 
             $id = $serviceItem->id;
-            if($id) {
+            if($id and $serviceItem->getMessages() === array()) {
                 // save images
                 $images = explode(",", $images);
                 foreach($images as $image) {

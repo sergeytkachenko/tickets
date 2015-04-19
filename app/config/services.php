@@ -39,9 +39,38 @@ $di->set('view', function () use ($config) {
 
             $volt->setOptions(array(
                 'compiledPath' => $config->application->cacheDir,
-                'compiledSeparator' => '_'
+                'compiledSeparator' => '_',
+                'stat' => true,
+                'compileAlways' => true
             ));
 
+            $compiler = $volt->getCompiler();
+
+            $compiler->addFunction('trim_to_dot',
+                function($resolvedArgs, $exprArgs) use ($compiler) {
+                    $string= $compiler->expression($exprArgs[0]['expr']);
+                    $secondArgument = $compiler->expression($exprArgs[1]['expr']);
+                    return 'trim_to_dot('.$string.','.$secondArgument.')';
+                });
+            $compiler->addFunction('substr',
+                function($resolvedArgs, $exprArgs) use ($compiler) {
+                    $string= $compiler->expression($exprArgs[0]['expr']);
+                    $secondArgument = $compiler->expression($exprArgs[1]['expr']);
+                    return 'substr('.$string.', 0, '.$secondArgument.')';
+                });
+
+            $compiler->addFunction('display_when',
+                function($resolvedArgs, $exprArgs) use ($compiler) {
+                    $string = $compiler->expression($exprArgs[0]['expr']);
+                    return '\DateFormat::displayWhen("'.$string.'")';
+                });
+            // количество обьявлений в текущем городе и категории
+            $compiler->addFunction('count_service_item',
+                function($resolvedArgs, $exprArgs) use ($compiler) {
+                    $serviceId = $compiler->expression($exprArgs[0]['expr']);
+                    $cityId = $compiler->expression($exprArgs[1]['expr']);
+                    return '\ServiceItem::count("is_published = 1 AND city_id = '.$cityId.' AND service_id = '.$serviceId.'")';
+                });
             return $volt;
         },
         '.phtml' => 'Phalcon\Mvc\View\Engine\Php'

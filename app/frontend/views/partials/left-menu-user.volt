@@ -10,6 +10,11 @@
             </li>
             <li class="list-group-item clearfix">
                 <a href="javascript:void(0);" >
+                    Баланс ({{ user.balance }} <span style="text-transform: none">руб.</span>)
+                </a>
+            </li>
+            <li class="list-group-item clearfix">
+                <a href="javascript:void(0);" >
                     Мои сообщения
                 </a>
                 <ul class="dropdown-menu" style="display:block;">
@@ -32,12 +37,6 @@
             <li class="list-group-item clearfix">
                 <a href="javascript:void(0);" >
                     Статистика
-                </a>
-            </li>
-
-            <li class="list-group-item clearfix">
-                <a href="javascript:void(0);" >
-                    Баланс ({{ user.balance }} <span style="text-transform: none">руб.</span>)
                 </a>
             </li>
         </ul>

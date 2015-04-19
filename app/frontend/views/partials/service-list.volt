@@ -6,7 +6,7 @@
             <div class="pi-img-wrapper">
                 <a href="/service-item/list/{{ service.id }}"><img src="{{ service.img_src }}" class="img-responsive" alt="{{ service.title|e }}"></a>
             </div>
-            <h3><a href="/service-item/list/{{ service.id }}">{{ service.title|e }} ({{ service.ServiceItem|length }})</a></h3>
+            <h3><a href="/service-item/list/{{ service.id }}">{{ service.title|e }} ({{ count_service_item(currentCity.id, service.id) }})</a></h3>
         </div>
     </div>
     <!-- PRODUCT ITEM END -->

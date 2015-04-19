@@ -1,6 +1,7 @@
 <?
 
 namespace Multiple\Frontend\Controllers;
+use Cities;
 use Menu;
 use Phalcon\Mvc\Controller;
 
@@ -14,7 +15,7 @@ class ControllerBase extends Controller {
 
         $this->setSessionVars();
 
-        $this->view->cities = \Cities::find();
+        $this->view->cities = Cities::find();
         foreach($this->view->cities as $city) {
             if($this->session->get("city_id") == $city->id) {
                 $this->view->currentCity = $city;
@@ -91,5 +92,14 @@ class ControllerBase extends Controller {
         }
 
         $this->view->setVar("br", $this->br->generate()); // added breadcrumb in view
+    }
+
+    /**
+     * redirect if user is null
+     */
+    public function checkUser () {
+        if(!$this->session->get("user")) {
+            $this->response->redirect('/user/login');
+        }
     }
 }

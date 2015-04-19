@@ -12,7 +12,7 @@
                     {% for category in categoriesMenu %}
                         {% set url =  "/service-item/list/" ~ category.id %}
                     <li class="{% if router.getRewriteUri() == url %}active{% endif %}">
-                        <a href="/service-item/list/{{ category.id }}" ><i class="fa fa-circle"></i>{{ category.title }}</a>
+                        <a href="/service-item/list/{{ category.id }}" ><i class="fa fa-circle"></i>{{ category.title }} ({{ count_service_item(currentCity.id, category.id) }})</a>
                     </li>
                     {% endfor %}
                 </ul>
@@ -27,7 +27,7 @@
                     {% for service in servicesMenu %}
                         {% set url =  "/service-item/list/" ~ service.id %}
                         <li class="{% if router.getRewriteUri() == url %}active{% endif %}">
-                            <a href="/service-item/list/{{ service.id }}" ><i class="fa fa-circle"></i>{{ service.title }}</a>
+                            <a href="/service-item/list/{{ service.id }}" ><i class="fa fa-circle"></i>{{ service.title }} ({{ count_service_item(currentCity.id, service.id) }})</a>
                         </li>
                     {% endfor %}
 
