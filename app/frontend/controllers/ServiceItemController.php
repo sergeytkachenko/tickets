@@ -2,12 +2,13 @@
 
 namespace Multiple\Frontend\Controllers;
 use Phalcon\Mvc\View;
+use ServiceItem;
 
 class ServiceItemController extends ControllerBase
 {
 
     public function listAction($serviceId=null) {
-        $serviceItems = \ServiceItem::find(array (
+        $serviceItems = ServiceItem::find(array (
             "service_id = $serviceId and is_published=1",
             "order" => \Order::getOrderServiceItem($this->session->get("sortType"))
         ));
@@ -28,14 +29,14 @@ class ServiceItemController extends ControllerBase
     }
 
     public function viewAction($id=null) {
-        $this->view->item  = \ServiceItem::findFirst("id = $id");
+        $this->view->item  = ServiceItem::findFirst("id = $id");
         $this->view->setRenderLevel(View::LEVEL_LAYOUT);
     }
 
     public function getPhotosAction ($serviceItemId) {
         $this->setJsonResponse();
 
-        $data = \ServiceItem::findFirst($serviceItemId)->ServiceItemImages->toArray();
+        $data = ServiceItem::findFirst($serviceItemId)->ServiceItemImages->toArray();
 
         return $data;
     }
@@ -44,7 +45,7 @@ class ServiceItemController extends ControllerBase
         $this->setJsonResponse();
 
         $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
-        $serviceItem = \ServiceItem::findFirst($serviceItemId);
+        $serviceItem = ServiceItem::findFirst($serviceItemId);
         $serviceItem->ServiceItemImages->delete();
         $serviceItem->ServiceItemVideos->delete();
         $serviceItem->ServiceItemComments->delete();
@@ -59,8 +60,8 @@ class ServiceItemController extends ControllerBase
     public function removeFromPlacementAction ($serviceItemId) {
         $this->setJsonResponse();
 
-        $this->view->setRenderLevel(\View::LEVEL_NO_RENDER);
-        $serviceItem = \ServiceItem::findFirst($serviceItemId);
+        $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
+        $serviceItem = ServiceItem::findFirst($serviceItemId);
         $serviceItem->is_published = 0;
         $serviceItem->save();
 
@@ -72,8 +73,8 @@ class ServiceItemController extends ControllerBase
     public function placementAction ($serviceItemId) {
         $this->setJsonResponse();
 
-        $this->view->setRenderLevel(\View::LEVEL_NO_RENDER);
-        $serviceItem = \ServiceItem::findFirst($serviceItemId);
+        $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
+        $serviceItem = ServiceItem::findFirst($serviceItemId);
         $serviceItem->is_published = 1;
         $serviceItem->save();
 
@@ -86,7 +87,7 @@ class ServiceItemController extends ControllerBase
         $this->setJsonResponse();
 
         $this->view->setRenderLevel(View::LEVEL_NO_RENDER);
-        $serviceItem = \ServiceItem::findFirst($serviceItemId);
+        $serviceItem = ServiceItem::findFirst($serviceItemId);
 
         return array(
             "success" => true,
@@ -97,7 +98,7 @@ class ServiceItemController extends ControllerBase
     public function upAction ($serviceItemId) { // поднятие анкеты
         $this->setJsonResponse();
 
-        $serviceItem = \ServiceItem::findFirst($serviceItemId);
+        $serviceItem = ServiceItem::findFirst($serviceItemId);
         $serviceItem->datePost = date('now');
         $serviceItem->save();
 
