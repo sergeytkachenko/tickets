@@ -6,6 +6,7 @@ Ext.define("DataAppModules",{
         return [
         { name: 'Пользователи', iconCls: 'grid-shortcut', module: 'users-manager' },
         { name: 'Статьи', iconCls: 'grid-shortcut', module: 'article-manager' },
+        { name: 'Рекомендованые Статьи', iconCls: 'grid-shortcut', module: 'recommended-article-manager' },
         { name: 'Новости', iconCls: 'grid-shortcut', module: 'news-manager' },
         { name: 'Меню', iconCls: 'grid-shortcut', module: 'menu-manager' },
         //{ name: 'Бонусы и акции', iconCls: 'grid-shortcut', module: 'bonus-manager' },
@@ -55,6 +56,7 @@ Ext.define('MyDesktop.App', {
     getModules : function(){
         return [
             new MyDesktop.ArticleManager(),
+            new MyDesktop.RecommendedArticleManager(),
             new MyDesktop.NewsManager(),
             new MyDesktop.MenuManager(),
             new MyDesktop.BonusManager(),

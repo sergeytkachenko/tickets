@@ -5,7 +5,6 @@ try {
     ini_set('display_errors', 1);
 
     define('PUBLIC_PATH', realpath(dirname(__FILE__)));
-    date_default_timezone_set('Europe/Kiev');//or change to whatever timezone you want
 
     /**
      * Read the configuration
