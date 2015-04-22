@@ -6,7 +6,7 @@ return new \Phalcon\Config(array(
         'host'        => 'localhost',
         'username'    => 'root',
         'password'    => '1665017',
-        'dbname'      => 'samara',
+        'dbname'      => 'furniture',
         'charset'     => 'utf8',
     ),
     'application' => array(
