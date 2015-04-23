@@ -13,12 +13,24 @@ class Config extends \Phalcon\Mvc\Model
      *
      * @var string
      */
-    public $name;
+    public $key;
 
     /**
      *
      * @var string
      */
     public $value;
+
+    /**
+     * Independent Column Mapping.
+     */
+    public function columnMap()
+    {
+        return array(
+            'id' => 'id', 
+            'key' => 'key', 
+            'value' => 'value'
+        );
+    }
 
 }

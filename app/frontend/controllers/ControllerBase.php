@@ -7,7 +7,6 @@ use Phalcon\Mvc\Controller;
 
 class ControllerBase extends Controller {
 
-    const COUNT_ITEMS_VIEW = 3;
     public $br = null;
 
     public function initialize() {
