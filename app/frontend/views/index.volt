@@ -61,7 +61,7 @@
                             <li>
                                 <a class="title" href="detail.html">Кухня Кантри - "Орех толовати"</a>
                                 <a href="detail.html" class="productimage">
-                                    <img src="http://divani-kiev.com.ua/images/logo/1/2/dls/brw%20brest/%D0%B0%D0%BC%D0%B0%D0%B4%D0%B5%D1%83%D1%81%20%D1%81%D0%BF%D0%B0%D0%BB%D1%8C%D0%BD%D1%8F.jpg" alt=""/>
+                                    <img src="/timthumb.php?w=265&h=200&src=/img/1.jpg" alt=""/>
                                 </a>
                                 <div class="price">
                                     Цена от
@@ -77,7 +77,7 @@
                             <li>
                                 <a class="title" href="detail.html">Кухня Кантри - "Орех толовати"</a>
                                 <a href="detail.html" class="productimage">
-                                    <img src="http://nika.kh.ua/wp-content/gallery/korusnaya-mebel/korpursnaya_mebel_1_k.jpg" alt=""/>
+                                    <img src="/timthumb.php?w=265&h=200&src=/img/2.jpg" alt=""/>
                                 </a>
                                 <div class="price">
                                     Цена от
@@ -93,7 +93,7 @@
                             <li>
                                 <a class="title" href="detail.html">Кухня Кантри - "Орех толовати"</a>
                                 <a href="detail.html" class="productimage">
-                                    <img src="http://www.brwland.com.ua/published/publicdata/BRWLAND/attachments/SC/cat_img/avatar-gerbor/livingroom.jpg" alt=""/>
+                                    <img src="/timthumb.php?w=265&h=200&src=/img/3.jpg" alt=""/>
                                 </a>
                                 <div class="price">
                                     Цена от
@@ -109,7 +109,7 @@
                             <li>
                                 <a class="title" href="detail.html">Кухня Кантри - "Орех толовати"</a>
                                 <a href="detail.html" class="productimage">
-                                    <img src="http://www.ergomebel.com/children/child_z/img/1.jpg" alt=""/>
+                                    <img src="/timthumb.php?w=265&h=200&src=/img/4.jpg" alt=""/>
                                 </a>
                                 <div class="price">
                                     Цена от
@@ -125,7 +125,7 @@
                             <li>
                                 <a class="title" href="detail.html">Кухня Кантри - "Орех толовати"</a>
                                 <a href="detail.html" class="productimage">
-                                    <img src="http://www.oookifa.com/uploads/posts/2013-01/1359224886_5457171.jpg" alt=""/>
+                                    <img src="/timthumb.php?w=265&h=200&src=/img/5.jpg" alt=""/>
                                 </a>
                                 <div class="price">
                                     Цена от
@@ -141,7 +141,7 @@
                             <li>
                                 <a class="title" href="detail.html">Кухня Кантри - "Орех толовати"</a>
                                 <a href="detail.html" class="productimage">
-                                    <img src="http://art-kuhni.com/wp-content/uploads/2012/03/mebel-pod-zakaz-dlya-gostinec-2.jpg" alt=""/>
+                                    <img src="/timthumb.php?w=265&h=200&src=/img/6.jpg" alt=""/>
                                 </a>
                                 <div class="price">
                                     Цена от

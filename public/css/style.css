@@ -851,7 +851,7 @@ ul.productlist li:nth-child(3n) {
 	width: 100%;
 	margin: 5px 0 ;
 	display: block!important;
-	font-size: 1em !important;
+	font-size: 0.8em !important;
 }
 
 ul.productlist li a.title {
@@ -862,6 +862,8 @@ ul.productlist li a.title {
 	display:inline-block;
 	font-weight: 600;
 	font-size: 1.1em;
+    color: #333;
+    font-weight: 600;
 }
 
 .carousel-inner {
