@@ -837,6 +837,10 @@ ul.productlist li {
 	margin-right: 4%;
 }
 
+.price .text-danger {
+    font-weight: 600;
+}
+
 ul.productlist li:nth-child(3n) {
     margin-right: 0;
 }
