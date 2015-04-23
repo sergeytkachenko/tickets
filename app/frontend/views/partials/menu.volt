@@ -4,11 +4,9 @@
             <li><a href="index.html#" class="selected">шкафы купе</a>
                 <!-- Sub Menu level 1 -->
                 <ul>
-                    <li class="first">&nbsp;</li>
-                    <li class="martop"><a href="index.html#">встроеные</a>
+                    <li class="martop dropdown"><a href="#" data-toggle="dropdown">встроеные</a>
                         <!-- Sub Menu level 1 -->
-                        <ul>
-                            <li class="first">&nbsp;</li>
+                        <ul >
                             <li class="martop"><a href="index.html#">2х дверные</a></li>
                             <li><a href="index.html#">3х дверные</a></li>
                             <li><a href="index.html#">4х дверные</a></li>
@@ -17,7 +15,6 @@
                     <li><a href="index.html#">корпусные</a>
                         <!-- Sub Menu level 1 -->
                         <ul>
-                            <li class="first">&nbsp;</li>
                             <li class="martop"><a href="index.html#">лдсп16</a></li>
                             <li><a href="index.html#">лдсп26</a></li>
                             <li><a href="index.html#">декоры лдсп</a></li>
@@ -26,7 +23,6 @@
                     <li><a href="index.html#">материалы</a>
                         <!-- Sub Menu level 1 -->
                         <ul>
-                            <li class="first">&nbsp;</li>
                             <li class="martop"><a href="index.html#">корпус</a></li>
                             <li><a href="index.html#">фасад</a></li>
                         </ul>
@@ -36,7 +32,6 @@
             <li><a href="index.html#">кухни</a>
                 <!-- Sub Menu level 1 -->
                 <ul>
-                    <li class="first">&nbsp;</li>
                     <li class="martop"><a href="index.html#">стандарт</a></li>
                     <li><a href="index.html#">премиум</a></li>
                     <li><a href="index.html#">столешницы</a></li>

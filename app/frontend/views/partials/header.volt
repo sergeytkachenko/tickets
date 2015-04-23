@@ -1,7 +1,7 @@
 <!-- Logo -->
 <div class="logo">
     <a href="index.html">
-        <img src="images/logo.png" alt="" />
+        <h2 >Название компании</h2>
     </a>
 </div>
 <!-- masterhead Right Section -->

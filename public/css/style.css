@@ -235,6 +235,12 @@ a.btn1 span {
 	line-height:27px;
 	width:80px;
 }
+
+.logo a , .logo a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 /*
 =======================================================================
 	Seach
@@ -267,7 +273,6 @@ a.btn1 span {
 	float:left;
 	height:46px;
 	font-size:13px;
-	font-family:"Myriad Pro";
 	position:relative;
 	z-index:9979;
 }
@@ -313,31 +318,35 @@ a.btn1 span {
 }
 /*1st sub level menu*/
 
+.ddsmoothmenu > ul > li:hover > ul {
+    display: block;
+}
+
 .ddsmoothmenu ul li ul {
 	position: absolute;
 	width: 233px!important;
 	display: none; /*collapse all sub menus to begin with*/
-	visibility: hidden;
 	background-image:url(../images/subbg.gif) !important;
 }
-/*Sub level menu list items (undo style from Top level List Items)*/
 
-.ddsmoothmenu ul li ul li {
-	display: list-item;
+.ddsmoothmenu  ul  li ul  li  {
 	float: none;
 	width:234px;
 	border-right:0px;
 	height:31px!important;
 	border-bottom: 1px solid #312e1b;
+    position: relative;
 }
-.ddsmoothmenu ul li ul li.first {
-	float: none;
-	width:234px;
-	height:17px!important;
-	border-bottom:0px!important;
-	background-image:url(../images/submenutopbg.jpg) !important;
-	background-repeat:no-repeat;
+.ddsmoothmenu > ul > li > ul > li ul {
+    top: -31px;
+    left: 232px;
+    position: absolute;
 }
+
+.ddsmoothmenu > ul > li > ul > li:hover ul {
+    display: block;
+}
+
 .martop {
 	margin-top:-12px;
 }
@@ -815,15 +824,23 @@ ul.paging li.all {
 ul.productlist {
 	padding-top:17px;
 	padding-bottom:21px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 1.6%;
 }
 ul.productlist li {
 	width: 30%;
 	padding:0 0 0 0px;
 	display: inline-block;
-
 	margin-bottom: 5%;
-	margin-right: 2%;
+	margin-right: 4%;
 }
+
+ul.productlist li:nth-child(3n) {
+    margin-right: 0;
+}
+
 .price {
 	padding-top: 5px;
 	box-sizing: border-box;

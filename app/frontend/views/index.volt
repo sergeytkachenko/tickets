@@ -2,15 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>E Commerce</title>
+    <title>Мебель</title>
     <!-- Stylesheet -->
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
     <!-- Javascript -->
     <script src="http://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
-    <script src="/js/ddsmoothmenu.js" type="text/javascript"></script>
     <script src="/js/cufon-yui.js" type="text/javascript"></script>
     {#<script type="text/javascript">Cufon.replace('h1,h2,h3,h4,h5, h6, .txtcufon');</script>#}
-    <script src="/js/TitilliumText22L_Rg_400-TitilliumText22L_Rg_700.font.js" type="text/javascript"></script>
     <script src="/js/contentslider.js" type="text/javascript"></script>
     <script src="/js/jcarousellite_1.0.1.js" type="text/javascript"></script>
     <script src="/js/jquery.easing.1.1.js" type="text/javascript"></script>
