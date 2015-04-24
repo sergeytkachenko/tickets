@@ -11,5 +11,27 @@ class MapController extends ControllerBase
         $this->view->map = \Config::findFirst("key='map'");
     }
 
+    public function availableSeatsAction () {
+        $this->setJsonResponse();
+
+        $seats = array( // список всех доступных мест на сцене
+            array("id" => 12, "price" => 200, "title" => "Название места"),
+            array("id" => 13, "price" => 200, "title" => "Название места"),
+            array("id" => 13, "price" => 200, "title" => "Название места"),
+            array("id" => 15, "price" => 200, "title" => "Название места"),
+            array("id" => 17, "price" => 200, "title" => "Название места"),
+            array("id" => 20, "price" => 200, "title" => "Название места"),
+            array("id" => 884, "price" => 200, "title" => "Название места"),
+            array("id" => 200, "price" => 200, "title" => "Название места"),
+            array("id" => 155, "price" => 200, "title" => "Название места"),
+            array("id" => 14, "price" => 250, "title" => "Название места")
+        );
+
+        return array(
+            "seats" => $seats,
+            "success" => true
+        );
+    }
+
 }
 
