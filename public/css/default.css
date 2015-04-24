@@ -7,3 +7,8 @@
     font-size: 0.9em;
     border-radius: 3px;
 }
+
+.purchased {
+    fill: #000;
+    background-color: #000;
+}
