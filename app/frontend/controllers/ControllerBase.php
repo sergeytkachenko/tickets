@@ -9,6 +9,8 @@ class ControllerBase extends Controller {
 
     public $br = null;
 
+    const RESERVATION_TIME = 15; // in minutes
+
     public function initialize() {
         $this->br = new \Breadcrumbs();
 

@@ -1,10 +1,15 @@
-var Map = function () {
+var Map = function (eventId) {
     var self = this;
     var mouse = {x: 0, y: 0};
 
     this.svg = $("#map svg");
     this.tooltip = $("#map .tooltip-ticket");
     this.reservUrl = "/reservation/seat/";
+    this.reservClearUrl = "/reservation/seatClear/";
+    this.checkReservation = "/reservation/check/";
+    this.timeOut = "/reservation/timeout/";
+
+    this.intervalTimeout = 14 * 1000; // 14 min
 
     this.hoverFill = "#000000"; // при наведении
     this.availableFill = "#006600"; // места, которые продаются
@@ -20,6 +25,7 @@ var Map = function () {
             var cls = $(this).attr("class");
             if(cls) {
                 self.clearPurchased(this);
+                self.clearReservation(this);
             } else {
                 self.setReservation(this);
                 self.setPurchased(this);
@@ -78,7 +84,7 @@ var Map = function () {
         if(!id) {return;}
         $.ajax ({ // резервация места, что-бы никто другой не смог купить
             type: "POST",
-            url: self.reservUrl+id,
+            url: self.reservUrl+id+"?eventId="+eventId,
             success: function (data) {
                 if(data && data.success) {
                     console.log(data);
@@ -90,6 +96,61 @@ var Map = function () {
             }
         });
     }
+
+    this.clearReservation = function (el) {
+        var id = $(el).attr("data-id");
+        if(!id) {return;}
+        $.ajax ({ // отмена резервации места
+            type: "POST",
+            url: self.reservClearUrl+id+"?eventId="+eventId,
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    }
+
+    // Проверка на доступность мест, не купляет ли кто другой эти места сейчас?
+    this.checkAvailability = function () {
+        // выбираем выбранные места и проверяем их доступность на backend
+        var idList = [];
+        $(this.svg).find(".purchased").each(function () {
+            var id = $(this).attr("data-id");
+            idList.push(id);
+        });
+        if(idList.length===0) {return};
+        $.ajax ({ // проверка доступности выбранных мест, что-бы их купить
+            type: "POST",
+            url: self.checkReservation + eventId,
+            data : {idList : idList.join(",")},
+            success: function (data) {
+                if(data && data.success) {
+                    console.log(data);
+                    return;
+                }
+                if(data.error) {alert(data.error); return;}
+                alert("Произошла не предвиденная ошибка, поробуйте позже...");
+            }
+        });
+    }
+
+    this.checkTimeout = function () {
+        self.checkTimeout.interval = setInterval(function () {
+            $.ajax ({ // проверка истечения таймаута
+                type: "POST",
+                url: self.timeOut+eventId,
+                success: function (data) {
+                    if(data && data.isTimeout) {
+                        alert(data.msg);
+                        location.href = data.href;
+                        clearInterval(self.checkTimeout.interval);
+                        return;
+                    }
+                }
+            });
+        }, self.intervalTimeout);
+    }
+
+    this.checkTimeout(); // регистрируем проверку таймаута для резервации билетов
 
     // слушает позицию курсора
     document.addEventListener('mousemove', function(e){

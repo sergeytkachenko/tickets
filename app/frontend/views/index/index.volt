@@ -4,5 +4,7 @@
          viewBox="0 0 595 562.835" enable-background="new 0 0 595 562.835" xml:space="preserve"></svg>
     <div class="tooltip-ticket">text</div>
 </div>
+
+<input type="button" onclick="window.map.checkAvailability();" value="Продолжить" />
 <script src="/js/map.js"></script>
 <script src="/js/default.js"></script>

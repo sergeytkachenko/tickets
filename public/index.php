@@ -1,4 +1,4 @@
-<?
+<? session_start();
 
 try {
     error_reporting(E_ALL);

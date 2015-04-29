@@ -1,6 +1,7 @@
 <?php
 namespace Multiple\Frontend\Controllers;
 
+use EventSeats;
 use Phalcon\Mvc\View;
 
 class MapController extends ControllerBase
@@ -11,22 +12,53 @@ class MapController extends ControllerBase
         $this->view->map = \Config::findFirst("key='map'");
     }
 
-    public function availableSeatsAction () {
+    public function availableSeatsAction ($eventId) {
         $this->setJsonResponse();
 
-        $seats = array( // список всех доступных мест на сцене
-            array("id" => 12, "price" => 200, "title" => "Название места", "free" => true),
-            array("id" => 13, "price" => 200, "title" => "Название места", "free" => false),
-            array("id" => 13, "price" => 200, "title" => "Название места", "free" => false),
-            array("id" => 15, "price" => 200, "title" => "Название места", "free" => false),
-            array("id" => 17, "price" => 200, "title" => "Название места", "free" => false),
-            array("id" => 20, "price" => 200, "title" => "Название места", "free" => true),
-            array("id" => 884, "price" => 200, "title" => "Название места", "free" => false),
-            array("id" => 200, "price" => 200, "title" => "Название места", "free" => false),
-            array("id" => 155, "price" => 200, "title" => "Название места", "free" => false),
-            array("id" => 14, "price" => 250, "title" => "Название места", "free" => true)
-        );
-
+        $minDate = new \DateTime('-'.ControllerBase::RESERVATION_TIME.' minute');
+        $eventSeatsFree = EventSeats::find(array(
+            "is_purchased = 0 AND event_id = :eventId:
+                AND (
+                    last_reservation IS NULL
+                    OR last_reservation < :minDate:
+                    OR last_reservation_session_id = :sessionId:
+                )",
+            "bind" => array (
+                "eventId" => $eventId,
+                "minDate" => $minDate->format("Y-m-d H:i:s"),
+                "sessionId" => session_id()
+            )
+        ));
+        $eventSeatsBusy = EventSeats::find(array(
+            "event_id = :eventId:
+                AND (
+                    last_reservation IS NOT NULL
+                    AND last_reservation_session_id != :sessionId:
+                    AND last_reservation > :minDate:
+                ) OR is_purchased = 1",
+            "bind" => array (
+                "eventId" => $eventId,
+                "minDate" => $minDate->format("Y-m-d H:i:s"),
+                "sessionId" => session_id()
+            )
+        ));
+        $seats = array();
+        foreach($eventSeatsFree as $eventSeat) {
+            array_push($seats, array(
+                "id" => $eventSeat->seat_id,
+                "price" => $eventSeat->price,
+                "title" => "Место №".$eventSeat->seat_id.", цена ".$eventSeat->price." грн.",
+                "free" => true
+            ));
+        }
+        foreach($eventSeatsBusy as $eventSeat) {
+            array_push($seats, array(
+                "id" => $eventSeat->seat_id,
+                "price" => $eventSeat->price,
+                "title" => "Место №".$eventSeat->seat_id.", цена ".$eventSeat->price." грн.",
+                "free" => false
+            ));
+        }
         return array(
             "seats" => $seats,
             "success" => true
