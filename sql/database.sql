@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Апр 24 2015 г., 18:01
+-- Время создания: Апр 29 2015 г., 19:28
 -- Версия сервера: 5.5.43-0ubuntu0.14.04.1
 -- Версия PHP: 5.5.9-1ubuntu4.9
 
@@ -71,18 +71,26 @@ CREATE TABLE IF NOT EXISTS `event_seats` (
   `seat_id` int(11) NOT NULL,
   `price` int(11) NOT NULL,
   `event_id` int(11) NOT NULL,
+  `last_reservation` datetime DEFAULT NULL,
+  `last_reservation_session_id` varchar(255) DEFAULT NULL,
   `is_purchased` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `event_id` (`event_id`),
   KEY `seat_id` (`seat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Дамп данных таблицы `event_seats`
 --
 
-INSERT INTO `event_seats` (`id`, `seat_id`, `price`, `event_id`, `is_purchased`) VALUES
-(1, 1, 200, 1, 0);
+INSERT INTO `event_seats` (`id`, `seat_id`, `price`, `event_id`, `last_reservation`, `last_reservation_session_id`, `is_purchased`) VALUES
+(1, 1, 200, 1, NULL, NULL, 0),
+(2, 12, 200, 1, NULL, NULL, 0),
+(3, 20, 200, 1, NULL, NULL, 0),
+(4, 14, 200, 1, NULL, NULL, 0),
+(5, 15, 200, 1, NULL, NULL, 0),
+(6, 16, 200, 1, NULL, NULL, 0),
+(7, 17, 200, 1, '2015-04-29 09:57:20', 'tvlop5p38bnmp3osj49t30e5s5', 0);
 
 -- --------------------------------------------------------
 
@@ -109,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `seats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
 
 --
 -- Дамп данных таблицы `seats`
@@ -127,7 +135,15 @@ INSERT INTO `seats` (`id`, `title`) VALUES
 (9, 'Название места'),
 (10, 'Название места'),
 (11, 'Название места'),
-(12, 'Название места');
+(12, 'Название места'),
+(13, 'Название места'),
+(14, 'Название места'),
+(15, 'Название места'),
+(16, 'Название места'),
+(17, 'Название места'),
+(18, 'Название места'),
+(19, 'Название места'),
+(20, 'Название места');
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -137,8 +153,8 @@ INSERT INTO `seats` (`id`, `title`) VALUES
 -- Ограничения внешнего ключа таблицы `event_seats`
 --
 ALTER TABLE `event_seats`
-  ADD CONSTRAINT `event_seats_ibfk_2` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`),
-  ADD CONSTRAINT `event_seats_ibfk_1` FOREIGN KEY (`seat_id`) REFERENCES `seats` (`id`);
+  ADD CONSTRAINT `event_seats_ibfk_1` FOREIGN KEY (`seat_id`) REFERENCES `seats` (`id`),
+  ADD CONSTRAINT `event_seats_ibfk_2` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `orders`
