@@ -1,14 +1,12 @@
-<!-- Logo -->
-<div class="logo">
-    <a href="index.html">
-        <h2 >Название компании</h2>
-    </a>
-</div>
-<!-- masterhead Right Section -->
-<div class="topright_sec">
-    <!-- top navigation -->
-    <div class="topnavigation">
-        contacts
+<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">Покупка билетов онлайн</a>
     </div>
-    <div class="clear"></div>
-</div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Мероприятия</a></li>
+            <li><a href="#">Правила использования</a></li>
+            <li><a href="#">Способы оплаты</a></li>
+        </ul>
+    </div><!--/.nav-collapse -->
+</div><!--/.container-fluid -->
