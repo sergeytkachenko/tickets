@@ -2,6 +2,7 @@
 
 namespace Multiple\Frontend;
 
+use Phalcon\DiInterface;
 use Phalcon\Loader,
     Phalcon\Mvc\Dispatcher,
     Phalcon\Mvc\View,
@@ -10,10 +11,7 @@ use Phalcon\Loader,
 class Module implements ModuleDefinitionInterface
 {
 
-    /**
-     * Регистрация автозагрузчика, специфичного для текущего модуля
-     */
-    public function registerAutoloaders()
+    public function registerAutoloaders(DiInterface $di = null)
     {
 
         $loader = new Loader();
@@ -27,10 +25,8 @@ class Module implements ModuleDefinitionInterface
         $loader->register();
     }
 
-    /**
-     * Регистрация специфичных сервисов для модуля
-     */
-    public function registerServices($di)
+
+    public function registerServices(DiInterface $di)
     {
         // Регистрация диспетчера
         $di->set('dispatcher', function() {
