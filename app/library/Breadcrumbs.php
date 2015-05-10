@@ -7,7 +7,7 @@ class Breadcrumbs
      *
      * @var array
      */
-    private $elements = [];
+    private $elements = array();
 
     /**
      * Constructor
@@ -19,10 +19,10 @@ class Breadcrumbs
 
     public function reset()
     {
-        $this->elements[] = [
+        $this->elements[] = array(
             'link' => '/',
             'text' => 'Главная',
-        ];
+        );
     }
 
     /**
@@ -34,11 +34,11 @@ class Breadcrumbs
      */
     public function add($caption, $link, $active = false)
     {
-        $element = [
+        $element = array(
             'link' => '/' . $link,
             'text' => $caption,
             'active' => $active? "active" : ""
-        ];
+        );
         $this->elements[] = $element;
         //array_unshift($this->elements, $element);
     }
