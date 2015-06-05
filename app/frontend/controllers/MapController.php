@@ -12,6 +12,10 @@ class MapController extends ControllerBase
         $this->view->map = \Config::findFirst("key='map'");
     }
 
+    /**
+     * @param $eventId
+     * @return array
+     */
     public function availableSeatsAction ($eventId) {
         $this->setJsonResponse();
 
@@ -59,6 +63,33 @@ class MapController extends ControllerBase
                 "free" => false
             ));
         }
+        return array(
+            "seats" => $seats,
+            "success" => true
+        );
+    }
+
+
+    public function getSelfPurchasedAction ($eventId) {
+        $this->setJsonResponse();
+
+        $minDate = new \DateTime('-'.ControllerBase::RESERVATION_TIME.' minute');
+        $eventSeatsPurchased = EventSeats::find(array(
+            "is_purchased = 0 AND event_id = :eventId:
+                AND (last_reservation > :minDate: AND last_reservation_session_id = :sessionId:)",
+            "bind" => array (
+                "eventId" => $eventId,
+                "minDate" => $minDate->format("Y-m-d H:i:s"),
+                "sessionId" => session_id()
+            )
+        ));
+        $seats = array();
+        foreach($eventSeatsPurchased as $eventSeat) {
+            array_push($seats, array(
+                "id" => $eventSeat->seat_id
+            ));
+        }
+
         return array(
             "seats" => $seats,
             "success" => true

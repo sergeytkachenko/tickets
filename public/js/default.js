@@ -4,12 +4,11 @@ $(document).ready(function () {
         url: "/map/view",
         success: function (data) {
             $("#map svg").html(data);
-            var eventId = 1;
+            var eventId = 1; // TODO где взять реальный id (ID мероприятия)
             window.map = new Map(eventId);
             getAvailableSeats(eventId, window.map.setAvailableSeats, window.map);
         }
     });
-
 });
 
 // load available prices for seat

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sogroop.ru.iml" filepath="$PROJECT_DIR$/.idea/sogroop.ru.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tickets-php.iml" filepath="$PROJECT_DIR$/.idea/tickets-php.iml" />
     </modules>
   </component>
 </project>

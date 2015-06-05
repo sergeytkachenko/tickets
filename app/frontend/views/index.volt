@@ -12,13 +12,13 @@
     <script src="/js/bootstrap-3/js/bootstrap.min.js"></script>
 </head>
 <body style="background-color: #eee;">
-<header class="navbar navbar-default">
-    <div class="container">
-        <nav>
-            {{ partial("partials/header") }}
-        </nav>
-    </div>
-</header>
+    <header class="navbar navbar-default">
+        <div class="container">
+            <nav>
+                {{ partial("partials/header") }}
+            </nav>
+        </div>
+    </header>
     <div class="container">
         <div class="jumbotron" style="background-color: #fff;">
             {{ content() }}

@@ -7,7 +7,9 @@ var Map = function (eventId) {
     this.reservUrl = "/reservation/seat/";
     this.reservClearUrl = "/reservation/seatClear/";
     this.checkReservation = "/reservation/check/";
+    this.selfPurchased = "/map/getSelfPurchased/"; // все зарезервированые собой места
     this.timeOut = "/reservation/timeout/";
+    this.prevLocation = "/order/preview/"+eventId;
 
     this.intervalTimeout = 14 * 1000; // 14 min
 
@@ -78,7 +80,31 @@ var Map = function (eventId) {
         }
 
         self.initEvent();
+        self.setSelfPurchased();
     }
+
+    /**
+     * Помечаем уже зарезервированые ранее места этим пользователем
+     */
+    this.setSelfPurchased = function () {
+        var self = this;
+        $.ajax ({
+            type: "POST",
+            url: self.selfPurchased+eventId,
+            success: function (data) {
+                if(data && data.success) {
+                    $.each(data.seats, function (key, obj) {
+                        var el = $(self.svg).find("[data-id="+obj.id+"]");
+                        self.setPurchased(el);
+                    })
+                    return;
+                }
+                if(data.error) {alert(data.error); return;}
+                alert("Произошла не предвиденная ошибка, поробуйте обновить страницу...");
+            }
+        });
+    }
+
     this.setReservation = function (el) {
         var id = $(el).attr("data-id");
         if(!id) {return;}
@@ -117,14 +143,17 @@ var Map = function (eventId) {
             var id = $(this).attr("data-id");
             idList.push(id);
         });
-        if(idList.length===0) {return};
+        if(idList.length===0) {
+            alert('Для покупки билета необходимо выбрать место');
+            return;
+        };
         $.ajax ({ // проверка доступности выбранных мест, что-бы их купить
             type: "POST",
             url: self.checkReservation + eventId,
             data : {idList : idList.join(",")},
             success: function (data) {
                 if(data && data.success) {
-                    console.log(data);
+                    location.href = self.prevLocation;
                     return;
                 }
                 if(data.error) {alert(data.error); return;}

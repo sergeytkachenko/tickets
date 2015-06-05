@@ -62,15 +62,9 @@ $di->set('view', function () use ($config) {
             $compiler->addFunction('display_when',
                 function($resolvedArgs, $exprArgs) use ($compiler) {
                     $string = $compiler->expression($exprArgs[0]['expr']);
-                    return '\DateFormat::displayWhen("'.$string.'")';
+                    return '\DateFormat::displayWhen('.$string.')';
                 });
-            // количество обьявлений в текущем городе и категории
-            $compiler->addFunction('count_service_item',
-                function($resolvedArgs, $exprArgs) use ($compiler) {
-                    $serviceId = $compiler->expression($exprArgs[0]['expr']);
-                    $cityId = $compiler->expression($exprArgs[1]['expr']);
-                    return '\ServiceItem::count("is_published = 1 AND city_id = '.$cityId.' AND service_id = '.$serviceId.'")';
-                });
+
             return $volt;
         },
         '.phtml' => 'Phalcon\Mvc\View\Engine\Php'

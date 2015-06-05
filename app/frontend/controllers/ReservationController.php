@@ -17,6 +17,7 @@ class ReservationController extends ControllerBase
                 AND (
                     (last_reservation > :minDate: AND last_reservation_session_id = :sessionId:)
                     OR last_reservation IS NULL
+                    OR last_reservation < :minDate:
                 )",
             "bind" => array (
                 "eventId" => $eventId,
@@ -83,7 +84,7 @@ class ReservationController extends ControllerBase
         );
     }
 
-    // отмена резервации
+    // проверка резервации
     public function checkAction ($eventId) {
         $this->setJsonResponse();
 
