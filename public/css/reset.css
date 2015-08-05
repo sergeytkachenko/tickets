@@ -1,0 +1,11 @@
+.fright {
+    float: right;
+}
+
+.fleft {
+    float: left;
+}
+
+.clear {
+    overflow: hidden;
+}

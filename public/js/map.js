@@ -13,8 +13,10 @@ var Map = function (eventId) {
 
     this.intervalTimeout = 14 * 1000; // 14 min
 
+    this.defaultOpacity = 0.5;
     this.hoverFill = "#000000"; // при наведении
-    this.availableFill = "#006600"; // места, которые продаются
+    this.reservedFill = "#000000"; // при резервации
+    this.availableFill = "#3C863C"; // места, которые продаются
 
     this.initEvent = function () {
         $(this.svg).find("path[data-id][data-free='true'], polygon[data-id][data-free='true']").hover(function () {
@@ -38,10 +40,10 @@ var Map = function (eventId) {
 
     this.setBgColor = function (el) {
         $(el).attr("old-fill", $(el).attr("fill"));
-        $(el).attr("fill", self.hoverFill);
+        $(el).attr("fill", self.hoverFill).css('opacity', 1);
     }
     this.clearBgColor = function (el) {
-        $(el).attr("fill", $(el).attr("old-fill"));
+        $(el).attr("fill", $(el).attr("old-fill")).css('opacity', this.defaultOpacity);
     }
     this.showTooltip = function (el) {
         $(self.tooltip).text($(el).attr("title"));

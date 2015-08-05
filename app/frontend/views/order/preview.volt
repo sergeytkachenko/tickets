@@ -35,7 +35,13 @@
     <ul class="list-group">
         {% for eventSeat in  eventSeats %}
             <li class="list-group-item">
-                <span class="badge">{{ eventSeat.price }} грн.</span>
+                <div class="fright clear">
+                    <span class="badge">
+                        {{ eventSeat.price }} грн.
+                    </span>
+                    <button type="button" class="delete-reservation btn btn-danger  btn-xs"
+                            data-url="/reservation/seatClear/{{ eventSeat.Seats.id }}?eventId={{ eventSeat.Events.id }}">Отмена</button>
+                </div>
                 {{ eventSeat.Events.title }}({{ display_when(eventSeat.Events.date) }}), место - {{ eventSeat.Seats.title }}({{ eventSeat.Seats.id }})
             </li>
         {% endfor %}
@@ -49,3 +55,20 @@
         Сожалеем, но у вас нет выбраных билетов. Пожалуйста, выберите нужные вам билеты повторно.
     </div>
 {% endif %}
+<script>
+    $(".delete-reservation").on("click", function () {
+        var prt = confirm("Вы дествительно хотите отменить покупку билета?");
+        if(!prt){return;}
+
+        var deleteUrl = $(this).attr('data-url');
+        $.ajax(deleteUrl, {
+            success : function () {
+                location.reload();
+            },
+
+            error : function () {
+                alert('Произошла ошибка, попробуйте позже...');
+            }
+        });
+    });
+</script>
