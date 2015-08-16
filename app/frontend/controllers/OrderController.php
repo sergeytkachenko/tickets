@@ -62,7 +62,6 @@ class OrderController extends ControllerBase
         }
         $liqpay = new LiqPay($this->publicKey, $this->privateKey);
         $serverUrl = 'http://'.$_SERVER['HTTP_HOST'].'/order/serverSuccess/?uidList=' . implode(",", $uidArray);
-
         $resultUrl = 'http://'.$_SERVER['HTTP_HOST'].'/order/success/';
         $html = $liqpay->cnb_form(array(
             'version' => 3,
@@ -84,21 +83,33 @@ class OrderController extends ControllerBase
         // server success
         $uidList = $this->request->get('uidList');
         $uidList = explode(",", $uidList);
+
+        $email = null;
         foreach($uidList as $uid) {
             $order = Orders::findFirst(array(
                 'uid = :uid:',
                 'bind' => array('uid'=> $uid)
             ));
-            $order->success = true;
+            $order->success = 1;
             $order->save();
 
             $eventSeat = EventSeats::findFirst($order->events_seat_id);
-            $eventSeat->save(array(
-                'is_purchased' => true
-            ));
+            $eventSeat->is_purchased = 1;
+            $eventSeat->save();
+
+            $email = $order->user_email;
         }
-        file_put_contents(PUBLIC_PATH . "/key.txt", '21312');
-        // send to email
+
+        $mail = $this->getDI()->get('mail');
+        $mail->send($email, 'Покупка билетов онлайн', 'order', array(
+            'email' => $email,
+            'datetime' => date("Y-m-d H:i:s"),
+            'orders' => Orders::find()->filter(function ($item) use($uidList) {
+                if (in_array($item->uid, $uidList)) {
+                    return $item;
+                }
+            })
+        ));
     }
 
     public function successAction() {

@@ -17,5 +17,17 @@ return new \Phalcon\Config(array(
         'libraryDir'     => __DIR__ . '/../../app/library/',
         'cacheDir'       => __DIR__ . '/../../app/cache/',
         'baseUri'        => '',
-    )
+        'publicUrl' => 'http://circus.org.ua'
+    ),
+    'mail' => array(
+        'fromName' => 'Покупка билетов circus.org.ua',
+        'fromEmail' => 'dima.borovyk@gmail.com',
+        'smtp' => array(
+            'server'	=> 'smtp.gmail.com',
+            'port' 		=> 465,
+            'security' => 'ssl',
+            'username' => 'dima.borovyk@gmail.com',
+            'password' => '1dborovyk1',
+        )
+    ),
 ));

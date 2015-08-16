@@ -24,6 +24,7 @@ try {
     include __DIR__ . "/../app/config/services.php";
 
     include __DIR__ . "/../app/config/debug.php";
+    include PUBLIC_PATH . "/vendor/autoload.php";
 
     /**
      * Handle the request
