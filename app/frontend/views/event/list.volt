@@ -12,7 +12,7 @@
             <div class="nearest-event">
                 <div>Дата проведения мероприятия:</div>
                 <div>{{ event.date }}</div>
-                <a class="btn btn-primary more" href="/event/view/{{  event.id }}">Детальніше</a>
+                <a class="btn btn-primary more" href="/event/view/{{  event.id }}">Купить билет</a>
             </div>
         </div>
     </div>
