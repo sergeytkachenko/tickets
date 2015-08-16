@@ -2,31 +2,29 @@
 
     <h4>Персональная информация</h4>
     <br>
-    <form class="form-horizontal" role="form" action="https://www.liqpay.com/api/checkout" method="post" accept-charset="utf-8">
+    <form class="form-horizontal" role="form" action="/order/payment/{{ eventId|e }}" method="post">
         <div class="form-group">
             <label class="control-label col-sm-2" for="name">Полное имя *</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="name" placeholder="Полное имя" required name="name">
+                <input type="text" class="form-control" id="name" placeholder="Полное имя" required name="name" onchange="save($(this));">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Email *</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="Электронный адрес" required name="email">
+                <input type="email" class="form-control" id="email" placeholder="Электронный адрес" required name="email" onchange="save($(this));">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="phone"> Моб. телефон *</label>
             <div class="col-sm-10">
-                <input  type="tel" pattern="[0-9]{10}" class="form-control" id="phone" placeholder="Мобильный телефон" required name="phone">
+                <input  type="tel" pattern="[0-9]{10}" class="form-control" id="phone" placeholder="Мобильный телефон" required name="phone" onchange="save($(this));">
                 <span id="helpBlock" class="help-block">Номер должен быть в формате: 0971234477</span>
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10" >
-                <input type="hidden" name="data" value="{{ data }}" />
-                <input type="hidden" name="signature" value="{{ signature }}" />
-                <input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />
+                <button type="submit" class="btn btn-primary">Перейти к оплате</button>
             </div>
         </div>
     </form>
@@ -72,5 +70,20 @@
                 alert('Произошла ошибка, попробуйте позже...');
             }
         });
+    });
+
+    function save($input) {
+        if(!window.localStorage) {return;}
+        localStorage.setItem($input.attr('name'), $input.val());
+    }
+
+    $(document).ready(function () {
+        $("input").each(function (ind, input) {
+            if(!window.localStorage) {return;}
+            var $input = $(input);
+            var val = localStorage.getItem($input.attr('name'));
+            if(!val) {return;}
+            $input.val(val);
+        })
     });
 </script>

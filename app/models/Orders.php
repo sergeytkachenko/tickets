@@ -40,6 +40,17 @@ class Orders extends \Phalcon\Mvc\Model
     public $date;
 
     /**
+     *
+     * @var integer
+     */
+    public $success;
+
+    /**
+     *
+     * @var string
+     */
+    public $uid;
+    /**
      * Initialize method for model.
      */
     public function initialize()
@@ -58,6 +69,8 @@ class Orders extends \Phalcon\Mvc\Model
             'user_name' => 'user_name', 
             'user_email' => 'user_email', 
             'user_phone' => 'user_phone', 
+            'success' => 'success',
+            'uid' => 'uid',
             'date' => 'date'
         );
     }

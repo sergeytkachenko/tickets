@@ -2,6 +2,7 @@
 namespace Multiple\Frontend\Controllers;
 
 use EventSeats;
+use LiqPay;
 use Orders;
 use Phalcon\Mvc\View;
 
@@ -22,20 +23,6 @@ class OrderController extends ControllerBase
         $this->view->setVar('totalSum', $totalSum);
         $this->view->setVar('eventId', $eventId);
 
-        $data = array(
-            'version' => 3,
-            'public_key' => $this->publicKey,
-            'amount' => $totalSum,
-            'currency' => 'UAH',
-            'order_id' => $eventId, // TODO уникальное ID покупки
-            'result_url' => 'http://circus.org.ua/order/payment/' . $eventId,
-            'language' => 'ru',
-            'sandbox' => 1
-        );
-
-        $data = base64_encode(json_encode(http_build_query($data)));
-        $this->view->setVar('data', $data);
-        $this->view->setVar('signature', sha1($this->privateKey . $data . $this->privateKey));
     }
 
     // сюда должно редиректить после успешной оплаты
@@ -47,10 +34,16 @@ class OrderController extends ControllerBase
         $name = $this->request->get('name');
         $email = $this->request->get('email');
         $phone = $this->request->get('phone');
+        $uidArray = array();
+        $totalSum = 0;
 
         if(!empty($name) and !empty($email) and !empty($phone)) {
             $eventSeats = $this->getSelfEventsSeats($eventId);
             foreach($eventSeats as $eventSeat) {
+                $uid = LiqPay::gen_uuid();
+                array_push($uidArray, $uid);
+                $totalSum += $eventSeat->price;
+
                 $order = new Orders();
                 $order->assign(array(
                     "events_seat_id" => $eventSeat->id,
@@ -58,17 +51,34 @@ class OrderController extends ControllerBase
                     "user_email" => $email,
                     "user_phone" => $phone,
                     "date" => date("Y-m-d H:i:s"),
+                    "uid" => $uid
                 ));
                 if($order->save()) {
-                    $eventSeat->is_purchased = 1;
-                    $eventSeat->save();
-
                     $this->view->setVar('success', true);
                     $this->view->setVar('email', $email);
                     $this->view->setVar('name', $name);
                 }
             }
         }
+
+        $liqpay = new LiqPay($this->publicKey, $this->privateKey);
+        $html = $liqpay->cnb_form(array(
+            'version' => 3,
+            'public_key' => $this->publicKey,
+            'amount' => $totalSum,
+            'currency' => 'UAH',
+            'order_id' => md5(http_build_query($uidArray)), // уникальное ID покупки
+            'result_url' => 'http://'.$_SERVER['HTTP_HOST'].'/order/success/' . http_build_query($uidArray),
+            'language' => 'ru',
+            'sandbox' => 1,
+            'description' => 'Покупка билета на представление в цирке'
+        ));
+
+        $this->view->setVar('html', $html);
+    }
+
+    public function successAction($uidList) {
+        debug($uidList);
     }
 
     private function getSelfEventsSeats ($eventId) {

@@ -1,13 +1,8 @@
 {% if success is defined %}
     <div class="row">
-        <p>
-            <strong>{{ name }}</strong>, ваша покупка и оплата прошла успешно!
-        </p>
-        <p>
-            На ваш email (<strong>{{ email }}</strong>) высланы детали приобретенных билетов!
-            <br>
-            Спасибо за то, что вы с нами!
-        </p>
+        <h3>Оплата осуществляется системой LiqPay</h3>
+        {{ html }}
+        <a href="https://www.liqpay.com/" target="_blank">Подробнее</a>
     </div>
 {% else %}
     <div>
