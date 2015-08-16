@@ -60,7 +60,6 @@ class OrderController extends ControllerBase
                 }
             }
         }
-
         $liqpay = new LiqPay($this->publicKey, $this->privateKey);
         $html = $liqpay->cnb_form(array(
             'version' => 3,
@@ -78,7 +77,13 @@ class OrderController extends ControllerBase
     }
 
     public function successAction($uidList) {
-        debug($uidList);
+        $orders = Orders::find(array(
+            'uid IN (:uidList:)',
+            'bind' => array(
+                'uidList' => $uidList
+            )
+        ));
+        debug($orders->toArray());
     }
 
     private function getSelfEventsSeats ($eventId) {
