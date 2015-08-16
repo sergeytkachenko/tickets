@@ -62,7 +62,6 @@ class OrderController extends ControllerBase
         }
         $liqpay = new LiqPay($this->publicKey, $this->privateKey);
         $serverUrl = 'http://'.$_SERVER['HTTP_HOST'].'/order/serverSuccess/?uidList=' . implode(",", $uidArray);
-        debug($serverUrl);
         $resultUrl = 'http://'.$_SERVER['HTTP_HOST'].'/order/success/';
         $html = $liqpay->cnb_form(array(
             'version' => 3,
