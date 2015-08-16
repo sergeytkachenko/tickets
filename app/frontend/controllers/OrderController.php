@@ -60,6 +60,8 @@ class OrderController extends ControllerBase
                 }
             }
         }
+
+        // Генерируем кнопку
         $liqpay = new LiqPay($this->publicKey, $this->privateKey);
         $serverUrl = 'http://'.$_SERVER['HTTP_HOST'].'/order/serverSuccess/?uidList=' . implode(",", $uidArray);
         $resultUrl = 'http://'.$_SERVER['HTTP_HOST'].'/order/success/';

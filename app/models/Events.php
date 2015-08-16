@@ -19,7 +19,20 @@ class Events extends \Phalcon\Mvc\Model
      *
      * @var string
      */
+    public $description;
+
+    /**
+     *
+     * @var string
+     */
+    public $img;
+
+    /**
+     *
+     * @var string
+     */
     public $date;
+
     public function initialize()
     {
         $this->hasMany('id', 'EventSeats', 'event_id', array('alias' => 'EventSeats'));

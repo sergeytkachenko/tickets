@@ -4,7 +4,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Мероприятия</a></li>
+            <li {% if router.getRewriteUri() == '/event/list' %}class="active"{% endif %}><a href="/event/list">Мероприятия</a></li>
             <li><a href="#">Правила использования</a></li>
             <li><a href="#">Способы оплаты</a></li>
         </ul>

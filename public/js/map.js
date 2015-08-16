@@ -116,7 +116,6 @@ var Map = function (eventId) {
             url: self.reservUrl+id+"?eventId="+eventId,
             success: function (data) {
                 if(data && data.success) {
-                    console.log(data);
                     return;
                 }
                 self.clearPurchased(el);

@@ -79,4 +79,15 @@
     top: 80px;
 }
 
+.event-image img {
+    max-width: 100%;
+}
 
+.row.event-short-container {
+    margin-bottom: 30px;
+}
+
+.event-short-container {
+    border-bottom: 1px dashed #999;
+    padding-bottom: 5px;
+}

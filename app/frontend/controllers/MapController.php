@@ -33,13 +33,14 @@ class MapController extends ControllerBase
                 "sessionId" => session_id()
             )
         ));
+
         $eventSeatsBusy = EventSeats::find(array(
             "event_id = :eventId:
-                AND (
+                AND ((
                     last_reservation IS NOT NULL
                     AND last_reservation_session_id != :sessionId:
                     AND last_reservation > :minDate:
-                ) OR is_purchased = 1",
+                ) OR is_purchased = 1)",
             "bind" => array (
                 "eventId" => $eventId,
                 "minDate" => $minDate->format("Y-m-d H:i:s"),
