@@ -32,7 +32,7 @@ var Map = function (eventId) {
                 self.clearReservation(this);
             } else {
                 self.setReservation(this);
-                self.setPurchased(this);
+                self.setPurchased(this, "me");
             }
         });
 
@@ -58,8 +58,9 @@ var Map = function (eventId) {
             display: "none"
         })
     }
-    this.setPurchased = function (el) {
-        $(el).attr("class", "purchased");
+    this.setPurchased = function (el, cls) {
+        cls = cls? cls + " purchased" : "purchased";
+        $(el).attr("class", cls);
     }
     this.clearPurchased = function (el) {
         $(el).removeAttr("class");
@@ -97,7 +98,7 @@ var Map = function (eventId) {
                 if(data && data.success) {
                     $.each(data.seats, function (key, obj) {
                         var el = $(self.svg).find("[data-id="+obj.id+"]");
-                        self.setPurchased(el);
+                        self.setPurchased(el, 'me');
                     })
                     return;
                 }

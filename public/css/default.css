@@ -12,7 +12,11 @@
 .purchased {
     fill: #000;
     background-color: #000;
+}
 
+.me.purchased {
+    fill: #F70202;
+    background-color: #F70202;
 }
 
 .purchased, [data-price] {

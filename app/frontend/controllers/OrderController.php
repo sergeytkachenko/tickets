@@ -94,6 +94,8 @@ class OrderController extends ControllerBase
             $order->save();
 
             $eventSeat = EventSeats::findFirst($order->events_seat_id);
+            $eventSeat->last_reservation = NULL;
+            $eventSeat->last_reservation_session_id = NULL;
             $eventSeat->is_purchased = 1;
             $eventSeat->save();
 
