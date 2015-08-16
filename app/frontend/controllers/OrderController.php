@@ -21,6 +21,21 @@ class OrderController extends ControllerBase
         $this->view->setVar('eventSeats', $eventSeats);
         $this->view->setVar('totalSum', $totalSum);
         $this->view->setVar('eventId', $eventId);
+
+        $data = array(
+            'version' => 3,
+            'public_key' => $this->publicKey,
+            'amount' => $totalSum,
+            'currency' => 'UAH',
+            'order_id' => $eventId, // TODO уникальное ID покупки
+            'result_url' => 'http://circus.org.ua/order/payment/' . $eventId,
+            'language' => 'ru',
+            'sandbox' => 1
+        );
+
+        $data = base64_encode(json_encode(http_build_query($data)));
+        $this->view->setVar('data', $data);
+        $this->view->setVar('signature', sha1($this->privateKey . $data . $this->privateKey));
     }
 
     // сюда должно редиректить после успешной оплаты

@@ -9,6 +9,9 @@ class ControllerBase extends Controller {
 
     public $br = null;
 
+    public $publicKey = 'i4733924068';
+    public $privateKey = 'ko3dx34ZPhgEknZNgYAmLnzTva8FWahm56JjK97q';
+
     const RESERVATION_TIME = 15; // in minutes
 
     public function initialize() {

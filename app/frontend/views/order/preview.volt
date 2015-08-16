@@ -2,7 +2,7 @@
 
     <h4>Персональная информация</h4>
     <br>
-    <form class="form-horizontal" role="form" action="/order/payment/{{ eventId|e }}" method="post">
+    <form class="form-horizontal" role="form" action="https://www.liqpay.com/api/checkout" method="post" accept-charset="utf-8">
         <div class="form-group">
             <label class="control-label col-sm-2" for="name">Полное имя *</label>
             <div class="col-sm-10">
@@ -24,7 +24,9 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10" >
-                <button type="submit" class="btn btn-primary">Перейти к оплате</button>
+                <input type="hidden" name="data" value="{{ data }}" />
+                <input type="hidden" name="signature" value="{{ signature }}" />
+                <input type="image" src="//static.liqpay.com/buttons/p1ru.radius.png" name="btn_text" />
             </div>
         </div>
     </form>
