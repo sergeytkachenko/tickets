@@ -61,13 +61,17 @@ class OrderController extends ControllerBase
             }
         }
         $liqpay = new LiqPay($this->publicKey, $this->privateKey);
+        $serverUrl = 'http://'.$_SERVER['HTTP_HOST'].'/order/serverSuccess/?uidList=' . implode(",", $uidArray);
+
+        $resultUrl = 'http://'.$_SERVER['HTTP_HOST'].'/order/success/';
         $html = $liqpay->cnb_form(array(
             'version' => 3,
             'public_key' => $this->publicKey,
             'amount' => $totalSum,
             'currency' => 'UAH',
             'order_id' => md5(http_build_query($uidArray)), // уникальное ID покупки
-            'result_url' => 'http://'.$_SERVER['HTTP_HOST'].'/order/success/' . http_build_query($uidArray),
+            'result_url' => $resultUrl,
+            'server_url' => $serverUrl,
             'language' => 'ru',
             'sandbox' => 1,
             'description' => 'Покупка билета на представление в цирке'
@@ -76,14 +80,29 @@ class OrderController extends ControllerBase
         $this->view->setVar('html', $html);
     }
 
-    public function successAction($uidList) {
-        $orders = Orders::find(array(
-            'uid IN (:uidList:)',
-            'bind' => array(
-                'uidList' => $uidList
-            )
-        ));
-        debug($orders->toArray());
+    public function serverSuccessAction() {
+        // server success
+        $uidList = $this->request->get('uidList');
+        $uidList = explode(",", $uidList);
+        foreach($uidList as $uid) {
+            $order = Orders::findFirst(array(
+                'uid = :uid:',
+                'bind' => array('uid'=> $uid)
+            ));
+            $order->success = true;
+            $order->save();
+
+            $eventSeat = EventSeats::findFirst($order->events_seat_id);
+            $eventSeat->save(array(
+                'is_purchased' => true
+            ));
+        }
+        file_put_contents(PUBLIC_PATH . "/key.txt", '21312');
+        // send to email
+    }
+
+    public function successAction() {
+       // client success
     }
 
     private function getSelfEventsSeats ($eventId) {
