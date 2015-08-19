@@ -91,3 +91,8 @@
     border-bottom: 1px dashed #999;
     padding-bottom: 5px;
 }
+
+div form.form-inline.uid input {
+    width: 70px;
+    text-align: center;
+}

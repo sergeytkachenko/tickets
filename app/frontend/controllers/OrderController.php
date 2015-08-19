@@ -220,23 +220,10 @@ class OrderController extends ControllerBase
        // client success
     }
 
-    private function getSelfEventsSeats ($eventId) {
-        $minDate = new \DateTime('-'.ControllerBase::RESERVATION_TIME.' minute');
-        return EventSeats::find(array(
-            "is_purchased = 0 AND event_id = :eventId:
-                AND (last_reservation > :minDate: AND last_reservation_session_id = :sessionId:)",
-            "bind" => array (
-                "eventId" => $eventId,
-                "minDate" => $minDate->format("Y-m-d H:i:s"),
-                "sessionId" => session_id()
-            )
-        ));
-    }
-
     public function printAction ($uid) {
         $this->view->setRenderLevel(View::LEVEL_ACTION_VIEW);
         $order = Orders::findFirst(array(
-            'uid = :uid:',
+            'uid = :uid: AND success = 1',
             'bind' => array(
                 'uid' => $uid
             )
@@ -253,5 +240,45 @@ class OrderController extends ControllerBase
         $this->view->setVar('order', $order);
 
     }
+
+    public function printByUidAction () {
+
+    }
+
+    public function cancelAction () {
+        $uid = $this->request->get("uid");
+        if(!$uid) {return;}
+        $order = Orders::findFirst(array(
+            'uid = :uid: AND success = 1',
+            'bind' => array(
+                'uid' => $uid
+            )
+        ));
+        if(!$order) {
+            $this->view->setVar('error', 'Билет '.$uid.' не найден в системе!');
+            return;
+        }
+        $eventSeat = $order->EventSeats;
+        $eventSeat->is_purchased = 0;
+        $eventSeat->save();
+        $order->success = 0;
+        $order->save();
+
+        $this->view->setVar('success', 'Билет '.$uid.' успешно отменен!');
+    }
+
+    private function getSelfEventsSeats ($eventId) {
+        $minDate = new \DateTime('-'.ControllerBase::RESERVATION_TIME.' minute');
+        return EventSeats::find(array(
+            "is_purchased = 0 AND event_id = :eventId:
+                AND (last_reservation > :minDate: AND last_reservation_session_id = :sessionId:)",
+            "bind" => array (
+                "eventId" => $eventId,
+                "minDate" => $minDate->format("Y-m-d H:i:s"),
+                "sessionId" => session_id()
+            )
+        ));
+    }
+
 }
 

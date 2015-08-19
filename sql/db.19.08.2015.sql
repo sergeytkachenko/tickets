@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Авг 19 2015 г., 19:47
+-- Время создания: Авг 19 2015 г., 20:38
 -- Версия сервера: 5.6.21
 -- Версия PHP: 5.6.8
 
@@ -85,9 +85,9 @@ INSERT INTO `event_seats` (`id`, `seat_id`, `price`, `event_id`, `last_reservati
 (1, 1, 1, 1, NULL, NULL, 0),
 (2, 12, 1, 1, NULL, NULL, 0),
 (3, 20, 1, 1, NULL, NULL, 0),
-(4, 14, 1, 1, NULL, NULL, 1),
+(4, 14, 1, 1, NULL, NULL, 0),
 (5, 15, 1, 1, NULL, NULL, 0),
-(6, 16, 1, 1, NULL, NULL, 1),
+(6, 16, 1, 1, NULL, NULL, 0),
 (7, 17, 1, 1, NULL, NULL, 0);
 
 -- --------------------------------------------------------
@@ -107,14 +107,6 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `uid` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `orders`
---
-
-INSERT INTO `orders` (`id`, `events_seat_id`, `user_name`, `user_email`, `user_phone`, `date`, `success`, `uid`) VALUES
-(1, 4, 'Кассир №1', 'serg.tkachenko@hotmail.com', NULL, '2015-08-19 22:21:20', 1, '676c2cb6-5ae9-4c7c-b9d1-13f1a2532d5e'),
-(2, 6, 'Кассир №1', 'serg.tkachenko@hotmail.com', NULL, '2015-08-19 22:21:20', 1, 'd04851e8-df80-4259-b98f-925c18513d7e');
-
 -- --------------------------------------------------------
 
 --
@@ -127,13 +119,6 @@ CREATE TABLE IF NOT EXISTS `order_history` (
   `uids` text NOT NULL,
   `datetime` datetime NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `order_history`
---
-
-INSERT INTO `order_history` (`id`, `user_id`, `uids`, `datetime`) VALUES
-(1, 1, '676c2cb6-5ae9-4c7c-b9d1-13f1a2532d5e,d04851e8-df80-4259-b98f-925c18513d7e', '2015-08-19 22:47:26');
 
 -- --------------------------------------------------------
 
