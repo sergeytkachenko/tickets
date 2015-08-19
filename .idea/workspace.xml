@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68d6220d-514f-4a92-8db8-fc51fb36306d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/library/LiqPay.php" afterPath="$PROJECT_DIR$/app/library/LiqPay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/controllers/OrderController.php" afterPath="$PROJECT_DIR$/app/frontend/controllers/OrderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/order/cancel.volt" afterPath="$PROJECT_DIR$/app/frontend/views/order/cancel.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/db.19.08.2015.sql" afterPath="$PROJECT_DIR$/sql/db.19.08.2015.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/order/form.volt" afterPath="$PROJECT_DIR$/app/frontend/views/order/form.volt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt" afterPath="$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/order/printByUid.volt" afterPath="$PROJECT_DIR$/app/frontend/views/order/printByUid.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/order/print.volt" afterPath="$PROJECT_DIR$/app/frontend/views/order/print.volt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="651c3a30-c589-45c5-bc7d-209aa434fe1f" name="New changelist" comment="" />
@@ -54,19 +51,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/views/partials/header.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="510">
-              <caret line="18" column="54" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="54" />
-              <folding>
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="cancel.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/frontend/views/order/cancel.volt">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/frontend/controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.251634" vertical-offset="664" max-vertical-offset="3120">
+            <state vertical-scroll-proportion="6.4166665" vertical-offset="664" max-vertical-offset="3120">
               <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
               <folding>
                 <element signature="e#180#789#0#PHP" expanded="false" />
@@ -108,9 +92,25 @@
       <file leaf-file-name="paymentPaymaster.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="585">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-              <folding />
+            <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="615">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="83" />
+              <folding>
+                <element signature="e#11709#11754#0#HTML" expanded="true" />
+                <element signature="e#12255#12300#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.volt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/frontend/views/order/form.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2937976" vertical-offset="0" max-vertical-offset="919">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="71" />
+              <folding>
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,16 +133,6 @@
               <folding>
                 <marker date="1440017516000" expanded="true" signature="3207:3370" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/views/index.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="510">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -190,14 +180,12 @@
         <option value="$PROJECT_DIR$/app/frontend/controllers/TicketController.php" />
         <option value="$PROJECT_DIR$/public/css/print.css" />
         <option value="$PROJECT_DIR$/app/frontend/views/mail/order.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/views/order/print.volt" />
         <option value="$PROJECT_DIR$/public/js/map.js" />
         <option value="$PROJECT_DIR$/public/js/map-user.js" />
         <option value="$PROJECT_DIR$/app/frontend/views/event/view.volt" />
         <option value="$PROJECT_DIR$/app/frontend/views/order/payment-paymaster.volt" />
         <option value="$PROJECT_DIR$/app/frontend/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/frontend/views/order/preview.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/views/order/form.volt" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/app/frontend/views/partials/header.volt" />
         <option value="$PROJECT_DIR$/public/css/default.css" />
@@ -207,8 +195,10 @@
         <option value="$PROJECT_DIR$/app/frontend/views/order/printByUid.volt" />
         <option value="$PROJECT_DIR$/app/frontend/views/order/cancel.volt" />
         <option value="$PROJECT_DIR$/app/library/LiqPay.php" />
-        <option value="$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt" />
         <option value="$PROJECT_DIR$/app/frontend/controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/views/order/form.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/views/order/print.volt" />
       </list>
     </option>
   </component>
@@ -919,7 +909,13 @@
       <option name="project" value="LOCAL" />
       <updated>1440016884091</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added user casire">
+      <created>1440017995837</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1440017995838</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -928,13 +924,13 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32520324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32520324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47853404" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1207,14 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/print.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52230686" vertical-offset="0" max-vertical-offset="919">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/views/mail/order.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919">
@@ -1286,14 +1274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17703862" vertical-offset="0" max-vertical-offset="932">
           <caret line="11" column="9" selection-start-line="11" selection-start-column="8" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/form.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39173013" vertical-offset="0" max-vertical-offset="919">
-          <caret line="24" column="83" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1401,14 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/views/order/printByUid.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="285">
@@ -1421,12 +1393,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/controllers/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.251634" vertical-offset="664" max-vertical-offset="3120">
+        <state vertical-scroll-proportion="6.4166665" vertical-offset="664" max-vertical-offset="3120">
           <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
           <folding>
             <element signature="e#180#789#0#PHP" expanded="false" />
             <element signature="e#3676#4036#0#PHP" expanded="false" />
             <element signature="e#4095#6199#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="615">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="83" />
+          <folding>
+            <element signature="e#11709#11754#0#HTML" expanded="true" />
+            <element signature="e#12255#12300#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/print.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3101197" vertical-offset="0" max-vertical-offset="919">
+          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/form.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2937976" vertical-offset="0" max-vertical-offset="919">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

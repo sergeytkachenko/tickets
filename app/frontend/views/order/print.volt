@@ -17,12 +17,14 @@
             <th style="border:1px solid #A6A6A6;padding:3px;">Місце</th>
             <th style="border:1px solid #A6A6A6;padding:3px;">Код замовлення</th>
             <th style="border:1px solid #A6A6A6;padding:3px;">Дата замовлення</th>
+            <th style="border:1px solid #A6A6A6;padding:3px;">Ціна</th>
         </tr>
         <tr>
             <th style="border:1px solid #A6A6A6;padding:3px;">{{ event.title }}, {{ event.date }}</th>
             <th style="border:1px solid #A6A6A6;padding:3px;">{{ seat.title }}</th>
             <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.uid }}</th>
             <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.date }}</th>
+            <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.EventSeats.price }}</th>
         </tr>
     </table>
     <h3 style="font-family:sans-serif, arial;font-size:0.9em;text-align:left;color:#FF0000;line-height:1em;">Звертаємо увагу!</h3>

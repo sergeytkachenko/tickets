@@ -9,6 +9,7 @@
             <th style="border:1px solid #A6A6A6;padding:3px;">Місце</th>
             <th style="border:1px solid #A6A6A6;padding:3px;">Код замовлення</th>
             <th style="border:1px solid #A6A6A6;padding:3px;">Дата замовлення</th>
+            <th style="border:1px solid #A6A6A6;padding:3px;">Стоимость (грн.)</th>
             <th style="border:1px solid #A6A6A6;padding:3px;">Печать</th>
         </tr>
         {% for order in orders %}
@@ -17,6 +18,7 @@
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.EventSeats.Seats.title }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.uid }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.date }}</th>
+                <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.EventSeats.price }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">
                     <a href="/order/print/{{ order.uid }}" role="button" class="btn btn-default" target="_blank">Печать</a>
                 </th>
