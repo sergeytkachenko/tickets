@@ -16,7 +16,7 @@ class ControllerBase extends Controller {
 
     public function initialize() {
         $this->br = new \Breadcrumbs();
-
+        $this->view->setVar('user', $this->session->get('user'));
     }
 
 

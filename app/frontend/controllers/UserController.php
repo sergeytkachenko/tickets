@@ -28,7 +28,7 @@ class UserController extends ControllerBase
             if($user and $security->checkHash($password, $user->password)) {
                $this->session->set("user", $user);
                $response = new Response();
-               return $response->redirect("/room");
+               return $response->redirect("/");
             }
             $errors[] = "Не верный логин или пароль";
         }

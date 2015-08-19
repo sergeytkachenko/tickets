@@ -115,10 +115,15 @@ var Map = function (eventId) {
             type: "POST",
             url: self.reservUrl+id+"?eventId="+eventId,
             success: function (data) {
-                if(data && data.success) {
+                if(data && data.success && !data.error) {
                     return;
                 }
+
                 self.clearPurchased(el);
+                // если место было зарезервировано ранее то отключаем клик на него
+                $(el).attr('data-free', false).off('click');
+                self.setPurchased(el);
+
                 if(data.error) {alert(data.error); return;}
                 alert("Произошла не предвиденная ошибка, поробуйте позже...");
             }
@@ -172,7 +177,7 @@ var Map = function (eventId) {
                 success: function (data) {
                     if(data && data.isTimeout) {
                         alert(data.msg);
-                        location.href = data.href;
+                        location.reload();
                         clearInterval(self.checkTimeout.interval);
                         return;
                     }

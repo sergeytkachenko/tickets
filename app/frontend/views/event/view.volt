@@ -1,6 +1,4 @@
-
 <h2>{{ event.title }}</h2>
-
 <div id="map">
     <svg version="1.1" id="_x2014_лой_1" xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="595px" height="562.835px"
@@ -18,3 +16,6 @@
 <script>window.eventId = '{{ event.id }}';</script>
 <script src="/js/map.js"></script>
 <script src="/js/default.js"></script>
+{%  if user %}
+    <script src="/js/map-user.js"></script>
+{% endif %}

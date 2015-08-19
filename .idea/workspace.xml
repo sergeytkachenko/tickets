@@ -1,19 +1,383 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68d6220d-514f-4a92-8db8-fc51fb36306d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/frontend/controllers/EventController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/frontend/views/event/list.volt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/frontend/views/event/view.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Events.php" afterPath="$PROJECT_DIR$/app/models/Events.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/controllers/IndexController.php" afterPath="$PROJECT_DIR$/app/frontend/controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/controllers/MapController.php" afterPath="$PROJECT_DIR$/app/frontend/controllers/MapController.php" />
+    <list default="true" id="68d6220d-514f-4a92-8db8-fc51fb36306d" name="Default" comment="liqpay">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/uml/Encoders.graffle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/uml/Mime.graffle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/uml/Transports.graffle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/files/swiftmailer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/files/textfile.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/AbstractFilterableInputStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/AbstractHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/AbstractMimeEntityTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/AbstractSmtpEventSupportTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/AbstractSmtpTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/AbstractStreamBufferAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/AntiFloodPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/AntiFloodPluginTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/ArrayByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/ByteStream/ArrayByteStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream/ArrayCharacterStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterStream/ArrayCharacterStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/ArrayKeyCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/KeyCache/ArrayKeyCacheAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/KeyCache/ArrayKeyCacheTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/ArrayLogger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Loggers/ArrayLoggerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/ArrayRecipientIterator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mailer/ArrayRecipientIteratorTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Attachment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Attachment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/AttachmentAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/AttachmentAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/smoke/Swift/Smoke/AttachmentSmokeTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/AttachmentTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/AuthHandlerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Authenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/BandwidthMonitorPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/BandwidthMonitorPluginTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/Base64ContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/Base64ContentEncoderAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/ContentEncoder/Base64ContentEncoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/Base64Encoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Encoder/Base64EncoderAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Encoder/Base64EncoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/HeaderEncoder/Base64HeaderEncoderAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/HeaderEncoder/Base64HeaderEncoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/smoke/Swift/Smoke/BasicSmokeTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/BasicSocketAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/BodySigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug111Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug118Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug206Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug274Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug34Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug35Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug38Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug518Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug51Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug534Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug71Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bug/Swift/Bug76Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/ByteArrayReplacementFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/StreamFilters/ByteArrayReplacementFilterTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/CA.srl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/CHANGES" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReaderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/CharsetObserver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/composer/ClassLoader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/CommandEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/CommandEventTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/CommandListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ConfigurableSpool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/CramMd5Authenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/CramMd5AuthenticatorTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DKIMSigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Signers/DKIMSignerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/DateHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/DateHeaderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/DecoratorPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/DecoratorPluginTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/DependencyContainer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/DependencyContainerAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/DependencyContainerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/DependencyException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/DiskKeyCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/KeyCache/DiskKeyCacheAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/DomainKeySigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Loggers/EchoLogger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Loggers/EchoLoggerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/EmbeddedFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/EmbeddedFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/EmbeddedFileAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/EmbeddedFileAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/EmbeddedFileTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoding.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/EncodingAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/EncodingObserver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/fixtures/EsmtpTransportFixture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/EsmtpTransportTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/Event.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventDispatcher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/EventObject.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/EventObjectTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/EsmtpTransport/ExtensionSupportTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/FailoverTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/FailoverTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/FailoverTransportTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/FileByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/ByteStream/FileByteStreamAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/FileSpool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/FileStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Filterable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/GenericFixedWidthReader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterReader/GenericFixedWidthReaderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Grammar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderSet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/HeaderSigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HitReporter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Reporters/HitReporterTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/Reporters/HtmlReporterTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/smoke/Swift/Smoke/HtmlWithAttachmentSmokeTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/IdenticalBinaryConstraint.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/IdentificationHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/IdentificationHeaderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ImpersonatePlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/InputByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/smoke/Swift/Smoke/InternationalSmokeTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/IoBuffer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/IoException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/KeyCacheInputStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/LoadBalancedTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/LoadBalancedTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/LoadBalancedTransportTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Logger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/LoggerPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/LoggerPluginTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/LoginAuthenticatorTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/MailInvoker.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MailTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/MailTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/MailTransportTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/MailboxHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/MailboxHeaderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/MailerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MemorySpool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/MessageAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/MessageLogger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/MessageTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/MimeEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/fixtures/MimeEntityFixture.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MimePart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/MimePart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/MimePartAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/MimePartAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/MimePartTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/NTLMAuthenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/NTLMAuthenticatorTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/NativeQpContentEncoderAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterStream/NgCharacterStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/NullKeyCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/NullTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/NullTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/OpenDKIMHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/OpenDKIMSigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Signers/OpenDKIMSignerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/OrderHistory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/OutputByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ParameterizedHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/ParameterizedHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/ParameterizedHeaderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/PathHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/PathHeaderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/PlainAuthenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/Esmtp/Auth/PlainAuthenticatorTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/PlainContentEncoderAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/ContentEncoder/PlainContentEncoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Connection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Pop/Pop3Exception.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/PopBeforeSmtpPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/PopBeforeSmtpPluginTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Preferences.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/ProcessAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/ContentEncoder/QpContentEncoderAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoderProxy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/ContentEncoder/QpContentEncoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/QpEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Encoder/QpEncoderAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Encoder/QpEncoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/HeaderEncoder/QpHeaderEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/HeaderEncoder/QpHeaderEncoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/ContentEncoder/RawContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer/RecipientIterator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/RedirectingPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/RedirectingPluginTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ReplacementFilterFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Decorator/Replacements.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Reporter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ReporterPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/ReporterPluginTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/ResponseEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/ResponseEventTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/ResponseListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Encoder/Rfc2231Encoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Encoder/Rfc2231EncoderAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Encoder/Rfc2231EncoderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/RfcComplianceException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signers/SMimeSigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Signers/SMimeSignerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SendEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/SendEventTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SendListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SendmailTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SendmailTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/SendmailTransportTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SignedMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Signer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReaderFactory/SimpleCharacterReaderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/CharacterReaderFactory/SimpleCharacterReaderFactoryAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/SimpleEventDispatcher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/SimpleEventDispatcherTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderFactoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleHeaderSet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleHeaderSetTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/KeyCache/SimpleKeyCacheInputStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/KeyCache/SimpleKeyCacheInputStreamTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SimpleMailInvoker.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Mime/SimpleMessageAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleMessageTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/SimpleMimeEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/SimpleMimeEntityTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Sleeper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SmtpAgent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SmtpTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SocketTimeoutTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Spool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SpoolTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/SpoolTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/SslSocketAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Transport/StreamBufferTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/StreamCollector.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/StringReplacementFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/StreamFilters/StringReplacementFilterFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/StreamFilters/StringReplacementFilterFactoryTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/StreamFilters/StringReplacementFilterTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/SwiftException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/SwiftMailerSmokeTestCase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/SwiftMailerTestCase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/ByteStream/TemporaryFileByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/ThrottlerPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Plugins/ThrottlerPluginTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Plugins/Timer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance/Swift/Transport/StreamBuffer/TlsSocketAcceptanceTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/TransportChangeEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/TransportChangeEventTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/TransportChangeListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/TransportException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/TransportExceptionEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Events/TransportExceptionEventTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Events/TransportExceptionListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mime/Headers/UnstructuredHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/Mime/Headers/UnstructuredHeaderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/UsAsciiReader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterReader/UsAsciiReaderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/UserGroup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Users.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/CharacterReader/Utf8Reader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/unit/Swift/CharacterReader/Utf8ReaderTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/VERSION" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Validate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/acceptance.conf.php.default" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/composer/autoload_classmap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/composer/autoload_files.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/composer/autoload_namespaces.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/composer/autoload_psr4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/composer/autoload_real.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/ca.crt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/ca.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/dependency_maps/cache_deps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/create-cert.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/files/data.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/db.16.08.2015.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sql/db.19.08.2015.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/dkim/dkim.test.priv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/dkim/dkim.test.pub" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/encrypt.crt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/encrypt.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/encrypt2.crt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/encrypt2.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/frontend/views/order/form.volt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/headers.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/help-resources.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/frontend/views/order/history.volt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/including-the-files.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/index.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/composer/installed.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/installing.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/intermediate.crt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/intermediate.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/introduction.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/japanese.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/dependency_maps/message_deps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/messages.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/dependency_maps/mime_deps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/mime_types.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/iso-2022-jp/one.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/iso-8859-1/one.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/utf-8/one.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/overview.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/plugins.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/preferences.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/frontend/views/order/print.volt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/doc/sending.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/sign.crt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/sign.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/sign2.crt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/smime/sign2.key" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/smoke.conf.php.default" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/swift_init.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/swift_required.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/swift_required_pear.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/utf-8/three.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/lib/dependency_maps/transport_deps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/swiftmailer/swiftmailer/tests/_samples/charsets/utf-8/two.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/frontend/controllers/NewsController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/frontend/controllers/RecommendedArticleController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/frontend/controllers/RoomController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/frontend/controllers/ServiceItemController.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/controllers/ControllerBase.php" afterPath="$PROJECT_DIR$/app/frontend/controllers/ControllerBase.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/controllers/OrderController.php" afterPath="$PROJECT_DIR$/app/frontend/controllers/OrderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/default.css" afterPath="$PROJECT_DIR$/public/css/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/default.js" afterPath="$PROJECT_DIR$/public/js/default.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/controllers/UserController.php" afterPath="$PROJECT_DIR$/app/frontend/controllers/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/partials/header.volt" afterPath="$PROJECT_DIR$/app/frontend/views/partials/header.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/index/index.volt" afterPath="$PROJECT_DIR$/app/frontend/views/index/index.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/user/login.volt" afterPath="$PROJECT_DIR$/app/frontend/views/user/login.volt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/map.js" afterPath="$PROJECT_DIR$/public/js/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/mail/order.volt" afterPath="$PROJECT_DIR$/app/frontend/views/mail/order.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/order/preview.volt" afterPath="$PROJECT_DIR$/app/frontend/views/order/preview.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/layouts/user.volt" afterPath="$PROJECT_DIR$/app/frontend/views/layouts/user.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/frontend/views/event/view.volt" afterPath="$PROJECT_DIR$/app/frontend/views/event/view.volt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="651c3a30-c589-45c5-bc7d-209aa434fe1f" name="New changelist" comment="" />
@@ -40,105 +404,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EventController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/controllers/EventController.php">
+      <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/frontend/controllers/OrderController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="360">
-              <caret line="14" column="34" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.volt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/frontend/views/event/list.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04828326" vertical-offset="0" max-vertical-offset="932">
-              <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+            <state vertical-scroll-proportion="-27.583334" vertical-offset="343" max-vertical-offset="3090">
+              <caret line="124" column="43" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="43" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#180#789#0#PHP" expanded="false" />
+                <element signature="e#794#2071#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/views/event/view.volt">
+      <file leaf-file-name="form.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/frontend/views/order/form.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="375">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/controllers/MapController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="1590">
-              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+            <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="615">
+              <caret line="24" column="83" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/views/index/index.volt">
+      <file leaf-file-name="history.volt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/frontend/views/order/history.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
-              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.050083473" vertical-offset="0" max-vertical-offset="599">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/controllers/IndexController.php">
+      <file leaf-file-name="Orders.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Orders.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="270">
-              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+            <state vertical-scroll-proportion="-22.958334" vertical-offset="304" max-vertical-offset="1260">
+              <caret line="57" column="91" selection-start-line="57" selection-start-column="81" selection-end-line="57" selection-end-column="91" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/views/partials/menu.volt">
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.75" vertical-offset="0" max-vertical-offset="825">
-              <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="3015">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/views/index.volt">
+      <file leaf-file-name="default.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/default.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/frontend/views/partials/header.volt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="255">
-              <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/default.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="454" max-vertical-offset="1485">
-              <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -155,18 +478,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/extjs/desktop/modules/RecommendedArticleManager.js" />
-        <option value="$PROJECT_DIR$/app/frontend/controllers/RecommendedArticleController.php" />
-        <option value="$PROJECT_DIR$/app/frontend/views/partials/recommended-articles.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/views/layouts/room.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/views/news/index.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/views/payment/index.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/views/payment/index.phtml" />
-        <option value="$PROJECT_DIR$/app/frontend/controllers/PaymentController.php" />
-        <option value="$PROJECT_DIR$/app/frontend/views/layouts/payment.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/views/payment/success.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/views/payment/error.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/views/room/balance.volt" />
         <option value="$PROJECT_DIR$/app/frontend/views/partials/left-menu-user.volt" />
         <option value="$PROJECT_DIR$/app/frontend/controllers/RoomController.php" />
         <option value="$PROJECT_DIR$/app/frontend/views/partials/search.volt" />
@@ -181,31 +492,43 @@
         <option value="$PROJECT_DIR$/app/library/Breadcrumbs.php" />
         <option value="$PROJECT_DIR$/app/frontend/controllers/ReservationController.php" />
         <option value="$PROJECT_DIR$/public/css/clear.css" />
-        <option value="$PROJECT_DIR$/app/frontend/views/index.volt" />
         <option value="$PROJECT_DIR$/public/css/reset.css" />
-        <option value="$PROJECT_DIR$/app/frontend/controllers/ControllerBase.php" />
         <option value="$PROJECT_DIR$/app/library/LiqPay.php" />
         <option value="$PROJECT_DIR$/app/models/Orders.php" />
-        <option value="$PROJECT_DIR$/app/frontend/views/order/preview.volt" />
         <option value="$PROJECT_DIR$/app/frontend/views/order/payment.volt" />
         <option value="$PROJECT_DIR$/app/frontend/views/order/success.volt" />
         <option value="$PROJECT_DIR$/public/key.txt" />
         <option value="$PROJECT_DIR$/app/config/services.php" />
         <option value="$PROJECT_DIR$/app/config/config.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/app/frontend/views/mail/order.volt" />
-        <option value="$PROJECT_DIR$/app/frontend/controllers/OrderController.php" />
         <option value="$PROJECT_DIR$/app/models/Events.php" />
         <option value="$PROJECT_DIR$/app/frontend/views/index/index.volt" />
         <option value="$PROJECT_DIR$/app/frontend/controllers/EventController.php" />
         <option value="$PROJECT_DIR$/public/js/default.js" />
-        <option value="$PROJECT_DIR$/app/frontend/views/event/view.volt" />
-        <option value="$PROJECT_DIR$/public/js/map.js" />
         <option value="$PROJECT_DIR$/app/frontend/controllers/MapController.php" />
         <option value="$PROJECT_DIR$/app/frontend/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/app/frontend/views/partials/header.volt" />
         <option value="$PROJECT_DIR$/public/css/default.css" />
         <option value="$PROJECT_DIR$/app/frontend/views/event/list.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/views/layouts/user.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/views/user/login.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/controllers/ControllerBase.php" />
+        <option value="$PROJECT_DIR$/app/frontend/views/index.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/views/partials/header.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/controllers/TiketController.php" />
+        <option value="$PROJECT_DIR$/app/frontend/controllers/TicketController.php" />
+        <option value="$PROJECT_DIR$/public/css/print.css" />
+        <option value="$PROJECT_DIR$/app/frontend/views/mail/order.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/views/order/print.volt" />
+        <option value="$PROJECT_DIR$/public/js/map.js" />
+        <option value="$PROJECT_DIR$/public/js/map-user.js" />
+        <option value="$PROJECT_DIR$/app/frontend/views/event/view.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/views/order/payment-paymaster.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/frontend/views/order/preview.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt" />
+        <option value="$PROJECT_DIR$/app/frontend/views/order/form.volt" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/app/frontend/controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/app/frontend/views/order/history.volt" />
       </list>
     </option>
   </component>
@@ -476,6 +799,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tickets-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tickets-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -502,7 +851,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
+              <option name="myItemId" value="order" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -528,7 +877,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
+              <option name="myItemId" value="mail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -614,11 +963,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/frontend/views/order" />
+      <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/app/frontend/controllers" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/app/frontend/views" />
-      <recent name="$PROJECT_DIR$/app/library" />
-      <recent name="$PROJECT_DIR$/app/frontend/views/order" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/views/layouts" />
@@ -816,34 +1165,46 @@
       <option name="project" value="LOCAL" />
       <updated>1439743038970</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="liqpay">
+      <created>1439746145083</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1439746145083</updated>
+    </task>
+    <task id="LOCAL-00027" summary="liqpay">
+      <created>1439746331142</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1439746331142</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32520324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32520324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47853404" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32825205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -885,88 +1246,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/frontend/controllers/OrderController.php</url>
+          <line>222</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/PaymentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/RoomController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.958334" vertical-offset="0" max-vertical-offset="0">
-          <caret line="40" column="72" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/partials/search.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="0">
-          <caret line="4" column="94" selection-start-line="4" selection-start-column="94" selection-end-line="4" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/partials/slider.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34276387" vertical-offset="0" max-vertical-offset="0">
-          <caret line="21" column="77" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/font-awesome-4.3.0/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/partials/brands.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22532189" vertical-offset="0" max-vertical-offset="0">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/partials/footer.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="0">
-          <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38626608" vertical-offset="0" max-vertical-offset="0">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06223176" vertical-offset="0" max-vertical-offset="0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/bootstrap-3/js/npm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18828452" vertical-offset="0" max-vertical-offset="0">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/views/map/view.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -999,13 +1290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33798283" vertical-offset="0" max-vertical-offset="932">
           <caret line="21" column="30" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/ReservationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.28755364" vertical-offset="538" max-vertical-offset="2475">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1044,53 +1328,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/library/LiqPay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.208334" vertical-offset="2563" max-vertical-offset="3540">
-          <caret line="208" column="35" selection-start-line="208" selection-start-column="27" selection-end-line="208" selection-end-column="35" />
-          <folding>
-            <element signature="e#6#582#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14121339" vertical-offset="0" max-vertical-offset="956">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/ControllerBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14484979" vertical-offset="0" max-vertical-offset="932">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/views/order/payment.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06437768" vertical-offset="0" max-vertical-offset="932">
           <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-36.958332" vertical-offset="958" max-vertical-offset="1950">
-          <caret line="129" column="3" selection-start-line="129" selection-start-column="3" selection-end-line="129" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/preview.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8551502" vertical-offset="478" max-vertical-offset="1410">
-          <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,7 +1339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="956">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1106,7 +1346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
@@ -1117,15 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.20708154" vertical-offset="193" max-vertical-offset="1125">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="855">
-          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1133,39 +1363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="585">
           <caret line="29" column="37" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/EventSeats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77253217" vertical-offset="0" max-vertical-offset="932">
-          <caret line="48" column="77" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/mail/order.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2414163" vertical-offset="0" max-vertical-offset="932">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58154505" vertical-offset="313" max-vertical-offset="1260">
-          <caret line="57" column="91" selection-start-line="57" selection-start-column="81" selection-end-line="57" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,15 +1370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.01609442" vertical-offset="0" max-vertical-offset="932">
           <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.112660944" vertical-offset="1005" max-vertical-offset="2100">
-          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,68 +1377,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33798283" vertical-offset="0" max-vertical-offset="932">
           <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="360">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/controllers/MapController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="1590">
+        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1590">
           <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09414226" vertical-offset="0" max-vertical-offset="956">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67384285" vertical-offset="199" max-vertical-offset="1155">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding>
-            <element signature="e#1423#1544#0" expanded="false" />
-            <element signature="e#1583#1678#0" expanded="false" />
-            <element signature="e#1716#1907#0" expanded="false" />
-            <element signature="e#1943#2019#0" expanded="false" />
-            <element signature="e#2198#2240#0" expanded="false" />
-            <element signature="e#2345#2942#0" expanded="false" />
-            <element signature="e#2948#3027#0" expanded="false" />
-            <element signature="e#3068#3706#0" expanded="false" />
-            <element signature="e#3748#4311#0" expanded="false" />
-            <element signature="e#4355#4660#0" expanded="false" />
-            <element signature="e#4783#5710#0" expanded="false" />
-            <element signature="e#5748#6317#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/event/view.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="375">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/views/index/index.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="345">
           <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
           <folding />
         </state>
@@ -1258,7 +1398,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="270">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="270">
           <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
           <folding />
         </state>
@@ -1266,15 +1406,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/views/partials/menu.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.75" vertical-offset="0" max-vertical-offset="825">
+        <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="825">
           <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/event/list.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.305794" vertical-offset="0" max-vertical-offset="932">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33263597" vertical-offset="17052" max-vertical-offset="72015">
+          <caret line="1158" column="17" selection-start-line="1158" selection-start-column="17" selection-end-line="1158" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/ReservationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79077256" vertical-offset="1543" max-vertical-offset="2475">
+          <caret line="153" column="28" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/layouts/user.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="932">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.88733906" vertical-offset="1018" max-vertical-offset="1950">
+          <caret line="129" column="3" selection-start-line="129" selection-start-column="3" selection-end-line="129" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/user/login.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="932">
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/ControllerBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="885">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15690376" vertical-offset="0" max-vertical-offset="956">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="454" max-vertical-offset="1485">
+        <state vertical-scroll-proportion="0.95292884" vertical-offset="454" max-vertical-offset="1485">
           <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
           <folding />
         </state>
@@ -1282,27 +1486,225 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/views/partials/header.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="255">
-          <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.112660944" vertical-offset="0" max-vertical-offset="932">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/PageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="956">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34120172" vertical-offset="1452" max-vertical-offset="3480">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="360">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/print.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07845188" vertical-offset="0" max-vertical-offset="956">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/frontend/views/index.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.14484979" vertical-offset="0" max-vertical-offset="932">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frontend/views/event/list.volt">
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/print.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04828326" vertical-offset="0" max-vertical-offset="932">
-          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.52230686" vertical-offset="0" max-vertical-offset="919">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/mail/order.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#7;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#9;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="3015">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/library/LiqPay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0461373" vertical-offset="1095" max-vertical-offset="3240">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding>
+            <marker date="1439723484000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/EventSeats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7886266" vertical-offset="0" max-vertical-offset="932">
+          <caret line="49" column="74" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45064378" vertical-offset="0" max-vertical-offset="932">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="46" />
+          <folding>
+            <element signature="e#47#72#0#PHP" expanded="true" />
+            <element signature="e#206#301#0#PHP" expanded="false" />
+            <element signature="e#1154#3007#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/paymentPaymaster.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22850925" vertical-offset="0" max-vertical-offset="919">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="17" selection-end-column="87" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#1;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#5;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#6;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#7;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#8;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#9;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.01609442" vertical-offset="0" max-vertical-offset="932">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Orders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.958334" vertical-offset="304" max-vertical-offset="1260">
+          <caret line="57" column="91" selection-start-line="57" selection-start-column="81" selection-end-line="57" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/preview.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25965664" vertical-offset="73" max-vertical-offset="1755">
+          <caret line="21" column="78" selection-start-line="0" selection-start-column="0" selection-end-line="111" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/event/view.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17703862" vertical-offset="0" max-vertical-offset="932">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="8" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/form.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="615">
+          <caret line="24" column="83" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.583334" vertical-offset="343" max-vertical-offset="3090">
+          <caret line="124" column="43" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="43" />
+          <folding>
+            <element signature="e#180#789#0#PHP" expanded="false" />
+            <element signature="e#794#2071#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/frontend/views/order/history.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.050083473" vertical-offset="0" max-vertical-offset="599">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,7 @@
+* {
+    visibility: hidden;
+}
+
+.print, .print * {
+    visibility: visible;
+}

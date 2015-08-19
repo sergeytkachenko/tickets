@@ -3,6 +3,7 @@ namespace Multiple\Frontend\Controllers;
 
 use EventSeats;
 use LiqPay;
+use OrderHistory;
 use Orders;
 use Phalcon\Mvc\View;
 
@@ -23,6 +24,105 @@ class OrderController extends ControllerBase
         $this->view->setVar('totalSum', $totalSum);
         $this->view->setVar('eventId', $eventId);
 
+    }
+    public function prePaymentPaymasterAction($eventId) {
+        $user = $this->session->get('user');
+        if(!$user){return;}
+
+        $name = $user->name;
+        $email = $user->email;
+        $uidArray = array();
+
+        $eventSeats = $this->getSelfEventsSeats($eventId);
+        if(!$eventSeats) {
+            die('Нет выбраных мест, или сессия истекла');
+        }
+        foreach($eventSeats as $eventSeat) {
+            $uid = LiqPay::gen_uuid();
+            array_push($uidArray, $uid);
+            $order = Orders::findFirst(array(
+                'events_seat_id = :eventSeatId:',
+                'bind' => array(
+                    'eventSeatId' => $eventSeat->id
+                )
+            ));
+            $order = $order? $order : new Orders();
+            $order->assign(array(
+                "events_seat_id" => $eventSeat->id,
+                "user_name" => $name,
+                "user_email" => $email,
+                "user_phone" => null,
+                "date" => date("Y-m-d H:i:s"),
+                "uid" => $uid
+            ));
+
+            if($order->save()) {
+
+            } else {
+                debug($order->getMessages());
+            }
+        }
+        $this->response->redirect("/order/paymentPaymaster/".implode(",", $uidArray));
+    }
+    public function paymentPaymasterAction ($uids) {
+        $user = $this->session->get('user');
+        if(!$user) {return;};
+        $uidList = explode(",", $uids);
+        $orders = array();
+        foreach($uidList as $uid) {
+            $order = Orders::findFirst(array(
+                'uid = :uid:',
+                'bind' => array(
+                    'uid' => $uid
+                )
+            ));
+            $order->assign(array(
+                "success" => true
+            ));
+
+            if($order->save()) {
+                $orders[] = $order;
+                $eventSeat = EventSeats::findFirst($order->events_seat_id);
+                $eventSeat->last_reservation = NULL;
+                $eventSeat->last_reservation_session_id = NULL;
+                $eventSeat->is_purchased = 1;
+                $eventSeat->save();
+
+            } else {
+                debug($order->getMessages());
+            }
+        }
+
+        $orderHistory = OrderHistory::findFirst(array(
+            "uids = :uids: AND user_id = :userId:",
+            'bind' => array(
+                'uids' => $uids,
+                'userId' => $user->id
+            )
+        ));
+        $orderHistory = $orderHistory? $orderHistory : new OrderHistory();
+        if(!$orderHistory->save(array(
+            'datetime' => date('Y-m-d H:i:s'),
+            'uids' => $uids,
+            'user_id' => $user->id
+        ))) {
+            debug($orderHistory->getMessages());
+        }
+        $this->view->setVar('orders', $orders);
+    }
+
+    public function historyAction () {
+        $user = $this->session->get('user');
+        if(!$user) {return;};
+
+        $orderHistories = OrderHistory::find(array(
+            "user_id = :userId:",
+            'bind' => array(
+                'userId' => $user->id
+            )
+        ));
+
+        $this->view->setVar('orderHistories', $orderHistories);
     }
 
     // сюда должно редиректить после успешной оплаты
@@ -133,5 +233,25 @@ class OrderController extends ControllerBase
         ));
     }
 
+    public function printAction ($uid) {
+        $this->view->setRenderLevel(View::LEVEL_ACTION_VIEW);
+        $order = Orders::findFirst(array(
+            'uid = :uid:',
+            'bind' => array(
+                'uid' => $uid
+            )
+        ));
+        if(!$order) {
+            exit;
+        }
+        $eventSeats = EventSeats::findFirst($order->events_seat_id);
+        $event = $eventSeats->Events;
+        $seat = $eventSeats->Seats;
+
+        $this->view->setVar('event', $event);
+        $this->view->setVar('seat', $seat);
+        $this->view->setVar('order', $order);
+
+    }
 }
 
