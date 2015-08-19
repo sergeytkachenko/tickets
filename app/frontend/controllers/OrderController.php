@@ -53,7 +53,8 @@ class OrderController extends ControllerBase
                 "user_email" => $email,
                 "user_phone" => null,
                 "date" => date("Y-m-d H:i:s"),
-                "uid" => $uid
+                "uid" => $uid,
+                "success" => 1
             ));
 
             if($order->save()) {
@@ -71,11 +72,12 @@ class OrderController extends ControllerBase
         $orders = array();
         foreach($uidList as $uid) {
             $order = Orders::findFirst(array(
-                'uid = :uid:',
+                'uid = :uid: AND success = 1',
                 'bind' => array(
                     'uid' => $uid
                 )
             ));
+            if(!$order){continue;}
             $order->assign(array(
                 "success" => true
             ));
