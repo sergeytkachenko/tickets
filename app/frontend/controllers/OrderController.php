@@ -231,7 +231,8 @@ class OrderController extends ControllerBase
             )
         ));
         if(!$order) {
-            exit;
+            $this->view->setVar('error', 'Билет '.$uid.' не найден...');
+            return;
         }
         $eventSeats = EventSeats::findFirst($order->events_seat_id);
         $event = $eventSeats->Events;
