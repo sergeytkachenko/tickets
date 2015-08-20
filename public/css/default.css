@@ -20,7 +20,18 @@
 }
 
 .purchased, [data-price] {
+    /*opacity: 1 !important;*/
+}
+[data-free]{
+    opacity: 0.5 !important;
+}
+
+[data-free=false], .purchased {
     opacity: 1 !important;
+}
+
+.purchased[data-free=false]{
+    opacity: 0.1 !important;
 }
 
 #map {

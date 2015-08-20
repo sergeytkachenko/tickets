@@ -12,4 +12,4 @@ INSERT INTO event_seats
       null as last_reservation,
       null as last_reservation_session_id,
       0 as is_purchased
-    FROM seats;
+    FROM seats s;

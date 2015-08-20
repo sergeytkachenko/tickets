@@ -48,6 +48,9 @@ var Map = function (eventId) {
             self.zoom(scale);
         });
         this.initDrag();
+
+
+        $(this.svg).find("[opacity]").attr("style", "opacity:0.1")
     }
 
     this.initDrag = function () {
@@ -100,7 +103,8 @@ var Map = function (eventId) {
             var obj = $(self.svg).find("[data-id="+seatId+"]");
             $(obj).attr("data-free", free);
             $(obj).attr("title", title).attr("data-price", price);
-            $(obj).attr("fill", self.availableFill);
+            //$(obj).attr("fill", self.availableFill);
+            $(obj).attr("opacity", 1);
             if(!free) {
                 $(obj).attr("fill", self.hoverFill);
             }
