@@ -16,6 +16,3 @@
 <script>window.eventId = '{{ event.id }}';</script>
 <script src="/js/map.js"></script>
 <script src="/js/default.js"></script>
-{%  if user %}
-    <script src="/js/map-user.js"></script>
-{% endif %}

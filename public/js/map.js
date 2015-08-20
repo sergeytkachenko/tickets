@@ -12,6 +12,8 @@ var Map = function (eventId) {
     this.prevLocation = "/order/preview/"+eventId;
 
     this.intervalTimeout = 14 * 1000; // 14 min
+    this.zoomDefault = 0.1;
+    this.scale = 1;
 
     this.defaultOpacity = 0.5;
     this.hoverFill = "#000000"; // при наведении
@@ -35,7 +37,29 @@ var Map = function (eventId) {
                 self.setPurchased(this, "me");
             }
         });
+        $(".zoom.plus").on("click", function () {
+            self.zoom(self.zoomDefault);
+        });
+        $(".zoom.minus").on("click", function () {
+            self.zoom(-self.zoomDefault);
+        });
+        $('#map').on('mousewheel', function(event) {
+            var scale = event.deltaY > 0 ? self.zoomDefault : - self.zoomDefault;
+            self.zoom(scale);
+        });
+        this.initDrag();
+    }
 
+    this.initDrag = function () {
+        $(this.svg).draggable();
+    }
+
+    this.zoom = function (scale) {
+        if(this.scale + scale < 1) {return;}
+        this.scale += scale;
+        $(this.svg).css({
+            "transform" : "scale(" + this.scale + ")"
+        });
     }
 
     this.setBgColor = function (el) {
