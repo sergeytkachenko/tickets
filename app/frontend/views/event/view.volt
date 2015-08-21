@@ -1,7 +1,14 @@
-<h2>{{ event.Representation.title }}, начало {{ display_when(event.date) }}</h2>
-<div class="description-event">
-
+<div class="description-event" style="margin-bottom: 20px;">
+    <a href="/representation/view/{{ event.Representation.id }}" class="btn btn-default" role="button">
+        <i class="fa fa-arrow-left"></i> Все даты представлений
+    </a>
 </div>
+<h2>
+    {{ event.Representation.title }}
+    <span style="float: right">
+        начало {{ display_when(event.date) }}
+    </span>
+</h2>
 <div id="map">
     <svg version="1.1" id="_x2014_лой_1" xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="595px" height="562.835px"

@@ -3,10 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Авг 21 2015 г., 16:53
+-- Время создания: Авг 21 2015 г., 16:54
 -- Версия сервера: 5.6.21
 -- Версия PHP: 5.6.8
 
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -3578,6 +3579,7 @@ TRUNCATE TABLE `user_group`;
 
 INSERT INTO `user_group` (`id`, `title`) VALUES
 (1, 'кассир');
+SET FOREIGN_KEY_CHECKS=1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -1,5 +1,12 @@
 <div class="row">
     {% if events|length %}
+    <div class="col-md-11">
+        <div class="description-event" style="margin-bottom: 20px;">
+            <a href="/representation/list" class="btn btn-default" role="button">
+                <i class="fa fa-arrow-left"></i> Все представления
+            </a>
+        </div>
+    </div>
     <div class="col-md-3">
         <div class="logo">
             <a href="/"><img src="/img/logo.png" alt="Цирк України"></a>
