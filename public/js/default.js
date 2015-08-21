@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $.ajax({
         type: "POST",
-        url: "/map/view",
+        url: "/maps/view",
         success: function (data) {
             $("#map svg").html(data);
             window.map = new Map(eventId);
@@ -19,7 +19,7 @@ $(document).ready(function () {
 function getAvailableSeats(eventId, callback, scope) {
     $.ajax({
         type: "POST",
-        url: "/map/availableSeats/"+eventId,
+        url: "/maps/availableSeats/"+eventId,
         success: function (data) {
             if(typeof callback === "function") {
                 $('.fakeLoader').fadeOut(1000);

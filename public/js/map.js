@@ -7,7 +7,7 @@ var Map = function (eventId) {
     this.reservUrl = "/reservation/seat/";
     this.reservClearUrl = "/reservation/seatClear/";
     this.checkReservation = "/reservation/check/";
-    this.selfPurchased = "/map/getSelfPurchased/"; // все зарезервированые собой места
+    this.selfPurchased = "/maps/getSelfPurchased/"; // все зарезервированые собой места
     this.timeOut = "/reservation/timeout/";
     this.prevLocation = "/order/preview/"+eventId;
 
