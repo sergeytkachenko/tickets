@@ -59,6 +59,22 @@ $di->set('view', function () use ($config) {
                     return 'substr('.$string.', 0, '.$secondArgument.')';
                 });
 
+            $compiler->addFilter('getDay', function($resolvedArgs, $exprArgs) {
+                return '\DateFormat::getDay('.$resolvedArgs.');';
+            });
+            $compiler->addFilter('getDayName', function($resolvedArgs, $exprArgs) {
+                return '\DateFormat::getDayName('.$resolvedArgs.');';
+            });
+            $compiler->addFilter('getMonthName', function($resolvedArgs, $exprArgs) {
+                return '\DateFormat::getMonthName('.$resolvedArgs.');';
+            });
+            $compiler->addFilter('getHours', function($resolvedArgs, $exprArgs) {
+                return '\DateFormat::getHours('.$resolvedArgs.');';
+            });
+            $compiler->addFilter('getMinutes', function($resolvedArgs, $exprArgs) {
+                return '\DateFormat::getMinutes('.$resolvedArgs.');';
+            });
+
             $compiler->addFunction('display_when',
                 function($resolvedArgs, $exprArgs) use ($compiler) {
                     $string = $compiler->expression($exprArgs[0]['expr']);

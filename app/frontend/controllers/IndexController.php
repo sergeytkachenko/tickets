@@ -5,7 +5,7 @@ class IndexController extends ControllerBase
 {
 
     public function indexAction() {
-        $this->response->redirect('/event/list');
+        $this->response->redirect('/representation/list');
     }
 
 }

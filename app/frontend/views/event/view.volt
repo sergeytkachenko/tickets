@@ -1,4 +1,7 @@
-<h2>{{ event.title }}</h2>
+<h2>{{ event.Representation.title }}, начало {{ event.date }}</h2>
+<div class="description-event">
+
+</div>
 <div id="map">
     <svg version="1.1" id="_x2014_лой_1" xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="595px" height="562.835px"
@@ -7,7 +10,17 @@
     <a class="zoom plus glyphicon glyphicon-plus"></a>
     <a class="zoom minus glyphicon glyphicon-minus"></a>
 </div>
+<div class="description-event">
+
+</div>
 <div class="navigation">
+    <ul class="colors">
+        <li><span style="background-color: #a61280;"></span> - 60 грн</li>
+        <li><span style="background-color: #00963f;"></span> - 80 грн</li>
+        <li><span style="background-color: #ffee00;"></span> - 100 грн</li>
+        <li><span style="background-color: #009fe3;"></span> - 120 грн</li>
+        <li><span style="background-color: #e3010f;"></span> - 150 грн</li>
+    </ul>
     <p style="text-align: right">
         <button class="btn btn-large btn-primary" type="button" onclick="window.map.checkAvailability();">
             Продолжить <i class="fa fa-angle-double-right"></i></button>

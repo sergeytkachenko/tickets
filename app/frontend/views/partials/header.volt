@@ -1,12 +1,14 @@
-<div class="container-fluid">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="/">Покупка билетов онлайн</a>
-    </div>
+<div class="container-fluid" style="padding: 0;">
     <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-            <li {% if router.getRewriteUri() == '/event/list' %}class="active"{% endif %}><a href="/event/list">Мероприятия</a></li>
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <a class="navbar-brand" href="/"><img src="/img/prapor.png" alt="Прапор України"></a>
+            </li>
+            <li {% if router.getRewriteUri() == '/representation/list' %}class="active"{% endif %}><a href="/representation/list">Мероприятия</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Как купить билет?</a></li>
             {%  if user %}
-                <li class="dropdown" style="height: 50px; margin-left: 10px;">
+                <li class="dropdown" style="height: 50px; margin-left: 10px; float: right">
                     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="height: 50px;">
                         {{ user.email }}
                         <span class="caret"></span>
@@ -23,7 +25,6 @@
 
                 </li>
             {% endif %}
-
         </ul>
-    </div><!--/.nav-collapse -->
-</div><!--/.container-fluid -->
+    </div>
+</div>

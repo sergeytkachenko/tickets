@@ -1,20 +1,34 @@
-<div>
-    {% for event in events %}
-    <div class="row event-short-container">
-        <div class="col-md-8" style="padding-left: 0">
-            <div class="event-image">
-                <img src="{{ event.img }}" alt="{{ event.title|e }}">
-            </div>
+<div class="row">
+    {% if events|length %}
+    <div class="col-md-3">
+        <div class="logo">
+            <a href="/"><img src="/img/logo.png" alt="Цирк України"></a>
         </div>
-        <div class="col-md-4 event-short-details">
-            <h3><a href="/event/view/{{  event.id }}">{{ event.title|e }}</a></h3>
-            <p>{{ event.description }}</p>
-            <div class="nearest-event">
-                <div>Дата проведения мероприятия:</div>
-                <div>{{ event.date }}</div>
-                <a class="btn btn-primary more" href="/event/view/{{  event.id }}">Купить билет</a>
+        <div class="poster">
+            <img src="{{ representation.img }}" alt="Афіша" height="345">
+            <div>
+                {{ representation.description }}
             </div>
         </div>
     </div>
-    {% endfor %}
+    <div class="col-md-8">
+        <div class="jumbotron" style="width:100%; background-color: #fff; padding:3%; float: right;">
+            <div class="tbl-responsive">
+                <table class="table">
+                    {% for event in events %}
+                        <tr class="backgr-grey">
+                            <td class="tbl-day"><h4>{{ event.date|getDay }}</h4></td>
+                            <td class="tbl-date"><h4>{{ event.date|getMonthName }}<br><span>{{ event.date|getDayName }}</span></h4></td>
+                            <td class="tbl-time"><h4>{{ event.date|getHours }}:{{ event.date|getMinutes }}</h4></td>
+                            <td class="tbl-show"><h4>{{ representation.title }}</h4></td>
+                            <td class="tbl-buy"><a class="btn btn-primary more" href="/event/view/{{ event.id }}">Купить билет</a></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+    {% else %}
+        <h4>На это мероприятие представлений нет. Попробуйте зайти позже.</h4>
+    {% endif %}
 </div>

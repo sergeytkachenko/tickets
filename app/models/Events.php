@@ -11,21 +11,9 @@ class Events extends \Phalcon\Mvc\Model
 
     /**
      *
-     * @var string
+     * @var integer
      */
-    public $title;
-
-    /**
-     *
-     * @var string
-     */
-    public $description;
-
-    /**
-     *
-     * @var string
-     */
-    public $img;
+    public $representation_id;
 
     /**
      *
@@ -36,6 +24,20 @@ class Events extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->hasMany('id', 'EventSeats', 'event_id', array('alias' => 'EventSeats'));
+        $this->belongsTo('representation_id', 'Representations', 'id', array('alias' => 'Representation'));
+
+    }
+
+    /**
+     * Independent Column Mapping.
+     */
+    public function columnMap()
+    {
+        return array(
+            'id' => 'id', 
+            'representation_id' => 'representation_id', 
+            'date' => 'date'
+        );
     }
 
 }

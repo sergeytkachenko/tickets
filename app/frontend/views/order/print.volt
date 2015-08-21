@@ -27,7 +27,7 @@
                 <th style="border:1px solid #A6A6A6;padding:3px;">Ціна</th>
             </tr>
             <tr>
-                <th style="border:1px solid #A6A6A6;padding:3px;">{{ event.title }}, {{ event.date }}</th>
+                <th style="border:1px solid #A6A6A6;padding:3px;">{{ event.Representation.title }}, {{ event.date }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ seat.title }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.uid }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.date }}</th>

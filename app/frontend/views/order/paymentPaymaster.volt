@@ -14,7 +14,7 @@
         </tr>
         {% for order in orders %}
             <tr>
-                <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.EventSeats.Events.title }}, {{ order.EventSeats.Events.date }}</th>
+                <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.EventSeats.Events.Representation.title }}, {{ order.EventSeats.Events.date }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.EventSeats.Seats.title }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.uid }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.date }}</th>

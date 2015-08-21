@@ -15,7 +15,7 @@ var Map = function (eventId) {
     this.zoomDefault = 0.1;
     this.scale = 1;
 
-    this.defaultOpacity = 0.5;
+    this.defaultOpacity = 0.7;
     this.hoverFill = "#000000"; // при наведении
     this.reservedFill = "#000000"; // при резервации
     this.availableFill = "#3C863C"; // места, которые продаются
