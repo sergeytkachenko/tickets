@@ -1,4 +1,4 @@
-<h2>{{ event.Representation.title }}, начало {{ event.date }}</h2>
+<h2>{{ event.Representation.title }}, начало {{ display_when(event.date) }}</h2>
 <div class="description-event">
 
 </div>

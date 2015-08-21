@@ -3,7 +3,7 @@ try {
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    setlocale(LC_ALL, 'ru_RU');
+    setlocale(LC_ALL, 'ru_RU.UTF-8');
 
     define('PUBLIC_PATH', realpath(dirname(__FILE__)));
 

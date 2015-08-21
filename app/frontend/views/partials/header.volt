@@ -1,7 +1,7 @@
 <div class="container-fluid" style="padding: 0;">
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-            <li>
+            <li style="margin-right: 40px;">
                 <a class="navbar-brand" href="/"><img src="/img/prapor.png" alt="Прапор України"></a>
             </li>
             <li {% if router.getRewriteUri() == '/representation/list' %}class="active"{% endif %}><a href="/representation/list">Мероприятия</a></li>
