@@ -1,6 +1,6 @@
 <?php
 
-class Seats extends \Phalcon\Mvc\Model
+class SeatColors extends \Phalcon\Mvc\Model
 {
 
     /**
@@ -13,20 +13,7 @@ class Seats extends \Phalcon\Mvc\Model
      *
      * @var string
      */
-    public $title;
-
-    /**
-     *
-     * @var integer
-     */
-    public $seat_color_id;
-
-
-    public function initialize()
-    {
-        $this->hasMany('id', 'EventSeats', 'seat_id', array('alias' => 'EventSeats'));
-        $this->hasMany('id', 'Orders', 'seat_id', array('alias' => 'Orders'));
-    }
+    public $hex;
 
     /**
      * Returns table name mapped in the model.
@@ -35,14 +22,14 @@ class Seats extends \Phalcon\Mvc\Model
      */
     public function getSource()
     {
-        return 'seats';
+        return 'seat_colors';
     }
 
     /**
      * Allows to query a set of records that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Seats[]
+     * @return SeatColors[]
      */
     public static function find($parameters = null)
     {
@@ -53,7 +40,7 @@ class Seats extends \Phalcon\Mvc\Model
      * Allows to query the first record that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Seats
+     * @return SeatColors
      */
     public static function findFirst($parameters = null)
     {

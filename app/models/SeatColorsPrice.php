@@ -1,6 +1,6 @@
 <?php
 
-class Seats extends \Phalcon\Mvc\Model
+class SeatColorsPrice extends \Phalcon\Mvc\Model
 {
 
     /**
@@ -11,21 +11,29 @@ class Seats extends \Phalcon\Mvc\Model
 
     /**
      *
-     * @var string
+     * @var integer
      */
-    public $title;
+    public $seat_color_id;
 
     /**
      *
      * @var integer
      */
-    public $seat_color_id;
+    public $representation_id;
 
+    /**
+     *
+     * @var integer
+     */
+    public $price;
 
+    /**
+     * Initialize method for model.
+     */
     public function initialize()
     {
-        $this->hasMany('id', 'EventSeats', 'seat_id', array('alias' => 'EventSeats'));
-        $this->hasMany('id', 'Orders', 'seat_id', array('alias' => 'Orders'));
+        $this->belongsTo('seat_color_id', 'SeatColors', 'id', array('alias' => 'SeatColors'));
+        $this->belongsTo('representation_id', 'Representations', 'id', array('alias' => 'Representations'));
     }
 
     /**
@@ -35,14 +43,14 @@ class Seats extends \Phalcon\Mvc\Model
      */
     public function getSource()
     {
-        return 'seats';
+        return 'seat_colors_price';
     }
 
     /**
      * Allows to query a set of records that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Seats[]
+     * @return SeatColorsPrice[]
      */
     public static function find($parameters = null)
     {
@@ -53,7 +61,7 @@ class Seats extends \Phalcon\Mvc\Model
      * Allows to query the first record that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Seats
+     * @return SeatColorsPrice
      */
     public static function findFirst($parameters = null)
     {
