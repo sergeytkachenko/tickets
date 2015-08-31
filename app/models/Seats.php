@@ -32,6 +32,7 @@ class Seats extends \Phalcon\Mvc\Model
     {
         $this->hasMany('id', 'EventSeats', 'seat_id', array('alias' => 'EventSeats'));
         $this->hasMany('id', 'Orders', 'seat_id', array('alias' => 'Orders'));
+        $this->belongsTo('seat_color_id', 'SeatColors', 'id', array('alias' => 'SeatColor'));
     }
 
     /**

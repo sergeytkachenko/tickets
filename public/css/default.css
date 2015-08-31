@@ -15,8 +15,8 @@
 }
 
 .me.purchased {
-    fill: #F70202;
-    background-color: #F70202;
+    fill: #80FDE1;
+    background-color: #80FDE1;
 }
 
 .purchased, [data-price] {

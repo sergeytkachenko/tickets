@@ -52,6 +52,7 @@ class MapsController extends ControllerBase
             array_push($seats, array(
                 "id" => $eventSeat->seat_id,
                 "price" => $eventSeat->getPrice(),
+                "hex" => $eventSeat->Seats->SeatColor->hex,
                 "title" => $eventSeat->Seats->title.", (".$eventSeat->getPrice()." грн.)",
                 "free" => true
             ));
@@ -60,6 +61,7 @@ class MapsController extends ControllerBase
             array_push($seats, array(
                 "id" => $eventSeat->seat_id,
                 "price" => $eventSeat->getPrice(),
+                "hex" => $eventSeat->Seats->SeatColor->hex,
                 "title" => $eventSeat->Seats->title.", (".$eventSeat->getPrice()." грн.)",
                 "free" => false
             ));
@@ -97,5 +99,10 @@ class MapsController extends ControllerBase
         );
     }
 
+    public function getSeatsAction() {
+        $this->setJsonResponse();
+
+        return \Seats::find()->toArray();;
+    }
 }
 

@@ -1,0 +1,12 @@
+$.ajax('/maps/getSeats', {
+    success : function (data) {
+
+        $.each(data, function(i, s) {change(s);} )
+    }
+});
+
+function change(seat) {
+  var $s = $('svg').find('[data-id="'+seat.alias+'"]');
+  $s.attr('data-alias', seat.alias);
+  $s.attr('data-id', seat.id);
+}
