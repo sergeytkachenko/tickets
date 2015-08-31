@@ -10,6 +10,7 @@ var Map = function (eventId) {
     this.selfPurchased = "/maps/getSelfPurchased/"; // все зарезервированые собой места
     this.timeOut = "/reservation/timeout/";
     this.prevLocation = "/order/preview/"+eventId;
+    this.colorPricesUrl = "/event/getEventPrices/"+eventId;
 
     this.intervalTimeout = 14 * 1000; // 14 min
     this.zoomDefault = 0.1;
@@ -193,6 +194,22 @@ var Map = function (eventId) {
                 }
                 if(data.error) {alert(data.error); return;}
                 alert("Произошла не предвиденная ошибка, поробуйте позже...");
+            }
+        });
+    }
+
+    this.renderColorsPrices = function (callback, scope) {
+        $.ajax ({ // присуем стоимость билетов по цветам
+            type: "POST",
+            url: self.colorPricesUrl,
+            success: function (data) {
+                if(!data) {return;}
+                $('ul.colors').empty();
+                $.each(data, function (ind,color) {
+                    var html = '<li><span style="background-color: '+color.hex+'"></span> - '+color.price+'грн</li>';
+                    $('ul.colors').append(html);
+                });
+                callback.call(scope);
             }
         });
     }

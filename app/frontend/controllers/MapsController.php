@@ -51,16 +51,16 @@ class MapsController extends ControllerBase
         foreach($eventSeatsFree as $eventSeat) {
             array_push($seats, array(
                 "id" => $eventSeat->seat_id,
-                "price" => $eventSeat->price,
-                "title" => "Место №".$eventSeat->seat_id.", цена ".$eventSeat->price." грн.",
+                "price" => $eventSeat->getPrice(),
+                "title" => $eventSeat->Seats->title.", (".$eventSeat->getPrice()." грн.)",
                 "free" => true
             ));
         }
         foreach($eventSeatsBusy as $eventSeat) {
             array_push($seats, array(
                 "id" => $eventSeat->seat_id,
-                "price" => $eventSeat->price,
-                "title" => "Место №".$eventSeat->seat_id.", цена ".$eventSeat->price." грн.",
+                "price" => $eventSeat->getPrice(),
+                "title" => $eventSeat->Seats->title.", (".$eventSeat->getPrice()." грн.)",
                 "free" => false
             ));
         }

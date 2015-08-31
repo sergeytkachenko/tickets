@@ -5,7 +5,9 @@ $(document).ready(function () {
         success: function (data) {
             $("#map svg").html(data);
             window.map = new Map(eventId);
-            getAvailableSeats(eventId, window.map.setAvailableSeats, window.map);
+            map.renderColorsPrices(function () {
+                getAvailableSeats(eventId, window.map.setAvailableSeats, window.map);
+            }, map);
         }
     });
     $(".fakeLoader").fakeLoader({
