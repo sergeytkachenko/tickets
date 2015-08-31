@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Авг 31 2015 г., 17:06
+-- Время создания: Авг 31 2015 г., 17:52
 -- Версия сервера: 5.6.21
 -- Версия PHP: 5.6.8
 
@@ -61,7 +61,7 @@ INSERT INTO `events` (`id`, `representation_id`, `date`) VALUES
 CREATE TABLE IF NOT EXISTS `event_prices` (
 `id` int(11) NOT NULL,
   `price` int(11) NOT NULL COMMENT 'цена на цвет',
-  `event_id` int(11) NOT NULL COMMENT 'id группы мероприятий ',
+  `representation_id` int(11) NOT NULL,
   `seat_color_id` int(11) NOT NULL COMMENT 'id цвета места'
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
@@ -69,12 +69,12 @@ CREATE TABLE IF NOT EXISTS `event_prices` (
 -- Дамп данных таблицы `event_prices`
 --
 
-INSERT INTO `event_prices` (`id`, `price`, `event_id`, `seat_color_id`) VALUES
-(1, 100, 1, 1),
-(2, 200, 1, 2),
-(3, 200, 1, 3),
-(4, 200, 1, 4),
-(5, 200, 1, 5);
+INSERT INTO `event_prices` (`id`, `price`, `representation_id`, `seat_color_id`) VALUES
+(1, 1, 1, 1),
+(2, 1, 1, 2),
+(3, 1, 1, 3),
+(4, 1, 1, 4),
+(5, 1, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -96,8 +96,8 @@ CREATE TABLE IF NOT EXISTS `event_seats` (
 --
 
 INSERT INTO `event_seats` (`id`, `seat_id`, `event_id`, `last_reservation`, `last_reservation_session_id`, `is_purchased`) VALUES
-(1, 1, 1, NULL, NULL, 1),
-(2, 2, 1, '2015-08-31 19:51:55', 'lisb9ugb63cm7upl1v2qrvbtu7', 0);
+(1, 1, 1, NULL, NULL, 0),
+(2, 2, 1, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -114,14 +114,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `date` datetime NOT NULL,
   `success` tinyint(1) DEFAULT '0',
   `uid` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `orders`
---
-
-INSERT INTO `orders` (`id`, `events_seat_id`, `user_name`, `user_email`, `user_phone`, `date`, `success`, `uid`) VALUES
-(1, 1, 'Кассир №1', 'serg.tkachenko@hotmail.com', NULL, '2015-08-31 19:33:11', 1, 'dc6f86047e96497a');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -134,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `order_history` (
   `user_id` int(11) NOT NULL,
   `uids` text NOT NULL,
   `datetime` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `order_history`
@@ -149,7 +142,8 @@ INSERT INTO `order_history` (`id`, `user_id`, `uids`, `datetime`) VALUES
 (6, 1, '3d9c25e8af924d6c,34e5adeb52d04704,3687249a0a6d4abb,0dc336a53beb4cf7,93e95cf9a3fd4c7a,a6a4541ea65844f8,32c1a40a97704acc,bee410e188104316,39b434718e5a4100,e317d27d7f4949af,477c01e4a5ea4802,ac56564829284c5d,9c6db18a8eca478e,b6c7be06f2df4a07', '2015-08-21 17:19:53'),
 (7, 1, '74a731d4d0dc46d4', '2015-08-21 17:43:39'),
 (8, 1, '9337691c44314db1,b8f3f34f1a524317,cd0022ff9d9c4e66,bdc5b5d36d5b4123,99130cb1b7504666,a6c5caaa45d448f0', '2015-08-21 17:44:11'),
-(9, 1, 'dc6f86047e96497a', '2015-08-31 19:33:12');
+(9, 1, 'dc6f86047e96497a', '2015-08-31 20:51:32'),
+(10, 1, '9866274659094264', '2015-08-31 20:51:55');
 
 -- --------------------------------------------------------
 
@@ -2099,7 +2093,7 @@ ALTER TABLE `events`
 -- Индексы таблицы `event_prices`
 --
 ALTER TABLE `event_prices`
- ADD PRIMARY KEY (`id`), ADD KEY `event_id` (`event_id`), ADD KEY `seat_color_id` (`seat_color_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `seat_color_id` (`seat_color_id`), ADD KEY `representation_id` (`representation_id`);
 
 --
 -- Индексы таблицы `event_seats`
@@ -2129,7 +2123,7 @@ ALTER TABLE `representations`
 -- Индексы таблицы `seats`
 --
 ALTER TABLE `seats`
- ADD PRIMARY KEY (`id`), ADD KEY `seat_color_id` (`seat_color_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `seat_color_id` (`seat_color_id`), ADD KEY `seat_color_id_2` (`seat_color_id`);
 
 --
 -- Индексы таблицы `seat_colors`
@@ -2183,12 +2177,12 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT для таблицы `order_history`
 --
 ALTER TABLE `order_history`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT для таблицы `representations`
 --
@@ -2233,8 +2227,7 @@ ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`representation_id`) REFERENCES `rep
 -- Ограничения внешнего ключа таблицы `event_prices`
 --
 ALTER TABLE `event_prices`
-ADD CONSTRAINT `event_prices_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`),
-ADD CONSTRAINT `event_prices_ibfk_2` FOREIGN KEY (`seat_color_id`) REFERENCES `seat_colors` (`id`);
+ADD CONSTRAINT `event_prices_ibfk_2` FOREIGN KEY (`representation_id`) REFERENCES `representations` (`id`);
 
 --
 -- Ограничения внешнего ключа таблицы `event_seats`

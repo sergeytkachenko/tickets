@@ -3,6 +3,7 @@ namespace Multiple\Frontend\Controllers;
 
 use EventSeats;
 use Phalcon\Mvc\View;
+use Seats;
 
 class MapsController extends ControllerBase
 {
@@ -102,7 +103,7 @@ class MapsController extends ControllerBase
     public function getSeatsAction() {
         $this->setJsonResponse();
 
-        return \Seats::find()->toArray();;
+        return Seats::find()->toArray();;
     }
 }
 

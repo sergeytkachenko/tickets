@@ -1,7 +1,5 @@
 <?php
 
-use Phalcon\Exception;
-
 class EventSeats extends \Phalcon\Mvc\Model
 {
 
@@ -49,16 +47,6 @@ class EventSeats extends \Phalcon\Mvc\Model
     }
 
     /**
-     * Returns table name mapped in the model.
-     *
-     * @return string
-     */
-    public function getSource()
-    {
-        return 'event_seats';
-    }
-
-    /**
      * Allows to query a set of records that match the specified conditions
      *
      * @param mixed $parameters
@@ -87,9 +75,9 @@ class EventSeats extends \Phalcon\Mvc\Model
      */
     public function getPrice () {
         $price = EventPrices::findFirst(array(
-            'event_id = :eventId: AND seat_color_id = :seatColorId:',
+            'representation_id = :representationId: AND seat_color_id = :seatColorId:',
             'bind' => array(
-                'eventId' => $this->event_id,
+                'representationId' => $this->Events->Representation->id,
                 'seatColorId' => $this->Seats->seat_color_id
             )
         ));
@@ -97,6 +85,16 @@ class EventSeats extends \Phalcon\Mvc\Model
             throw new Exception('price for seat not found');
         }
         return $price->price;
+    }
+
+    /**
+     * Returns table name mapped in the model.
+     *
+     * @return string
+     */
+    public function getSource()
+    {
+        return 'event_seats';
     }
 
 }

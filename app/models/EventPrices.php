@@ -19,7 +19,7 @@ class EventPrices extends \Phalcon\Mvc\Model
      *
      * @var integer
      */
-    public $event_id;
+    public $representation_id;
 
     /**
      *
@@ -32,18 +32,8 @@ class EventPrices extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->belongsTo('event_id', 'Events', 'id', array('alias' => 'Events'));
+        $this->belongsTo('representation_id', 'Representations', 'id', array('alias' => 'Representations'));
         $this->belongsTo('seat_color_id', 'SeatColors', 'id', array('alias' => 'SeatColors'));
-    }
-
-    /**
-     * Returns table name mapped in the model.
-     *
-     * @return string
-     */
-    public function getSource()
-    {
-        return 'event_prices';
     }
 
     /**
@@ -66,6 +56,16 @@ class EventPrices extends \Phalcon\Mvc\Model
     public static function findFirst($parameters = null)
     {
         return parent::findFirst($parameters);
+    }
+
+    /**
+     * Returns table name mapped in the model.
+     *
+     * @return string
+     */
+    public function getSource()
+    {
+        return 'event_prices';
     }
 
 }

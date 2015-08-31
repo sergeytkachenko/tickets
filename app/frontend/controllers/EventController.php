@@ -27,13 +27,19 @@ class EventController extends ControllerBase {
         $this->view->setVar('colors', $colors);
     }
 
+    /**
+     * @param $eventId
+     * @return mixed
+     */
     public function getEventPricesAction ($eventId) {
         $this->setJsonResponse();
 
+        $event = Events::findFirst($eventId);
+
         $eventPrices =  EventPrices::find(array(
-            'event_id = :eventId:',
+            'representation_id = :representationId:',
             'bind' => array(
-                'eventId' => $eventId
+                'representationId' => $event->Representation->id
             )
         ));
 
