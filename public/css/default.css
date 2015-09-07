@@ -135,3 +135,7 @@ ul.colors li span {
     float: left;
     margin-right: 5px;
 }
+
+.row.event-short-container:last-child {
+    border-bottom: 0;
+}

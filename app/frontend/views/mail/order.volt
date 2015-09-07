@@ -24,7 +24,13 @@
         </tr>
     </table>
     <h3 style="font-family:sans-serif, arial;font-size:0.9em;text-align:left;color:#FF0000;line-height:1em;">Звертаємо увагу!</h3>
-    <h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646; line-height:1em;">Отримати квитки можна безпосередньо перед початком вистави, на яку було придбано квитки.</h3><h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646;line-height:1em;">Для цього Вам потрібно повідомити касиру <b>код замовлення</b>, який вказаний у цьому повідомленні.</h3><h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646;line-height:1em;">Організатори вистави не несуть відповідальності за передачу <b>коду замовлення </b>іншим особам.</h3><h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646;line-height:1em;">Видача квитків починається за годину до початку вистави.</h3><br>
+    <h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646; line-height:1em;">
+        Отримати квитки можна безпосередньо перед початком вистави, на яку було придбано квитки.</h3>
+    <h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646;line-height:1em;">Для цього Вам потрібно повідомити касиру <b>код замовлення</b>, який вказаний у цьому повідомленні.</h3>
+    <h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646;line-height:1em;">Організатори вистави не несуть відповідальності за передачу <b>коду замовлення </b>іншим особам.</h3>
+    <h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646;line-height:1em;">Видача квитків починається за годину до початку вистави.</h3><br>
+    <h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646;line-height:1em;">Квитки придбані онлайн поверненню не підлягають.</h3><br>
+
     <h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646; line-height: 1em;">Якщо у Вас виникли будь-які запитання, звертайтеся за нижче вказаними контактними даними:</h3>
     <h3 style="font-family:sans-serif, arial;font-size:0.8em;text-align:left;color:#464646; line-height: 1em;">Тел. 097-211-33-88</h3>
     <h3 style="font-family:sans-serif, arial;font-size:0.8em;text-align:left;color:#464646; line-height: 1em;">E-mail: info@circus.org.ua</h3>

@@ -3,10 +3,10 @@
         <i class="fa fa-arrow-left"></i> Все даты представлений
     </a>
 </div>
-<h2>
+<h2 style="font-family:Tahoma,sans-serif;font-size:1.2em;font-weight:600;text-transform:uppercase;color:#337ab7;">
     {{ event.Representation.title }}
-    <span style="float: right">
-        начало {{ display_when(event.date) }}
+    <span style="float: right;font-size:0.95em;">
+       Начало {{ display_when(event.date) }}
     </span>
 </h2>
 <div id="map">

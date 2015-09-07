@@ -4,9 +4,9 @@
             <li style="margin-right: 40px;">
                 <a class="navbar-brand" href="/"><img src="/img/prapor.png" alt="Прапор України"></a>
             </li>
-            <li {% if router.getRewriteUri() == '/representation/list' %}class="active"{% endif %}><a href="/representation/list">Мероприятия</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Как купить билет?</a></li>
+            <li {% if router.getRewriteUri() == '/representation/list' %}class="active"{% endif %}><a href="/representation/list">Представления</a></li>
+            <li><a href="/page/view/1">Контакты</a></li>
+            <li><a href="/page/view/2">Как купить билет?</a></li>
             {%  if user %}
                 <li class="dropdown" style="height: 50px; margin-left: 10px; float: right">
                     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="height: 50px;">
