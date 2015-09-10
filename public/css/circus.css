@@ -104,7 +104,7 @@
     font-size: 13px; !important;
 }
 .navbar-nav a:hover {
-    color:#fff;
+    color:#fff !important;
 }
 .navbar-nav li:hover {
     background-color:#ff5747;
@@ -123,7 +123,7 @@
 }
 
 #navbar > ul > li:hover a{
-    color: #000; !important;
+    color: #000; 
 }
 
 #navbar ul li:first-child:hover {
