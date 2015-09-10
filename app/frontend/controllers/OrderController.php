@@ -208,6 +208,7 @@ class OrderController extends ControllerBase
 
         $configEmail = \Config::findFirst('key="email"');
         $emails = array($email, $configEmail);
+        debug($emails);
         $mail = $this->getDI()->get('mail');
         $mail->send($emails, 'Покупка билетов онлайн', 'order', array(
             'email' => $email,
