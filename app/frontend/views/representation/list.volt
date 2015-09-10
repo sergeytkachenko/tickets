@@ -18,7 +18,7 @@
                         {#На данный момент нет запланированых выступов.#}
                     {#{% endif %}#}
                 {#</div>#}
-                {#<a class="btn btn-primary more" href="/representation/view/{{  representation.id }}">Подробнее</a>#}
+                {#<a class="btn btn-danger more" href="/representation/view/{{  representation.id }}">Подробнее</a>#}
             {#</div>#}
         {#</div>#}
     {#</div>#}
