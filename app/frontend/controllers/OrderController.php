@@ -206,8 +206,10 @@ class OrderController extends ControllerBase
             $email = $order->user_email;
         }
 
+        $configEmail = \Config::findFirst('key="email"');
+        $emails = array($email, $configEmail);
         $mail = $this->getDI()->get('mail');
-        $mail->send($email, 'Покупка билетов онлайн', 'order', array(
+        $mail->send($emails, 'Покупка билетов онлайн', 'order', array(
             'email' => $email,
             'datetime' => date("Y-m-d H:i:s"),
             'orders' => Orders::find()->filter(function ($item) use($uidList) {
