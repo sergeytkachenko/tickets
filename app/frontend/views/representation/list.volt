@@ -44,7 +44,7 @@
                     {% endif %}
                 </div>
                 <hr style=" border: 0; width:14em;float:left;margin-top:3%;height: 0.05em;background: #333;background-image: linear-gradient(to right, #ccc, #ccc, #ccc);">
-                <a class="btn btn-primary more" href="/representation/view/{{  representation.id }}">Подробнее</a>
+                <a class="btn btn-danger more" href="/representation/view/{{  representation.id }}">Подробнее</a>
             </div>
         </div>
         <div class="col-md-6 event-short-details">
