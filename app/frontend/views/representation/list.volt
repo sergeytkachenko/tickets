@@ -35,6 +35,7 @@
                 <a href="/representation/view/{{  representation.id }}">{{ representation.title|e }}</a>
             </h3>
             <div class="nearest-event">
+                <div>Ближайшая дата проведения:</div>
                 <div>
                     {% if representation.getNearestEvent() %}
                         {{ representation.getNearestEvent().date }}

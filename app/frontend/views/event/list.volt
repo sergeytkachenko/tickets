@@ -13,9 +13,6 @@
         </div>
         <div class="poster">
             <img src="{{ representation.img }}" alt="Афіша" height="345">
-            <div>
-                {{ representation.description }}
-            </div>
         </div>
     </div>
     <div class="col-md-8">
