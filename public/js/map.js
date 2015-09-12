@@ -12,7 +12,7 @@ var Map = function (eventId) {
     this.prevLocation = "/order/preview/"+eventId;
     this.colorPricesUrl = "/event/getEventPrices/"+eventId;
 
-    this.intervalTimeout = 14 * 1000; // 14 min
+    this.intervalTimeout = 60 * 1000; // 60 sec
     this.zoomDefault = 0.1;
     this.scale = 1;
 
@@ -221,6 +221,7 @@ var Map = function (eventId) {
                 url: self.timeOut+eventId,
                 success: function (data) {
                     if(data && data.isTimeout) {
+                        return; // Отмена перезагрузки страницы
                         alert(data.msg);
                         location.reload();
                         clearInterval(self.checkTimeout.interval);
