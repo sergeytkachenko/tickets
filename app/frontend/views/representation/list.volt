@@ -47,7 +47,7 @@
                 <a class="btn btn-danger more" href="/representation/view/{{  representation.id }}">Подробнее</a>
             </div>
         </div>
-        <div class="col-md-6 event-short-details">
+        <div class="col-md-6 event-short-details" style="font-size:0.9em;text-align:justify;text-indent:1em;">
             {{ representation.description }}
         </div>
     </div>
