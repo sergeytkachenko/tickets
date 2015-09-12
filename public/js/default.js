@@ -3,7 +3,7 @@ $(document).ready(function () {
         type: "POST",
         url: "/maps/view",
         success: function (data) {
-            $("#map svg").html(data);
+            $("#map [data-id=svg]").html(data);
             window.map = new Map(eventId);
             map.renderColorsPrices(function () {
                 getAvailableSeats(eventId, window.map.setAvailableSeats, window.map);
