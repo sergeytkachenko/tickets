@@ -27,7 +27,7 @@
     <div class="row event-short-container">
         <div class="col-md-3" style="padding-left:0;">
             <div class="event-image">
-                <img src="{{ representation.img }}" alt="{{ representation.title|e }}">
+                <img src="{{ representation.img }}" alt="{{ representation.title|e }}" style="border-radius: 0.3em;box-shadow: 0.1em 0.1em 0.1em #a4a4a4;">
             </div>
         </div>
         <div class="col-md-3 event-short-details">
