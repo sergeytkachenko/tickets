@@ -3,7 +3,6 @@ namespace Multiple\Frontend\Controllers;
 
 use EventPrices;
 use Events;
-use SeatColorsPrice;
 
 class EventController extends ControllerBase {
 
@@ -16,15 +15,9 @@ class EventController extends ControllerBase {
      * @param $eventId
      */
     public function viewAction($eventId) {
+
         $event = Events::findFirst($eventId);
-        $colors = SeatColorsPrice::find(array(
-            'representation_id = :representationId:',
-            'bind' => array(
-                'representationId' => $event->Representation->id
-            )
-        ));
         $this->view->setVar('event', $event);
-        $this->view->setVar('colors', $colors);
     }
 
     /**

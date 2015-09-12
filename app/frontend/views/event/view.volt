@@ -19,11 +19,7 @@
 
 </div>
 <div class="navigation">
-    <ul class="colors">
-        {% for color in colors %}
-            <li><span style="background-color: {{ color.SeatColors.hex }};"></span> - {{ color.price }} грн</li>
-        {% endfor %}
-    </ul>
+    <ul class="colors"></ul>
     <p style="text-align: right">
         <button class="btn btn-large btn-primary" type="button" onclick="window.map.checkAvailability();">
             Продолжить <i class="fa fa-angle-double-right"></i></button>
