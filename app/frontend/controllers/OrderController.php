@@ -176,7 +176,7 @@ class OrderController extends ControllerBase
             'result_url' => $resultUrl,
             'server_url' => $serverUrl,
             'language' => 'ru',
-            'sandbox' => 0,
+            'sandbox' => 1,
             'description' => 'Покупка билета на представление в цирке'
         ));
 
