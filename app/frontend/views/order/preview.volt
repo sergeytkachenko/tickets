@@ -65,7 +65,7 @@
                     <button type="button" class="delete-reservation btn btn-danger  btn-xs"
                             data-url="/reservation/seatClear/{{ eventSeat.Seats.id }}?eventId={{ eventSeat.Events.id }}">Отмена</button>
                 </div>
-                {{ eventSeat.Events.Representation.title }}({{ display_when(eventSeat.Events.date) }}), место - {{ eventSeat.Seats.title }}({{ eventSeat.Seats.id }})
+                {{ eventSeat.Events.Representation.title }}({{ display_when(eventSeat.Events.date) }}), место - {{ eventSeat.Seats.title }}
             </li>
         {% endfor %}
     </ul>
