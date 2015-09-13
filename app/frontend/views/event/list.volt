@@ -9,7 +9,7 @@
     </div>
     <div class="col-md-3">
         <div class="logo">
-            <a href="/"><img src="/img/logo.png" alt="Цирк України"></a>
+            <a href="http://circus.org.ua/"><img src="/img/logo.png" alt="Цирк України"></a>
         </div>
         <div class="poster">
             <img src="{{ representation.img }}" alt="Афіша" height="345">
