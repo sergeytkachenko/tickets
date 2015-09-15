@@ -43,7 +43,7 @@
                         На данный момент нет запланированых выступов.
                     {% endif %}
                 </div>
-                <hr style=" border: 0; width:100%;float:left;margin-top:3%;height: 0.05em;background: #333;background-image: linear-gradient(to right, #ccc, #ccc, #ccc);">
+                <hr>
                 <a class="btn btn-danger more" style="margin-bottom:3%;" href="/representation/view/{{  representation.id }}">Подробнее</a>
             </div>
         </div>
