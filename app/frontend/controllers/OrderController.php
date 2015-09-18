@@ -221,7 +221,6 @@ class OrderController extends ControllerBase
 		$uidList = $this->request->get('uidList');
 		$uidList = explode(",", $uidList);
 		$email = null;
-		$errors = [];
 		foreach ($uidList as $uid) {
 			$order = Orders::findFirst(array(
 				'uid = :uid:',
@@ -230,9 +229,7 @@ class OrderController extends ControllerBase
 			$order->success = 1;
 			$order->data = base64_decode($this->request->get('data'));
 			$order->signature = $signature;
-			if(!$order->save()) {
-				$errors[] = $order->getMessages();
-			};
+			$order->save();
 
 			$eventSeat = EventSeats::findFirst($order->events_seat_id);
 			$eventSeat->last_reservation = NULL;
@@ -242,9 +239,7 @@ class OrderController extends ControllerBase
 
 			$email = $order->user_email;
 		}
-		if($errors==array()) {
-			return;
-		}
+
 		$configEmail = @Config::findFirst('key="email"')->value;
 		$emails = array($email, $configEmail);
 		$mail = $this->getDI()->get('mail');
