@@ -56,6 +56,12 @@ class Orders extends \Phalcon\Mvc\Model
 	 * @var string
 	 */
 	public $data;
+
+	/**
+	 *
+	 * @var string
+	 */
+	public $signature;
     /**
      * Initialize method for model.
      */
