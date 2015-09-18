@@ -246,7 +246,8 @@ class OrderController extends ControllerBase
 
 	public function successAction()
 	{
-		// client success
+		$response = $this->request->getJsonRawBody();
+		debug($response);
 	}
 
 	public function printAction($uid)
