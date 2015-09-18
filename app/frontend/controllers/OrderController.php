@@ -194,7 +194,7 @@ class OrderController extends ControllerBase
 			'result_url' => $resultUrl,
 			'server_url' => $serverUrl,
 			'language' => 'ru',
-			'sandbox' => 0,
+			'sandbox' => 1,
 			'description' => 'Покупка билета на представление в цирке'
 		));
 
@@ -227,7 +227,9 @@ class OrderController extends ControllerBase
 				'bind' => array('uid' => $uid)
 			));
 			$order->success = 1;
-			$order->save();
+			$order->save(array(
+				'data' => base64_decode($this->request->get('data'))
+			));
 
 			$eventSeat = EventSeats::findFirst($order->events_seat_id);
 			$eventSeat->last_reservation = NULL;
