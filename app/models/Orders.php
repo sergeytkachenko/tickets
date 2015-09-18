@@ -84,7 +84,8 @@ class Orders extends \Phalcon\Mvc\Model
             'success' => 'success',
             'uid' => 'uid',
             'date' => 'date',
-	        'data' => 'data'
+	        'data' => 'data',
+	        'signature' => 'signature'
         );
     }
 
