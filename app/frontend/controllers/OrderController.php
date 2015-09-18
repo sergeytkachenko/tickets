@@ -194,7 +194,7 @@ class OrderController extends ControllerBase
 			'result_url' => $resultUrl,
 			'server_url' => $serverUrl,
 			'language' => 'ru',
-			'sandbox' => 1,
+			'sandbox' => 0,
 			'description' => 'Покупка билета на представление в цирке'
 		));
 
@@ -214,7 +214,7 @@ class OrderController extends ControllerBase
 //			throw new Exception('Не верный приватный ключ');
 //		}
 		$data = json_decode($data);
-		if($data->status !== 'success' and $data->status !== 'sandbox') {
+		if($data->status !== 'success') {
 			throw new Exception('Не успешный платеж');
 		}
 
