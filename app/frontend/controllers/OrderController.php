@@ -6,6 +6,7 @@ use EventSeats;
 use LiqPay;
 use OrderHistory;
 use Orders;
+use Phalcon\Exception;
 use Phalcon\Mvc\View;
 
 class OrderController extends ControllerBase
@@ -202,10 +203,15 @@ class OrderController extends ControllerBase
 
 	public function serverSuccessAction()
 	{
-		// server success
+		$response = $this->request->getJsonRawBody();
+		if(!$this->request->isPost() or !@$response->status) {
+			throw new Exception('wrong params');
+		}
+		if($response->status !== 'success') {
+			return;
+		}
 		$uidList = $this->request->get('uidList');
 		$uidList = explode(",", $uidList);
-
 		$email = null;
 		foreach ($uidList as $uid) {
 			$order = Orders::findFirst(array(
