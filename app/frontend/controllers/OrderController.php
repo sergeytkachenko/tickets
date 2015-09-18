@@ -228,7 +228,7 @@ class OrderController extends ControllerBase
 				'bind' => array('uid' => $uid)
 			));
 			$order->success = 1;
-			$order->data = $this->request->getRawBody();
+			$order->data = $this->request->get('data');
 			if(!$order->save()) {
 				$errors[] = $order->getMessages();
 			};
