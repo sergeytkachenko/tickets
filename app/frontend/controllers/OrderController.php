@@ -214,7 +214,7 @@ class OrderController extends ControllerBase
 			throw new Exception('Не верный приватный ключ');
 		}
 		$data = json_decode($data);
-		if($data->status !== 'success') {
+		if($data->status !== 'success' and $data->status !== 'sandbox') {
 			throw new Exception('Не успешный платеж');
 		}
 
