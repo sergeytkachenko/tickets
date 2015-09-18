@@ -203,13 +203,21 @@ class OrderController extends ControllerBase
 
 	public function serverSuccessAction()
 	{
-		$response = $this->request->getJsonRawBody();
-		if(!$this->request->isPost() or !@$response->status) {
+		$data = base64_decode($this->request->get('data'));
+		$signature = $this->request->get('signature');
+
+		if(!$this->request->isPost() or !$data or !$signature) {
 			throw new Exception('wrong params');
 		}
-		if($response->status !== 'success') {
-			return;
+		$privateKey = Config::findFirst('key="privatekey"')->value;
+		if($signature !== base64_encode( sha1( $privateKey . $this->request->get('data') . $privateKey ) )) {
+			throw new Exception('Не верный приватный ключ');
 		}
+		$data = json_decode($data);
+		if($data->status !== 'success') {
+			throw new Exception('Не успешный платеж');
+		}
+
 		$uidList = $this->request->get('uidList');
 		$uidList = explode(",", $uidList);
 		$email = null;
@@ -244,10 +252,8 @@ class OrderController extends ControllerBase
 		));
 	}
 
-	public function successAction()
-	{
-		$response = $this->request->getJsonRawBody();
-		debug($response);
+	public function successAction() {
+
 	}
 
 	public function printAction($uid)
