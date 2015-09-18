@@ -209,14 +209,14 @@ class OrderController extends ControllerBase
 		if(!$this->request->isPost() or !$data or !$signature) {
 			throw new Exception('wrong params');
 		}
-		$privateKey = Config::findFirst('key="privatekey"')->value;
-		if($signature !== base64_encode( sha1( $privateKey . $this->request->get('data') . $privateKey ) )) {
-			throw new Exception('Не верный приватный ключ');
-		}
-		$data = json_decode($data);
-		if($data->status !== 'success' and $data->status !== 'sandbox') {
-			throw new Exception('Не успешный платеж');
-		}
+//		$privateKey = Config::findFirst('key="privatekey"')->value;
+//		if($signature !== base64_encode( sha1( $privateKey . $this->request->get('data') . $privateKey ) )) {
+//			throw new Exception('Не верный приватный ключ');
+//		}
+//		$data = json_decode($data);
+//		if($data->status !== 'success' and $data->status !== 'sandbox') {
+//			throw new Exception('Не успешный платеж');
+//		}
 
 		$uidList = $this->request->get('uidList');
 		$uidList = explode(",", $uidList);
