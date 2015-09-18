@@ -229,6 +229,7 @@ class OrderController extends ControllerBase
 			));
 			$order->success = 1;
 			$order->data = base64_decode($this->request->get('data'));
+			$order->signature = $signature;
 			if(!$order->save()) {
 				$errors[] = $order->getMessages();
 			};
