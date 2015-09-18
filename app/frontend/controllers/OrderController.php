@@ -227,9 +227,8 @@ class OrderController extends ControllerBase
 				'bind' => array('uid' => $uid)
 			));
 			$order->success = 1;
-			$order->save(array(
-				'data' => base64_decode($this->request->get('data'))
-			));
+			$order->data = $this->request->getRawBody();
+			$order->save();
 
 			$eventSeat = EventSeats::findFirst($order->events_seat_id);
 			$eventSeat->last_reservation = NULL;
