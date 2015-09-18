@@ -209,10 +209,10 @@ class OrderController extends ControllerBase
 		if(!$this->request->isPost() or !$data or !$signature) {
 			throw new Exception('wrong params');
 		}
-		$privateKey = Config::findFirst('key="privatekey"')->value;
-		if($signature !== base64_encode( sha1( $privateKey . $this->request->get('data') . $privateKey ) )) {
-			throw new Exception('Не верный приватный ключ');
-		}
+//		$privateKey = Config::findFirst('key="privatekey"')->value;
+//		if($signature !== base64_encode( sha1( $privateKey . $this->request->get('data') . $privateKey ) )) {
+//			throw new Exception('Не верный приватный ключ');
+//		}
 		$data = json_decode($data);
 		if($data->status !== 'success' and $data->status !== 'sandbox') {
 			throw new Exception('Не успешный платеж');
@@ -221,6 +221,7 @@ class OrderController extends ControllerBase
 		$uidList = $this->request->get('uidList');
 		$uidList = explode(",", $uidList);
 		$email = null;
+		$errors = [];
 		foreach ($uidList as $uid) {
 			$order = Orders::findFirst(array(
 				'uid = :uid:',
@@ -229,7 +230,9 @@ class OrderController extends ControllerBase
 			$order->success = 1;
 			$order->data = base64_decode($this->request->get('data'));
 			$order->signature = $signature;
-			$order->save();
+			if(!$order->save()) {
+				$errors[] = implode("-|-", $order->getMessages());
+			}
 
 			$eventSeat = EventSeats::findFirst($order->events_seat_id);
 			$eventSeat->last_reservation = NULL;
@@ -238,6 +241,9 @@ class OrderController extends ControllerBase
 			$eventSeat->save();
 
 			$email = $order->user_email;
+		}
+		if($errors !== array()) {
+			file_put_contents(PUBLIC_PATH.'/payment.logs', implode("\n", $errors));
 		}
 
 		$configEmail = @Config::findFirst('key="email"')->value;
