@@ -17,6 +17,7 @@
 .me.purchased {
     fill: #80FDE1;
     background-color: #80FDE1;
+	stroke: red !important;
 }
 
 .purchased, [data-price] {
