@@ -188,7 +188,7 @@ class OrderController extends ControllerBase
 		$html = $liqpay->cnb_form(array(
 			'version' => 3,
 			'public_key' => $this->publicKey,
-			'amount' => $totalSum,
+			'amount' => round($totalSum + ($totalSum * $this->serviceFee / 100)),
 			'currency' => 'UAH',
 			'order_id' => md5(http_build_query($uidArray)), // уникальное ID покупки
 			'result_url' => $resultUrl,

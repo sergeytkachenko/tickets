@@ -15,13 +15,18 @@ class ControllerBase extends Controller
 	public $publicKey = 'i4733924068';
 	public $privateKey = null;
 
+	public $serviceFee = 0;
+
 	const RESERVATION_TIME = 15; // in minutes
 
 	public function initialize()
 	{
 		$this->privateKey = Config::findFirst('key="privatekey"')->value;
+		$this->serviceFee = Config::findFirst('key="serviceFee"')->value;
 		$this->br = new \Breadcrumbs();
 		$this->view->setVar('user', $this->session->get('user'));
+		// сервисный збор
+		$this->view->setVar('serviceFee', $this->serviceFee);
 	}
 
 

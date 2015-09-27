@@ -74,7 +74,9 @@ $di->set('view', function () use ($config) {
             $compiler->addFilter('getMinutes', function($resolvedArgs, $exprArgs) {
                 return '\DateFormat::getMinutes('.$resolvedArgs.');';
             });
-
+	        $compiler->addFunction('round', function($resolvedArgs, $exprArgs) {
+		        return 'round('.$resolvedArgs.');';
+	        });
             $compiler->addFunction('display_when',
                 function($resolvedArgs, $exprArgs) use ($compiler) {
                     $string = $compiler->expression($exprArgs[0]['expr']);

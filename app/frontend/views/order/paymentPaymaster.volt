@@ -18,7 +18,7 @@
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.EventSeats.Seats.title }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.uid }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.date }}</th>
-                <th style="border:1px solid #A6A6A6;padding:3px;">{{ order.EventSeats.price }}</th>
+                <th style="border:1px solid #A6A6A6;padding:3px;">{{ round(order.EventSeats.price + (order.EventSeats.price * serviceFee / 100)) }}</th>
                 <th style="border:1px solid #A6A6A6;padding:3px;">
                     <a href="/order/print/{{ order.uid }}" role="button" class="btn btn-default" target="_blank">Печать</a>
                 </th>

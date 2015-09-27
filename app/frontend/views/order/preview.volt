@@ -69,8 +69,19 @@
             </li>
         {% endfor %}
     </ul>
+	<ul class="list-group">
+			<li class="list-group-item">
+				<div class="fright clear">
+					<span class="badge">
+                        {{ round(totalSum * serviceFee / 100) }} грн.
+                    </span>
+					<button type="button" class="btn btn-primary btn-xs"> <span class="badge">{{ serviceFee }}%</span></button>
+				</div>
+				Сервисный сбор:
+			</li>
+	</ul>
     <div style="text-align: right">
-        Всего к оплате: <h4>{{ totalSum }} грн.</h4>
+        Всего к оплате: <h4>{{ round((totalSum * serviceFee / 100) + totalSum) }} грн.</h4>
     </div>
 
 {% else %}
