@@ -195,7 +195,8 @@ class OrderController extends ControllerBase
 			'server_url' => $serverUrl,
 			'language' => 'ru',
 			'sandbox' => 0,
-			'description' => 'Покупка билета на представление в цирке'
+			'description' => 'Покупка билета на представление в цирке',
+			'pay_way' => 'card,liqpay,privat24'
 		));
 
 		$this->view->setVar('html', $html);
