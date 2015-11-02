@@ -1,2 +1,1 @@
-INSERT INTO event_seats( id, seat_id, event_id, is_purchased ) 
-VALUES ('NULL',  '202',  '21',  '0')
+
