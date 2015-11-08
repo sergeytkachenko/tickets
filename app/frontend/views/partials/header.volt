@@ -19,6 +19,7 @@
                         <li><a href="/order/history"><i class="fa fa-history"></i> История покупок</a></li>
                         <li><a href="/order/cancel"><i class="fa fa-ban"></i> Отмена билета</a></li>
                         <li><a href="/order/printByUid"><i class="fa fa-print"></i> Печать билета по UID</a></li>
+                        <li><a href="/statistic/purchased"><i class="fa fa-bars"></i> Билеты</a></li>
                         <li class="divider"></li>
                         <li><a href="/user/exit">Выход</a></li>
                     </ul>
