@@ -18,6 +18,9 @@ class StatisticController extends ControllerBase
 	 * @param $eventId
 	 */
 	public function purchasedAction ($eventId) {
+		if(!$this->session->get('user')) {
+			$this->response->redirect("/user/login");
+		}
 		$event = Events::findFirst($eventId);
 		$representation = Events::findFirst($event->representation_id);
 		$query = Events::query()
