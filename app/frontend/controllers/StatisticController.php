@@ -35,13 +35,13 @@ class StatisticController extends ControllerBase
 				'o.date as date_buy',
 				's.title as seat_title'
 			))
-			->where('Events.id = :eventId: AND es.is_purchased = 1')
+			->where('Events.id = :eventId: AND es.is_purchased = 1 AND o.success = 1')
 			->join('EventSeats', 'es.event_id = Events.id', 'es')
 			->join('Seats', 's.id = es.seat_id', 's')
 			->join('Orders', 'o.events_seat_id = es.id', 'o')
 			->join('Representations', 'r.id = Events.representation_id', 'r')
 			->join('EventPrices', 'ep.representation_id = r.id AND ep.seat_color_id = s.seat_color_id', 'ep')
-			->orderBy('o.date DESC')
+			->orderBy('o.user_name DESC')
 			->bind(array(
 				'eventId' => $eventId
 			));
