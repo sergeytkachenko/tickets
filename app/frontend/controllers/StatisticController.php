@@ -41,7 +41,7 @@ class StatisticController extends ControllerBase
 			->join('Orders', 'o.events_seat_id = es.id', 'o')
 			->join('Representations', 'r.id = Events.representation_id', 'r')
 			->join('EventPrices', 'ep.representation_id = r.id AND ep.seat_color_id = s.seat_color_id', 'ep')
-			->orderBy('s.title as seat_title')
+			->orderBy('o.user_email DESC')
 			->bind(array(
 				'eventId' => $eventId
 			));
