@@ -33,6 +33,7 @@ class StatisticController extends ControllerBase
 				'o.user_email',
 				'o.user_phone',
 				'o.date as date_buy',
+				'o.uid',
 				's.title as seat_title'
 			))
 			->where('Events.id = :eventId: AND es.is_purchased = 1 AND o.success = 1')

@@ -19,6 +19,7 @@
 		<th>ФИО</th>
 		<th>Email</th>
 		<th>Телефон</th>
+		<th>UID</th>
 		<th>Дата покупки</th>
 		<th>Цена</th>
 	</tr>
@@ -28,6 +29,7 @@
 		<td>{{ m['user_name'] }}</td>
 		<td>{{ m['user_email'] }}</td>
 		<td>{{ m['user_phone'] }}</td>
+		<td>{{ m['uid'] }}</td>
 		<td>{{ display_when(m['date_buy']) }}</td>
 		<td>{{ m['price'] }}</td>
 	</tr>
