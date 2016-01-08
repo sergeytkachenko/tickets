@@ -2,17 +2,24 @@
 	{{ event.Representation.title }}, {{ event.date }}
 </h2>
 <form>
+<div class="col-md-3">
 	<select onchange="getEvents();" id="representation">
 		{% for r in representations %}
 		<option value="{{ r.id }}"  {% if r.id == representation.id %} selected {% endif %}>{{ r.title }}</option>
 		{% endfor %}
 	</select>
+</div>
+<div class="col-md-3">
 	<select  id="event" onchange="reloadPage();">
 		{% for e in events %}
 			<option value="{{ e.id }}" {% if e.id == event.id %} selected {% endif %}>{{ e.date }}</option>
 		{% endfor %}
 	</select>
+</div>
 </form>
+<div class="col-md-6">	
+<input id="tablesearchinput" type="text" class="form-control" placeholder="Поиск" /></label><br>
+</div>
 <table class="table table-striped">
 	<tr>
 		<th>Место</th>
