@@ -16,6 +16,7 @@
     <script src="/js/jquery-ui-1.11.4.custom/jquery.mousewheel.min.js"></script>
     <script src="/js/bootstrap-3/js/bootstrap.min.js"></script>
     <script src="/js/fakeLoader.min.js"></script>
+    <script src="/js/jquery.searcher.js"></script>
 </head>
 <body style="background-color: #eee;">
     <header class="navbar navbar-default">
