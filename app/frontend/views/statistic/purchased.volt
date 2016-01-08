@@ -1,3 +1,6 @@
+<h2 style="font-family:Tahoma,sans-serif;font-size:1.4em;font-weight:600;text-transform:uppercase;color:#337ab7;text-indent: 0.3em;margin-bottom:1em;">
+	{{ event.Representation.title }}, {{ event.date }}
+</h2>
 <form>
 	<select onchange="getEvents();" id="representation">
 		{% for r in representations %}
@@ -10,9 +13,6 @@
 		{% endfor %}
 	</select>
 </form>
-<h2 style="font-family:Tahoma,sans-serif;font-size:1.4em;font-weight:600;text-transform:uppercase;color:#337ab7;text-indent: 0.3em;margin-bottom:1em;">
-	{{ event.Representation.title }}, {{ event.date }}
-</h2>
 <table class="table table-striped">
 	<tr>
 		<th>Место</th>
