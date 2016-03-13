@@ -38,7 +38,8 @@
 #map {
     text-align: center;
     background-color: #fff;
-    border: 1px dashed #666;
+    border: 1px dashed #E0E0E0;
+    border-radius: 2px;
     padding: 30px 0;
     position: relative;
     cursor: pointer;
