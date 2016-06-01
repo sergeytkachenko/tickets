@@ -17,6 +17,7 @@
     <script src="/js/bootstrap-3/js/bootstrap.min.js"></script>
     <script src="/js/fakeLoader.min.js"></script>
     <script src="/js/jquery.searcher.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
 </head>
 <body style="background-color: #eee;">
     <header class="navbar navbar-default">
