@@ -6,7 +6,7 @@
 </head>
 <body style="background-color:#f8f8f8;">
 <div style="width: 90%;margin: auto;background: #FFFFFF;padding:2%;border:solid 0.1em #CBCBCB;border-radius: 0.5em;">
-    <a href="http://circus.org.ua"><img style="max-width: 100%; height: auto; margin: 0 auto; text-align: center;" src="http://circus.org.ua/img/logo.png"></a>
+    <a href="http://circus.org.ua"><img style="max-width: 100%; height: auto; margin-left: 45%;" src="http://circus.org.ua/img/logo.png"></a>
     <h3 style="font-family:sans-serif, arial;font-size:1em;text-align:center;color:#464646;">Вітаємо! Ви придбали квитки на сайті "Цирк України"</h3>
     <h3 style="font-family:sans-serif, arial;font-size:0.9em;text-align:center;color:#464646;">Деталі Вашого замовлення:</h3>
     <table style="min-width:600px;width:100%;padding-bottom:2em;">
