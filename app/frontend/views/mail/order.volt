@@ -33,8 +33,8 @@
     <h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646;line-height:1em;">Організатори вистави не несуть відповідальності за передачу <b>коду замовлення </b>іншим особам.</h3><br>
 
     <h3 style="font-family:sans-serif, arial;font-weight:200;font-size:1em;text-align:left;color:#464646; line-height: 1em;">Якщо у Вас виникли будь-які запитання, звертайтеся за нижче вказаними контактними даними:</h3>
-    <h3 style="font-family:sans-serif, arial;font-size:0.8em;text-align:left;color:#464646; line-height: 1em;">Тел. 097-211-33-88 (з 9:00 до 18:00)</h3>
-    <h3 style="font-family:sans-serif, arial;font-size:0.8em;text-align:left;color:#464646; line-height: 1em;">E-mail: info@circus.org.ua</h3>
+    <h3 style="font-family:sans-serif, arial;font-size:0.9em;text-align:left;color:#464646; line-height: 1em;">Тел. 097-211-33-88 (з 9:00 до 18:00)</h3>
+    <h3 style="font-family:sans-serif, arial;font-size:0.9em;text-align:left;color:#464646; line-height: 1em;">E-mail: info@circus.org.ua</h3>
 </div>
 </body>
 </html>
