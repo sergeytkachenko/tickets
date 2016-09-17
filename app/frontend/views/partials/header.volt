@@ -2,7 +2,7 @@
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
             <li style="margin-right: 40px;">
-                <a class="navbar-brand" href="/"><img src="http://circus.org.ua/img/logo_transparent.png" alt="Прапор України" style="width:100%; height: auto;"></a>
+                <a class="navbar-brand" href="/"><img src="http://circus.org.ua/img/logo_transparent.png" alt="Прапор України" style="width:100%; height: auto; max-width: 20px;"></a>
             </li>
             <li {% if router.getRewriteUri() == '/representation/list' %}class="active"{% endif %}><a href="/representation/list">Представления</a></li>
             <li><a href="/page/view/1">Контакты</a></li>
