@@ -99,7 +99,7 @@
 .navbar-nav a:hover {
     color: #EEEEEE !important;
 }
-.dropdown-menu ul li a {
+.dropdown-menu li a {
 	color: #333 !important;
 }
 .navbar-nav li:hover {
