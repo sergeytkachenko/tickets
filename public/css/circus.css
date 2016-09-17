@@ -97,6 +97,7 @@
 }
 .navbar-nav a:hover {
     color: #FFEB3B !important;
+    text-shadow: none !important;
 }
 .dropdown-menu li a {
     color: #333 !important;
