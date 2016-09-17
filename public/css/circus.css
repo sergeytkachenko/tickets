@@ -100,7 +100,10 @@
     color: #FFEB3B !important;
 }
 .dropdown-menu li a {
-	color: #333 !important;
+    color: #333 !important;
+}
+.dropdown-menu li a:hover {
+    color: #333 !important;
 }
 .navbar-nav li:hover {
     -webkit-transition: all 180ms ease-in-out;
