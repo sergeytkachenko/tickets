@@ -93,11 +93,14 @@
     font-weight: 400;
     color: #ffffff !important;
     text-transform: uppercase;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: 0.05em;
 }
 .navbar-nav a:hover {
     color: #EEEEEE !important;
+}
+.dropdown-menu ul li a {
+	color: #333 !important;
 }
 .navbar-nav li:hover {
     -webkit-transition: all 180ms ease-in-out;
